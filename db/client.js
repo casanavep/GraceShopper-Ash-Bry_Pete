@@ -4,7 +4,7 @@ require("dotenv").config();
 const client = new Client(
   process.env.DATABASE_URL || {
     user: "postgres",
-    password: "Abedith1990",
+    password: process.env.PASSWORD,
     database: "graceshopper",
     port: 3000,
   }
