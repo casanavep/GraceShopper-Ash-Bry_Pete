@@ -39,16 +39,16 @@ async function getProductByTitle(title) {
     const resp = await client.query(
       `
       SELECT * FROM products
-      WHERE title = $1
+      WHERE lower(title) LIKE $1
       `,
-      [title]
+      [`%` + title + `%`]
     );
     return resp.rows[0];
   } catch (error) {
     throw error;
   }
 }
-// getProductByTitle("faster car").then(console.log);
+// getProductByTitle("comp").then(console.log);
 
 // getProductById
 async function getProductById(id) {
