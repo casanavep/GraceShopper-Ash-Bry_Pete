@@ -93,7 +93,7 @@ async function getProductOrderByOrderId(order_id) {
     throw error;
   }
 }
-getProductOrderByOrderId(1).then(console.log);
+// getProductOrderByOrderId(1).then(console.log);
 module.exports = {
   createProductOrder,
   getAllProductOrders,

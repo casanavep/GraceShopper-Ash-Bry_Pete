@@ -82,7 +82,7 @@ async function getProductByCategoryId(category_id) {
     throw error;
   }
 }
-getProductByCategoryId(1).then(console.log);
+// getProductByCategoryId(1).then(console.log);
 module.exports = {
   getProductByTitle,
   getProductById,

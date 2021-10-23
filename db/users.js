@@ -112,7 +112,7 @@ async function getUserByEmail(email) {
     throw error;
   }
 }
-getUserByEmail("bob@aol.com").then(console.log);
+// getUserByEmail("bob@aol.com").then(console.log);
 //  Create a patch function to update users
 
 module.exports = {
