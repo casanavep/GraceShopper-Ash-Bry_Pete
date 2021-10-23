@@ -22,6 +22,13 @@ async function createProductOrder({
     throw error;
   }
 }
+// createProductOrder({
+//   product_id: 2,
+//   order_id: 2,
+//   purchase_price: 124.0,
+//   quantity: 8,
+// }).then(console.log);
+
 // getAllProductOrders
 async function getAllProductOrders() {
   try {
@@ -30,11 +37,13 @@ async function getAllProductOrders() {
       SELECT * FROM "products_orders"
       `
     );
-    return resp.rows[0];
+    return resp.rows;
   } catch (error) {
     throw error;
   }
 }
+// getAllProductOrders().then(console.log);
+
 // getProductOrderById
 async function getProductOrderById(id) {
   try {
@@ -50,8 +59,10 @@ async function getProductOrderById(id) {
     throw error;
   }
 }
+// getProductOrderById(2).then(console.log);
+
 // getProductOrderByProductId
-async function getProductOrderByProductId(product_idid) {
+async function getProductOrderByProductId(product_id) {
   try {
     const resp = await client.query(
       `
@@ -60,13 +71,15 @@ async function getProductOrderByProductId(product_idid) {
       `,
       [product_id]
     );
-    return resp.rows[0];
+    return resp.rows;
   } catch (error) {
     throw error;
   }
 }
+// getProductOrderByProductId(1).then(console.log);
+
 // getProductOrderOrderId
-async function getProductByOrderId(order_id) {
+async function getProductOrderByOrderId(order_id) {
   try {
     const resp = await client.query(
       `
@@ -80,10 +93,11 @@ async function getProductByOrderId(order_id) {
     throw error;
   }
 }
+getProductOrderByOrderId(1).then(console.log);
 module.exports = {
   createProductOrder,
   getAllProductOrders,
   getProductOrderById,
-  getProductByOrderId,
+  getProductOrderByOrderId,
   getProductOrderByProductId,
 };

@@ -1,7 +1,7 @@
 const client = require("./client");
 
 async function seedDB() {
-  client.connect();
+  // client.connect();
   await client.query(`  
   DROP TABLE IF EXISTS products_orders;
   DROP TABLE IF EXISTS products;
@@ -209,6 +209,7 @@ async function seedDB() {
       ]
     );
   }
+  console.log("Database seeded");
 }
 
 seedDB();
