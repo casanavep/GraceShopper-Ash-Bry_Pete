@@ -12,6 +12,6 @@ apiRouter.use("/users", usersRouter);
 apiRouter.use("/products", productsRouter);
 apiRouter.use("/reviews", reviewsRouter);
 apiRouter.use("/orders", ordersRouter);
-apiRouter.use("/productOrders", productOrdersRouter);
+apiRouter.use("/productorders", productOrdersRouter);
 
 module.exports = apiRouter;
