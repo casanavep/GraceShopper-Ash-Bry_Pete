@@ -6,7 +6,7 @@ async function createOrder(user_id) {
     const resp = await client.query(
       `
         INSERT INTO orders
-        VALUES ($1)
+        (user_id) VALUES ($1)
         RETURNING *;
       `,
       [user_id]
@@ -17,6 +17,8 @@ async function createOrder(user_id) {
     throw error;
   }
 }
+// createOrder(4).then(console.log);
+
 // getAllOrders
 async function getAllOrders() {
   // console.log("Creating Users");
@@ -26,12 +28,14 @@ async function getAllOrders() {
         SELECT * FROM orders
       `
     );
-    const orders = resp.rows[0];
+    const orders = resp.rows;
     return orders;
   } catch (error) {
     throw error;
   }
 }
+// getAllOrders().then(console.log);
+
 // getOrderByOrderId
 async function getOrderByOrderId(id) {
   try {
@@ -47,6 +51,8 @@ async function getOrderByOrderId(id) {
     throw error;
   }
 }
+// getOrderByOrderId(4).then(console.log);
+
 // getAllOrdersByUser
 async function getAllOrdersByUser(user_id) {
   try {
@@ -62,6 +68,7 @@ async function getAllOrdersByUser(user_id) {
     throw error;
   }
 }
+// getAllOrdersByUser(2).then(console.log);
 module.exports = {
   createOrder,
   getAllOrders,

@@ -7,13 +7,12 @@ const {
 } = require("../db/orders");
 const ordersRouter = require("express").Router();
 
-ordersRouter.post("/order", async (req, res) => {
+ordersRouter.post("/", async (req, res) => {
   try {
     const { user_id } = req.body;
     const user = await createOrder({
       user_id,
     });
-    //console.log(user);
     res.send({ order: order });
   } catch (error) {
     res.status(401).send("username already exists");
@@ -24,28 +23,28 @@ ordersRouter.get("/", async (req, res, next) => {
   try {
     const getOrders = await getAllOrders();
     res.send(getOrders);
-  } catch ({ name, message }) {
-    next({ name, message });
+  } catch (error) {
+    throw error;
   }
 });
 // getOrderByOrderId
-ordersRouter.get("/:id", async (req, res, next) => {
+ordersRouter.get("/orderid/:id", async (req, res, next) => {
   try {
     const { id } = req.params;
     const getOrder = await getOrderByOrderId({ id });
     res.send(getOrder);
-  } catch ({ name, message }) {
-    next({ name, message });
+  } catch (error) {
+    throw error;
   }
 });
 // getAllOrdersByUser
-ordersRouter.get("/:username", async (req, res, next) => {
+ordersRouter.get("/userid/:user_id", async (req, res, next) => {
   try {
-    const { username } = req.params;
-    const getOrder = await getAllOrdersByUser({ username });
+    const { user_id } = req.params;
+    const getOrder = await getAllOrdersByUser({ user_id });
     res.send(getOrder);
-  } catch ({ name, message }) {
-    next({ name, message });
+  } catch (error) {
+    throw error;
   }
 });
 

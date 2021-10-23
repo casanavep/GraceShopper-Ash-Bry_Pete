@@ -19,10 +19,21 @@ async function createUser({
     const resp = await client.query(
       `
       INSERT INTO users (email,password,admin,country,fullname,phone,address,city,state,zip)
-      VALUES ($1,$2)
+      VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10)
       RETURNING *;
     `,
-      [username, hashedPassword]
+      [
+        email,
+        hashedPassword,
+        admin,
+        country,
+        fullname,
+        phone,
+        address,
+        city,
+        state,
+        zip,
+      ]
     );
     const user = resp.rows[0];
     delete user.password;
@@ -32,15 +43,28 @@ async function createUser({
   }
 }
 
-async function getUser({ username, password }) {
+// createUser({
+//   email: "bob@aol.com",
+//   password: "dddddddddd",
+//   admin: false,
+//   country: "us",
+//   fullname: "Bob Eubanks",
+//   phone: 1235551234,
+//   address: "101 My House",
+//   city: "Austin",
+//   state: "TX",
+//   zip: 78613,
+// }).then(console.log);
+
+async function getUser({ email, password }) {
   // console.log("Getting User");
   try {
     const resp = await client.query(
       `
     SELECT * FROM users
-    WHERE username = $1
+    WHERE email = $1
     `,
-      [username]
+      [email]
     );
     const user = resp.rows[0];
     if (await bcrypt.compare(password, user.password)) {
@@ -51,6 +75,10 @@ async function getUser({ username, password }) {
     throw error;
   }
 }
+// getUser({
+//   email: "bob@aol.com",
+//   password: "dddddddddd",
+// }).then(console.log);
 
 async function getUserById(id) {
   // console.log("Getting User By ID");
@@ -67,21 +95,26 @@ async function getUserById(id) {
     throw error;
   }
 }
+// getUserById(4).then(console.log);
 async function getUserByEmail(email) {
   // console.log("Getting User By ID");
   try {
     const resp = await client.query(
       `
     SELECT * FROM users
-    WHERE username = $1
+    WHERE email = $1
     `,
       [email]
     );
+    delete resp.rows[0].password;
     return resp.rows[0];
   } catch (error) {
     throw error;
   }
 }
+getUserByEmail("bob@aol.com").then(console.log);
+//  Create a patch function to update users
+
 module.exports = {
   createUser,
   getUser,
