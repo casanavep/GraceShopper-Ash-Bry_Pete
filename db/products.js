@@ -23,6 +23,7 @@ async function createProduct({
     const product = resp.rows[0];
     return product;
   } catch (error) {
+    console.log(error);
     throw error;
   }
 }
@@ -43,12 +44,25 @@ async function getProductByTitle(title) {
       `,
       [`%` + title + `%`]
     );
-    return resp.rows[0];
+    return resp.rows;
   } catch (error) {
     throw error;
   }
 }
-// getProductByTitle("comp").then(console.log);
+getProductByTitle("muffler").then(console.log);
+async function getProducts() {
+  try {
+    const resp = await client.query(
+      `
+      SELECT * FROM products
+      `
+    );
+    return resp.rows;
+  } catch (error) {
+    throw error;
+  }
+}
+// getProducts().then(console.log);
 
 // getProductById
 async function getProductById(id) {
@@ -84,6 +98,7 @@ async function getProductByCategoryId(category_id) {
 }
 // getProductByCategoryId(1).then(console.log);
 module.exports = {
+  getProducts,
   getProductByTitle,
   getProductById,
   createProduct,
