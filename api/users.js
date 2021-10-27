@@ -1,9 +1,7 @@
 const express = require("express");
 const { createUser, getUser, getUserById, getUserByEmail } = require("../db");
-const express = require("express");
 const userRouter = require("express").Router();
 const jwt = require("jsonwebtoken");
-const { getUserByEmail } = require("../db/users");
 const { JWT_SECRET } = "BryAshPete";
 
 userRouter.post("/register", async (req, res) => {

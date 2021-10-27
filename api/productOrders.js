@@ -1,6 +1,5 @@
 const express = require("express");
 const { createProductOrder } = require("../db");
-const express = require("express");
 const { getAllOrders } = require("../db/orders");
 const {
   getAllProductOrders,
@@ -8,7 +7,7 @@ const {
   getProductOrderById,
   getProductOrderByProductId,
 } = require("../db/productOrders");
-const productOrders = require("express").Router();
+const productOrdersRouter = require("express").Router();
 
 // createProductOrder
 productOrdersRouter.post("/", async (req, res) => {
