@@ -23,7 +23,6 @@ async function createProduct({
     const product = resp.rows[0];
     return product;
   } catch (error) {
-    console.log(error);
     throw error;
   }
 }
