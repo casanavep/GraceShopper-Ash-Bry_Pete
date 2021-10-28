@@ -13,15 +13,16 @@ const productOrdersRouter = require("express").Router();
 productOrdersRouter.post("/", async (req, res) => {
   try {
     const { product_id, order_id, purchase_price, quantity } = req.body;
-    const user = await createProductOrder({
+    const productOrder = await createProductOrder(
       product_id,
       order_id,
       purchase_price,
-      quantity,
-    });
+      quantity
+    );
     //console.log(user);
-    res.send({ order: order });
+    res.send(productOrder);
   } catch (error) {
+    console.log(error);
     res.status(401).send("order failed");
   }
 });
@@ -62,6 +63,7 @@ productOrdersRouter.get("/productid/:product_id ", async (req, res, next) => {
     const getOrders = await getProductOrderByProductId(product_id);
     res.send(getOrders);
   } catch (error) {
+    console.log(error);
     throw error;
   }
 });

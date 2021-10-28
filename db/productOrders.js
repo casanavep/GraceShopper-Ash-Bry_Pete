@@ -71,7 +71,7 @@ async function getProductOrderByProductId(product_id) {
       `,
       [product_id]
     );
-    return resp.rows;
+    return resp.rows[0];
   } catch (error) {
     throw error;
   }
