@@ -14,10 +14,11 @@ async function createOrder(user_id) {
     const order = resp.rows[0];
     return order;
   } catch (error) {
+    console.log(error);
     throw error;
   }
 }
-// createOrder(4).then(console.log);
+// createOrder(1).then(console.log);
 
 // getAllOrders
 async function getAllOrders() {

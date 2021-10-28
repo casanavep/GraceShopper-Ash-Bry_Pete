@@ -49,7 +49,7 @@ async function getProductByTitle(title) {
     throw error;
   }
 }
-getProductByTitle("muffler").then(console.log);
+// getProductByTitle("muffler").then(console.log);
 async function getProducts() {
   try {
     const resp = await client.query(
