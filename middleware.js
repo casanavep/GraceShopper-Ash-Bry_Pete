@@ -29,5 +29,5 @@ server.use("/api", apiRouter);
 
 server.listen(process.env.PORT, () => {
   //   client.connect();
-  console.log("The middleware server is up on port 3000");
+  console.log("The middleware server is up on port", process.env.PORT);
 });
