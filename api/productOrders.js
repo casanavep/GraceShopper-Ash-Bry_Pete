@@ -1,11 +1,12 @@
 const express = require("express");
-const { createProductOrder } = require("../db");
+
 const { getAllOrders } = require("../db/orders");
 const {
   getAllProductOrders,
   getProductOrderByOrderId,
   getProductOrderById,
   getProductOrderByProductId,
+  createProductOrder,
 } = require("../db/productOrders");
 const productOrdersRouter = require("express").Router();
 
@@ -13,12 +14,12 @@ const productOrdersRouter = require("express").Router();
 productOrdersRouter.post("/", async (req, res) => {
   try {
     const { product_id, order_id, purchase_price, quantity } = req.body;
-    const productOrder = await createProductOrder(
+    const productOrder = await createProductOrder({
       product_id,
       order_id,
       purchase_price,
-      quantity
-    );
+      quantity,
+    });
     //console.log(user);
     res.send(productOrder);
   } catch (error) {
@@ -57,13 +58,12 @@ productOrdersRouter.get("/orderid/:order_id", async (req, res, next) => {
   }
 });
 // getProductOrderByProductId
-productOrdersRouter.get("/productid/:product_id ", async (req, res, next) => {
+productOrdersRouter.get("/productid/:product_id", async (req, res, next) => {
   try {
     const { product_id } = req.params;
     const getOrders = await getProductOrderByProductId(product_id);
     res.send(getOrders);
   } catch (error) {
-    console.log(error);
     throw error;
   }
 });

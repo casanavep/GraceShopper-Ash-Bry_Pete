@@ -33,7 +33,7 @@ async function seedDB() {
           admin BOOLEAN NOT NULL DEFAULT false,
           country VARCHAR(255) NOT NULL,
           fullname VARCHAR(255) NOT NULL,
-          phone INT UNIQUE NOT NULL,
+          phone BIGSERIAL UNIQUE NOT NULL,
           address VARCHAR(255) NOT NULL,
           city VARCHAR(255) NOT NULL,
           state VARCHAR(255) NOT NULL,
