@@ -63,16 +63,16 @@ userRouter.get("/me", (req, res) => {
     res.status(404).send("you are not logged in");
   }
 });
-userRouter.get("/:username", async (req, res, next) => {
+userRouter.get("/username/:username", async (req, res, next) => {
   try {
-    const { username } = req.params;
-    const getUser = await getUserByEmail({ username });
-    res.send(getUser);
-  } catch ({ name, message }) {
-    next({ name, message });
+    const email = req.params.username;
+    const getUser = await getUserByEmail(email);
+    res.send({ getUser });
+  } catch (error) {
+    throw error;
   }
 });
-userRouter.get("/:id", async (req, res, next) => {
+userRouter.get("/id/:id", async (req, res, next) => {
   try {
     const { id } = req.params;
     const getUser = await getUserById(id);
