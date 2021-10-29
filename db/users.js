@@ -90,6 +90,7 @@ async function getUserById(id) {
     `,
       [id]
     );
+    delete resp.rows[0].password;
     return resp.rows[0];
   } catch (error) {
     throw error;
