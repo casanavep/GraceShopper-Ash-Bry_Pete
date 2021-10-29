@@ -40,14 +40,14 @@ userRouter.post("/register", async (req, res) => {
 });
 
 userRouter.post("/login", async (req, res) => {
-  const { username, password } = req.body;
+  const { email, password } = req.body;
 
   try {
     console.log("getting user information");
-    const user = await getUser(username, password);
+    const user = await getUser({ email, password });
 
     const token = jwt.sign(
-      { id: user.id, username: user.username },
+      { id: user.id, username: user.email },
       process.env.JWT_SECRET
     );
     res.send({ message: "you are logged in", token: token });
