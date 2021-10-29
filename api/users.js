@@ -2,7 +2,6 @@ const express = require("express");
 const { createUser, getUser, getUserById, getUserByEmail } = require("../db");
 const userRouter = require("express").Router();
 const jwt = require("jsonwebtoken");
-const { JWT_SECRET } = "BryAshPete";
 
 userRouter.post("/register", async (req, res) => {
   try {
@@ -34,18 +33,19 @@ userRouter.post("/register", async (req, res) => {
       zip,
     });
     //console.log(user);
-    res.send({ user: user });
+    res.send(user);
   } catch (error) {
-    res.status(401).send("username already exists");
+    throw error;
   }
 });
 
 userRouter.post("/login", async (req, res) => {
   const { username, password } = req.body;
+
   try {
-    //getting user info
-    const user = await getUser({ username, password });
-    //console.log(user);
+    console.log("getting user information");
+    const user = await getUser(username, password);
+
     const token = jwt.sign(
       { id: user.id, username: user.username },
       process.env.JWT_SECRET
