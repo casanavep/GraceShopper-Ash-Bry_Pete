@@ -56,7 +56,7 @@ async function createUser({
 //   zip: 78613,
 // }).then(console.log);
 
-async function getUser(email, password) {
+async function getUser({ email, password }) {
   // console.log("Getting User");
   try {
     const resp = await client.query(
