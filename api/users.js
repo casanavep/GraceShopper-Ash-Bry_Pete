@@ -32,10 +32,15 @@ userRouter.post("/register", async (req, res) => {
       state,
       zip,
     });
+    const token = jwt.sign(
+      { id: user.id, email: user.email },
+      process.env.JWT_SECRET
+    );
     //console.log(user);
-    res.send(user);
+    res.send({ message: "you are registered", token: token, user: user });
   } catch (error) {
-    throw error;
+    console.log(error);
+    res.status(409).send({ errorMessage: "Username already exists" });
   }
 });
 
@@ -47,12 +52,18 @@ userRouter.post("/login", async (req, res) => {
     const user = await getUser({ email, password });
 
     const token = jwt.sign(
-      { id: user.id, username: user.email },
+      { id: user.id, email: user.email },
       process.env.JWT_SECRET
     );
-    res.send({ message: "you are logged in", token: token });
+    res.send({
+      message: "you are logged in",
+
+      token: token,
+      user: user,
+    });
   } catch (error) {
-    res.status(409).send("incorrect information");
+    console.log(error);
+    return res.status(409).send({ errorMessage: "incorrect information" });
   }
 });
 userRouter.get("/me", (req, res) => {
@@ -60,12 +71,13 @@ userRouter.get("/me", (req, res) => {
   if (req.user) {
     res.send(req.user);
   } else {
-    res.status(404).send("you are not logged in");
+    return res.status(404).send("you are not logged in");
   }
 });
 userRouter.get("/username/:username", async (req, res, next) => {
   try {
     const email = req.params.username;
+    console.log(email);
     const getUser = await getUserByEmail(email);
     res.send({ getUser });
   } catch (error) {

@@ -11,19 +11,21 @@ const server = express();
 server.use(cors());
 server.use(express.json());
 
-// server.use(async (req, res, next) => {
-//   const token = req.headers.authorization
-//     ? req.headers.authorization.split(" ")[1]
-//     : null;
-//   if (!token) {
-//     return next();
-//   }
-//   const login = jwt.verify(token, process.env.JWT_SECRET);
-//   const user = await getUserByEmail(login.username);
-//   delete user.password;
-//   req.user = user;
-//   next();
-// });
+server.use(async (req, res, next) => {
+  const token = req.headers.authorization
+    ? req.headers.authorization.split(" ")[1]
+    : null;
+
+  console.log(token);
+  if (!token) {
+    return next();
+  }
+  const login = jwt.verify(token, process.env.JWT_SECRET);
+  const user = await getUserByEmail(login.email);
+  delete user.password;
+  req.user = user;
+  next();
+});
 
 server.use("/api", apiRouter);
 
