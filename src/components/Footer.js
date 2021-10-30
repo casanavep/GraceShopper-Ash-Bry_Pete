@@ -6,8 +6,7 @@ const Footer = () => {
   return (
     <>
       <h1>Footer</h1>
-      <Link to="tracking">Track Your Order</Link>
-
+      <Link to="tracking">Track Your Order</Link>|
       <Link to="contactus">Contact Us</Link>
     </>
   );

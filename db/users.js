@@ -67,6 +67,7 @@ async function getUser({ email, password }) {
       [email]
     );
     const user = resp.rows[0];
+    console.log(user);
     if (await bcrypt.compare(password, user.password)) {
       delete user.password;
       return user;

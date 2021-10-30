@@ -2,13 +2,21 @@ import { useState } from "react";
 
 import { Link } from "react-router-dom";
 
-const Navbar = () => {
+const Navbar = (props) => {
+  const handleSignOut = () => {
+    localStorage.removeItem("token");
+
+    props.setUser(null);
+  };
   const [searchValue, setSearchValue] = useState();
   return (
     <>
       <h1>Commerce Site</h1>
       <Link to="profile">Profile</Link>|<Link to="register">Register</Link>|
-      <Link to="signin">Sign In</Link>|
+      <Link to="signin">Sign In</Link>|{" "}
+      <Link onClick={handleSignOut} to="/">
+        Sign Out
+      </Link>
       <form>
         <input
           value={searchValue}

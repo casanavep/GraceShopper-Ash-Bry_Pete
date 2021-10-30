@@ -1,4 +1,5 @@
 const client = require("./client");
+const faker = require("faker");
 
 async function seedDB() {
   // client.connect();
@@ -13,6 +14,8 @@ async function seedDB() {
     CREATE TABLE categories (
             id SERIAL PRIMARY KEY,
             name VARCHAR(255) UNIQUE NOT NULL
+            
+            
         );
 
         CREATE TABLE products (
@@ -58,17 +61,35 @@ async function seedDB() {
  
    
         `);
-
-  const categories = [
-    { name: "auto" },
-    { name: "gym" },
-    { name: "electronics" },
+  let categories = [
+    { name: "Kids" },
+    { name: "Industrial" },
+    { name: "Baby" },
+    { name: "Clothing" },
+    { name: "Beauty" },
+    { name: "Books" },
+    { name: "Movies" },
+    { name: "Games" },
+    { name: "Electronics" },
+    { name: "Outdoors" },
+    { name: "Music" },
+    { name: "Sports" },
+    { name: "Toys" },
+    { name: "Home" },
+    { name: "Automotive" },
+    { name: "Tools" },
+    { name: "Shoes" },
+    { name: "Grocery" },
+    { name: "Jewelery" },
+    { name: "Computers" },
+    { name: "Garden" },
+    { name: "Health" },
   ];
-
   for (let category of categories) {
     await client.query(
       `
-    INSERT INTO categories(name) VALUES($1);
+    INSERT INTO categories(name) VALUES($1)
+    
     `,
       [category.name]
     );
