@@ -3,7 +3,7 @@ const { createUser, getUser, getUserById, getUserByEmail } = require("../db");
 const userRouter = require("express").Router();
 const jwt = require("jsonwebtoken");
 
-userRouter.post("/register", async (req, res) => {
+userRouter.post("/register", async (req, res, next) => {
   try {
     const {
       email,
@@ -18,7 +18,7 @@ userRouter.post("/register", async (req, res) => {
       zip,
     } = req.body;
     if (password.length < 8) {
-      return res.status(409).send("password is too short.");
+      return res.status(406).send("password is too short.");
     }
     const user = await createUser({
       email,
@@ -37,14 +37,14 @@ userRouter.post("/register", async (req, res) => {
       process.env.JWT_SECRET
     );
     //console.log(user);
+
     res.send({ message: "you are registered", token: token, user: user });
-  } catch (error) {
-    console.log(error);
-    res.status(409).send({ errorMessage: "Username already exists" });
+  } catch ({ name, message }) {
+    next({ name, message });
   }
 });
 
-userRouter.post("/login", async (req, res) => {
+userRouter.post("/login", async (req, res, next) => {
   const { email, password } = req.body;
 
   try {
@@ -61,9 +61,8 @@ userRouter.post("/login", async (req, res) => {
       token: token,
       user: user,
     });
-  } catch (error) {
-    console.log(error);
-    return res.status(409).send({ errorMessage: "incorrect information" });
+  } catch ({ name, message }) {
+    next({ name, message: "username or password is incorrect" });
   }
 });
 userRouter.get("/me", (req, res) => {
@@ -71,17 +70,17 @@ userRouter.get("/me", (req, res) => {
   if (req.user) {
     res.send(req.user);
   } else {
-    return res.status(404).send("you are not logged in");
+    return res.status(401).send("you are not logged in");
   }
 });
 userRouter.get("/username/:username", async (req, res, next) => {
   try {
     const email = req.params.username;
-    console.log(email);
+
     const getUser = await getUserByEmail(email);
     res.send({ getUser });
-  } catch (error) {
-    throw error;
+  } catch ({ name, message }) {
+    next({ name, message });
   }
 });
 userRouter.get("/id/:id", async (req, res, next) => {
