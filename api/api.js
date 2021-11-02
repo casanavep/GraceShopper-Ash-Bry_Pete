@@ -14,4 +14,8 @@ apiRouter.use("/products", productsRouter);
 apiRouter.use("/orders", ordersRouter);
 apiRouter.use("/productorders", productOrdersRouter);
 
+apiRouter.use((error, req, res, next) => {
+  res.send(error);
+});
+
 module.exports = apiRouter;

@@ -9,15 +9,15 @@ const {
 } = require("../db/products");
 const productsRouter = require("express").Router();
 
-productsRouter.get("/", async (req, res) => {
+productsRouter.get("/", async (req, res, next) => {
   try {
     const products = await getProducts();
     res.send(products);
-  } catch (error) {
-    res.send(error);
+  } catch ({ name, message }) {
+    next({ name, message });
   }
 });
-productsRouter.post("/", async (req, res) => {
+productsRouter.post("/", async (req, res, next) => {
   try {
     const { title, description, price, quantity, category_id } = req.body;
     const product = await createProduct({
@@ -29,8 +29,8 @@ productsRouter.post("/", async (req, res) => {
     });
     //console.log();
     res.send(product);
-  } catch (error) {
-    res.send(error);
+  } catch ({ name, message }) {
+    next({ name, message });
   }
 });
 
@@ -40,12 +40,12 @@ productsRouter.get("/title/:title", async (req, res, next) => {
   try {
     const resp = await getProductByTitle(title);
     if (resp.length === 0) {
-      res.send("No search results found");
+      return res.status(404).send(`${title} is not a product sold here`);
     } else {
       res.send(resp);
     }
-  } catch (error) {
-    res.send(error);
+  } catch ({ name, message }) {
+    next({ name, message });
   }
 });
 // getProductById
@@ -53,13 +53,12 @@ productsRouter.get("/productid/:id", async (req, res, next) => {
   const { id } = req.params;
   try {
     const resp = await getProductById(id);
-    if (resp.length === 0) {
-      res.send("No search results found");
-    } else {
-      res.send(resp);
+    if (!resp) {
+      res.status(404).send(`No product with the ID ${id} exists`);
     }
-  } catch (error) {
-    res.send(error);
+    res.send(resp);
+  } catch ({ name, message }) {
+    next({ name, message });
   }
 });
 // getProductByCategoryId
@@ -68,12 +67,12 @@ productsRouter.get("/category/:category_id", async (req, res, next) => {
   try {
     const resp = await getProductByCategoryId(category_id);
     if (resp.length === 0) {
-      res.send("No search results found");
+      res.status(404).send(`Category with the ID ${category_id} exists`);
     } else {
       res.send(resp);
     }
-  } catch (error) {
-    res.send(error);
+  } catch ({ name, message }) {
+    next(name, message);
   }
 });
 module.exports = productsRouter;
