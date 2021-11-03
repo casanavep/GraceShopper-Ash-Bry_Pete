@@ -11,7 +11,7 @@ const Navbar = (props) => {
   const [searchValue, setSearchValue] = useState();
   return (
     <>
-      <h1>Commerce Site</h1>
+      <h1>BAP Gaming</h1>
       <Link to="profile">Profile</Link>|<Link to="register">Register</Link>|
       <Link to="signin">Sign In</Link>|{" "}
       <Link onClick={handleSignOut} to="/">

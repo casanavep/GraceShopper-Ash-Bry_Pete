@@ -96,6 +96,7 @@ async function getProductByCategoryId(category_id) {
   }
 }
 // getProductByCategoryId(1).then(console.log);
+
 module.exports = {
   getProducts,
   getProductByTitle,
