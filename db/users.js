@@ -117,7 +117,36 @@ async function getUserByEmail(email) {
 // getUserByEmail("bob@aol.com").then(console.log);
 //  Create a patch function to update users
 
+async function destroyUser(id) {
+  try {
+    // console.log("destroying order");
+    await client.query(
+      `
+    DELETE FROM orders WHERE user_id = $1
+    `,
+      [id]
+    );
+    // console.log("destroying user");
+    const {
+      rows: [user],
+    } = await client.query(
+      `
+      DELETE FROM users WHERE id = $1
+      RETURNING *;
+    `,
+      [id]
+    );
+    // console.log("finished");
+    return user;
+  } catch (error) {
+    throw error;
+  }
+}
+// destroyUser(3).then(console.log);
+
+//need to add patches
 module.exports = {
+  destroyUser,
   createUser,
   getUser,
   getUserById,

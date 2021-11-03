@@ -1,5 +1,6 @@
 const client = require("./client");
 const faker = require("faker");
+const { createUser } = require("./users");
 
 async function seedDB() {
   // client.connect();
@@ -13,14 +14,16 @@ async function seedDB() {
     
     CREATE TABLE categories (
             id SERIAL PRIMARY KEY,
-            name VARCHAR(255) UNIQUE NOT NULL
+            platform VARCHAR(255) NOT NULL,
+            console_type VARCHAR(255) UNIQUE NOT NULL 
             
             
         );
 
         CREATE TABLE products (
+
             id SERIAL PRIMARY KEY,
-            title VARCHAR(255) UNIQUE NOT NULL,
+            title VARCHAR(255) NOT NULL,
             description VARCHAR(255),
             price DEC (8,2),
             quantity INT NOT NULL,
@@ -62,53 +65,660 @@ async function seedDB() {
    
         `);
   let categories = [
-    { name: "Kids" },
-    { name: "Industrial" },
-    { name: "Baby" },
-    { name: "Clothing" },
-    { name: "Beauty" },
-    { name: "Books" },
-    { name: "Movies" },
-    { name: "Games" },
-    { name: "Electronics" },
-    { name: "Outdoors" },
-    { name: "Music" },
-    { name: "Sports" },
-    { name: "Toys" },
-    { name: "Home" },
-    { name: "Automotive" },
-    { name: "Tools" },
-    { name: "Shoes" },
-    { name: "Grocery" },
-    { name: "Jewelery" },
-    { name: "Computers" },
-    { name: "Garden" },
-    { name: "Health" },
+    { platform: "PC", console_type: "PC" },
+    { platform: "Console", console_type: "XBox" },
+    { platform: "Console", console_type: "Playstation" },
+    { platform: "Console", console_type: "Nintendo Switch" },
+    { platform: "Console", console_type: "Nintendo 64" },
+    { platform: "Console", console_type: "Nintendo GameCube" },
+    { platform: "Console", console_type: "Sega Dreamcast" },
   ];
   for (let category of categories) {
     await client.query(
       `
-    INSERT INTO categories(name) VALUES($1)
+    INSERT INTO categories(platform, console_type) VALUES($1, $2)
     
     `,
-      [category.name]
+      [category.platform, category.console_type]
     );
   }
 
   const products = [
     {
-      title: "muffler",
-      description: "It's a muffler",
-      price: 35.99,
-      quantity: 150,
+      title: "Mortal Kombat",
+      description: "Beat up ficitonal characters. violent. rated M",
+      price: 20.99,
+      quantity: 50,
       categoryId: 1,
     },
     {
-      title: "dumbbells",
+      title: "Mortal Kombat",
+      description: "Beat up ficitonal characters. violent. rated M",
+      price: 20.99,
+      quantity: 50,
+      categoryId: 2,
+    },
+    {
+      title: "Mortal Kombat",
+      description: "Beat up ficitonal characters. violent. rated M",
+      price: 20.99,
+      quantity: 50,
+      categoryId: 3,
+    },
+    {
+      title: "Mortal Kombat",
+      description: "Beat up ficitonal characters. violent. rated M",
+      price: 20.99,
+      quantity: 50,
+      categoryId: 7,
+    },
+    {
+      title: "Mortal Kombat 4",
+      description:
+        "Beat up ficitonal characters with better graphics. violent. rated M",
+      price: 25.99,
+      quantity: 50,
+      categoryId: 1,
+    },
+    {
+      title: "Mortal Kombat 4",
+      description:
+        "Beat up ficitonal characters with better graphics. violent. rated M",
+      price: 25.99,
+      quantity: 50,
+      categoryId: 3,
+    },
+    {
+      title: "Mortal Kombat 4",
+      description:
+        "Beat up ficitonal characters with better graphics. violent. rated M",
+      price: 25.99,
+      quantity: 50,
+      categoryId: 5,
+    },
+    {
+      title: "Mortal Kombat 11",
+      description:
+        "Beat up ficitonal characters with incredible graphics. very violent and bloody. rated M",
+      price: 35.99,
+      quantity: 5000,
+      categoryId: 3,
+    },
+    {
+      title: "Mortal Kombat 11",
+      description:
+        "Beat up ficitonal characters with incredible graphics. very violent and bloody. rated M",
+      price: 35.99,
+      quantity: 5000,
+      categoryId: 1,
+    },
+    {
+      title: "Mortal Kombat 11",
+      description:
+        "Beat up ficitonal characters with incredible graphics. very violent and bloody. rated M",
+      price: 25.99,
+      quantity: 5000,
+      categoryId: 2,
+    },
+    {
+      title: "Mortal Kombat 11",
+      description:
+        "Beat up ficitonal characters with incredible graphics. very violent and bloody. rated M",
+      price: 35.99,
+      quantity: 5000,
+      categoryId: 4,
+    },
+    {
+      title: "Fallout",
+      description:
+        "Survive in Southern California 84 years after nuclear fallout. Rated M",
+      price: 25.99,
+      quantity: 57,
+      categoryId: 1,
+    },
+    {
+      title: "Fallout 2",
+      description:
+        "Survive in Southern Oregon 164 years after nuclear fallout. Rated M",
+      price: 30.99,
+      quantity: 107,
+      categoryId: 1,
+    },
+    {
+      title: "Fallout 3",
+      description:
+        "Survive in Washington DC 200 years after nuclear fallout. Rated M",
+      price: 35.99,
+      quantity: 206,
+      categoryId: 1,
+    },
+    {
+      title: "Fallout 3",
+      description:
+        "Survive in Washington DC 200 years after nuclear fallout. Rated M",
+      price: 35.99,
+      quantity: 203,
+      categoryId: 2,
+    },
+    {
+      title: "Fallout 3",
+      description:
+        "Survive in Washington DC 200 years after nuclear fallout. Rated M",
+      price: 35.99,
+      quantity: 203,
+      categoryId: 3,
+    },
+    {
+      title: "Fallout 4",
+      description: "Survive in Boston 210 years after nuclear fallout. Rated M",
+      price: 45.99,
+      quantity: 203,
+      categoryId: 3,
+    },
+    {
+      title: "Fallout 4",
+      description: "Survive in Boston 210 years after nuclear fallout. Rated M",
+      price: 45.99,
+      quantity: 203,
+      categoryId: 2,
+    },
+    {
+      title: "Fallout 4",
+      description: "Survive in Boston 210 years after nuclear fallout. Rated M",
+      price: 45.99,
+      quantity: 203,
+      categoryId: 1,
+    },
+    {
+      title: "Gears of War",
+      description: "Save humanity against a horde of monsters",
+      price: 23.99,
+      quantity: 63,
+      categoryId: 1,
+    },
+    {
+      title: "Gears of War",
+      description: "Save humanity against a horde of monsters",
+      price: 23.99,
+      quantity: 63,
+      categoryId: 2,
+    },
+    {
+      title: "Gears of War",
+      description: "Save humanity against a horde of monsters",
+      price: 23.99,
+      quantity: 63,
+      categoryId: 3,
+    },
+    {
+      title: "FIFA",
       description: "20 lbs",
       price: 15.5,
       quantity: 300,
       categoryId: 2,
+    },
+    {
+      title: "Gears of War",
+      description: "it runs",
+      price: 150.37,
+      quantity: 43,
+      categoryId: 3,
+    },
+
+    {
+      title: "NBA 2k",
+      description: "it runs",
+      price: 150.37,
+      quantity: 43,
+      categoryId: 3,
+    },
+    {
+      title: "Call of Duty",
+      description: "it runs",
+      price: 150.37,
+      quantity: 43,
+      categoryId: 3,
+    },
+    {
+      title: "Diablo",
+      description: "it runs",
+      price: 150.37,
+      quantity: 43,
+      categoryId: 3,
+    },
+    {
+      title: "Fortnight",
+      description: "it runs",
+      price: 150.37,
+      quantity: 43,
+      categoryId: 3,
+    },
+    {
+      title: "Overwatch",
+      description: "it runs",
+      price: 150.37,
+      quantity: 43,
+      categoryId: 3,
+    },
+    {
+      title: "Smash Bros",
+      description: "it runs",
+      price: 150.37,
+      quantity: 43,
+      categoryId: 3,
+    },
+    {
+      title: "Star Fox",
+      description: "it runs",
+      price: 150.37,
+      quantity: 43,
+      categoryId: 3,
+    },
+    {
+      title: "PUBG",
+      description: "it runs",
+      price: 150.37,
+      quantity: 43,
+      categoryId: 3,
+    },
+    {
+      title: "League of Legends",
+      description: "it runs",
+      price: 150.37,
+      quantity: 43,
+      categoryId: 3,
+    },
+    {
+      title: "Minecraft",
+      description: "it runs",
+      price: 150.37,
+      quantity: 43,
+      categoryId: 3,
+    },
+    {
+      title: "Elder Scrolls",
+      description: "it runs",
+      price: 150.37,
+      quantity: 43,
+      categoryId: 3,
+    },
+    {
+      title: "Apex Legends",
+      description: "it runs",
+      price: 150.37,
+      quantity: 43,
+      categoryId: 3,
+    },
+    {
+      title: "Final Fantasy",
+      description: "it runs",
+      price: 150.37,
+      quantity: 43,
+      categoryId: 3,
+    },
+    {
+      title: "Super Mario",
+      description: "it runs",
+      price: 150.37,
+      quantity: 43,
+      categoryId: 3,
+    },
+    {
+      title: "Mario Kart",
+      description: "it runs",
+      price: 150.37,
+      quantity: 43,
+      categoryId: 3,
+    },
+    {
+      title: "Halo",
+      description: "it runs",
+      price: 150.37,
+      quantity: 43,
+      categoryId: 3,
+    },
+    {
+      title: "007 Golden Eye",
+      description: "it runs",
+      price: 150.37,
+      quantity: 43,
+      categoryId: 3,
+    },
+    {
+      title: "Zelda",
+      description: "it runs",
+      price: 150.37,
+      quantity: 43,
+      categoryId: 3,
+    },
+    {
+      title: "Sonic",
+      description: "it runs",
+      price: 150.37,
+      quantity: 43,
+      categoryId: 3,
+    },
+    {
+      title: "Crazy taxi",
+      description: "it runs",
+      price: 150.37,
+      quantity: 43,
+      categoryId: 3,
+    },
+    {
+      title: "Half-life",
+      description: "it runs",
+      price: 150.37,
+      quantity: 43,
+      categoryId: 3,
+    },
+    {
+      title: "Resident Evil",
+      description: "it runs",
+      price: 150.37,
+      quantity: 43,
+      categoryId: 3,
+    },
+    {
+      title: "Pokemon",
+      description: "it runs",
+      price: 150.37,
+      quantity: 43,
+      categoryId: 3,
+    },
+    {
+      title: "Animal Crossing",
+      description: "it runs",
+      price: 150.37,
+      quantity: 43,
+      categoryId: 3,
+    },
+    {
+      title: "Sims",
+      description: "it runs",
+      price: 150.37,
+      quantity: 43,
+      categoryId: 3,
+    },
+    {
+      title: "Computer",
+      description: "it runs",
+      price: 150.37,
+      quantity: 43,
+      categoryId: 3,
+    },
+    {
+      title: "Computer",
+      description: "it runs",
+      price: 150.37,
+      quantity: 43,
+      categoryId: 3,
+    },
+    {
+      title: "Computer",
+      description: "it runs",
+      price: 150.37,
+      quantity: 43,
+      categoryId: 3,
+    },
+    {
+      title: "Computer",
+      description: "it runs",
+      price: 150.37,
+      quantity: 43,
+      categoryId: 3,
+    },
+    {
+      title: "Computer",
+      description: "it runs",
+      price: 150.37,
+      quantity: 43,
+      categoryId: 3,
+    },
+    {
+      title: "Computer",
+      description: "it runs",
+      price: 150.37,
+      quantity: 43,
+      categoryId: 3,
+    },
+    {
+      title: "Computer",
+      description: "it runs",
+      price: 150.37,
+      quantity: 43,
+      categoryId: 3,
+    },
+    {
+      title: "Computer",
+      description: "it runs",
+      price: 150.37,
+      quantity: 43,
+      categoryId: 3,
+    },
+    {
+      title: "Computer",
+      description: "it runs",
+      price: 150.37,
+      quantity: 43,
+      categoryId: 3,
+    },
+    {
+      title: "Computer",
+      description: "it runs",
+      price: 150.37,
+      quantity: 43,
+      categoryId: 3,
+    },
+    {
+      title: "Computer",
+      description: "it runs",
+      price: 150.37,
+      quantity: 43,
+      categoryId: 3,
+    },
+    {
+      title: "Computer",
+      description: "it runs",
+      price: 150.37,
+      quantity: 43,
+      categoryId: 3,
+    },
+    {
+      title: "Computer",
+      description: "it runs",
+      price: 150.37,
+      quantity: 43,
+      categoryId: 3,
+    },
+    {
+      title: "Computer",
+      description: "it runs",
+      price: 150.37,
+      quantity: 43,
+      categoryId: 3,
+    },
+    {
+      title: "Computer",
+      description: "it runs",
+      price: 150.37,
+      quantity: 43,
+      categoryId: 3,
+    },
+    {
+      title: "Computer",
+      description: "it runs",
+      price: 150.37,
+      quantity: 43,
+      categoryId: 3,
+    },
+    {
+      title: "Computer",
+      description: "it runs",
+      price: 150.37,
+      quantity: 43,
+      categoryId: 3,
+    },
+    {
+      title: "Computer",
+      description: "it runs",
+      price: 150.37,
+      quantity: 43,
+      categoryId: 3,
+    },
+    {
+      title: "Computer",
+      description: "it runs",
+      price: 150.37,
+      quantity: 43,
+      categoryId: 3,
+    },
+    {
+      title: "Computer",
+      description: "it runs",
+      price: 150.37,
+      quantity: 43,
+      categoryId: 3,
+    },
+    {
+      title: "Computer",
+      description: "it runs",
+      price: 150.37,
+      quantity: 43,
+      categoryId: 3,
+    },
+    {
+      title: "Computer",
+      description: "it runs",
+      price: 150.37,
+      quantity: 43,
+      categoryId: 3,
+    },
+    {
+      title: "Computer",
+      description: "it runs",
+      price: 150.37,
+      quantity: 43,
+      categoryId: 3,
+    },
+    {
+      title: "Computer",
+      description: "it runs",
+      price: 150.37,
+      quantity: 43,
+      categoryId: 3,
+    },
+    {
+      title: "Computer",
+      description: "it runs",
+      price: 150.37,
+      quantity: 43,
+      categoryId: 3,
+    },
+    {
+      title: "Computer",
+      description: "it runs",
+      price: 150.37,
+      quantity: 43,
+      categoryId: 3,
+    },
+    {
+      title: "Computer",
+      description: "it runs",
+      price: 150.37,
+      quantity: 43,
+      categoryId: 3,
+    },
+    {
+      title: "Computer",
+      description: "it runs",
+      price: 150.37,
+      quantity: 43,
+      categoryId: 3,
+    },
+    {
+      title: "Computer",
+      description: "it runs",
+      price: 150.37,
+      quantity: 43,
+      categoryId: 3,
+    },
+    {
+      title: "Computer",
+      description: "it runs",
+      price: 150.37,
+      quantity: 43,
+      categoryId: 3,
+    },
+    {
+      title: "Computer",
+      description: "it runs",
+      price: 150.37,
+      quantity: 43,
+      categoryId: 3,
+    },
+    {
+      title: "Computer",
+      description: "it runs",
+      price: 150.37,
+      quantity: 43,
+      categoryId: 3,
+    },
+    {
+      title: "Computer",
+      description: "it runs",
+      price: 150.37,
+      quantity: 43,
+      categoryId: 3,
+    },
+    {
+      title: "Computer",
+      description: "it runs",
+      price: 150.37,
+      quantity: 43,
+      categoryId: 3,
+    },
+    {
+      title: "Computer",
+      description: "it runs",
+      price: 150.37,
+      quantity: 43,
+      categoryId: 3,
+    },
+    {
+      title: "Computer",
+      description: "it runs",
+      price: 150.37,
+      quantity: 43,
+      categoryId: 3,
+    },
+    {
+      title: "Computer",
+      description: "it runs",
+      price: 150.37,
+      quantity: 43,
+      categoryId: 3,
+    },
+    {
+      title: "Computer",
+      description: "it runs",
+      price: 150.37,
+      quantity: 43,
+      categoryId: 3,
+    },
+    {
+      title: "Computer",
+      description: "it runs",
+      price: 150.37,
+      quantity: 43,
+      categoryId: 3,
+    },
+    {
+      title: "Computer",
+      description: "it runs",
+      price: 150.37,
+      quantity: 43,
+      categoryId: 3,
     },
     {
       title: "Computer",
@@ -174,23 +784,18 @@ async function seedDB() {
   ];
 
   for (let user of users) {
-    await client.query(
-      `
-    INSERT INTO users(email, password, admin,  country, fullname, phone, address, city, state, zip) VALUES($1,$2,$3,$4,$5,$6,$7,$8,$9, $10)
-    `,
-      [
-        user.email,
-        user.password,
-        user.admin,
-        user.country,
-        user.fullname,
-        user.phone,
-        user.address,
-        user.city,
-        user.state,
-        user.zip,
-      ]
-    );
+    await createUser({
+      email: user.email,
+      password: user.password,
+      admin: user.admin,
+      country: user.country,
+      fullname: user.fullname,
+      phone: user.phone,
+      address: user.address,
+      city: user.city,
+      state: user.state,
+      zip: user.zip,
+    });
   }
 
   const orders = [
