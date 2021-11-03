@@ -97,10 +97,37 @@ async function getProductByCategoryId(category_id) {
 }
 // getProductByCategoryId(1).then(console.log);
 
+async function destroyProducts(id) {
+  try {
+    // console.log("destroying product_order");
+    await client.query(
+      `
+    DELETE FROM products_orders WHERE product_id = $1
+    RETURNING *;
+    `,
+      [id]
+    );
+    // console.log("destroying product");
+    const resp = await client.query(
+      `
+    DELETE FROM products WHERE id = $1
+    RETURNING *;
+    `,
+      [id]
+    );
+    // console.log("finsihed");
+  } catch (error) {
+    throw error;
+  }
+}
+// destroyProducts(1).then(console.log);
+
+//need to add patches
 module.exports = {
   getProducts,
   getProductByTitle,
   getProductById,
   createProduct,
   getProductByCategoryId,
+  destroyProducts,
 };

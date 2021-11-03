@@ -94,7 +94,28 @@ async function getProductOrderByOrderId(order_id) {
   }
 }
 // getProductOrderByOrderId(1).then(console.log);
+
+async function destroyProductOrder(id) {
+  try {
+    const {
+      rows: [order],
+    } = await client.query(
+      `
+      DELETE FROM products_orders WHERE id = $1
+      RETURNING *;
+
+      `,
+      [id]
+    );
+
+    return order;
+  } catch (error) {
+    throw error;
+  }
+}
+// destroyProductOrder(1).then(console.log);
 module.exports = {
+  destroyProductOrder,
   createProductOrder,
   getAllProductOrders,
   getProductOrderById,
