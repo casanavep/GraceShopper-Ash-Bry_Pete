@@ -46,8 +46,26 @@ async function getCategoryByID(id) {
 }
 
 // getCategoryByID(7).then(console.log);
+
+async function getCategoryByPlatform(platform) {
+  try {
+    const resp = await client.query(
+      `
+        SELECT * FROM categories WHERE lower(platform) LIKE $1
+        `,
+      [`%` + platform + `%`]
+    );
+
+    return resp.rows;
+  } catch (error) {
+    throw error;
+  }
+}
+
+// getCategoryByPlatform("nintendo").then(console.log);
 module.exports = {
   getAllCategories,
   createCategory,
   getCategoryByID,
+  getCategoryByPlatform,
 };

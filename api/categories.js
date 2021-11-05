@@ -2,6 +2,7 @@ const {
   getAllCategories,
   createCategory,
   getCategoryByID,
+  getCategoryByPlatform,
 } = require("../db/categories");
 
 const categoryRouter = require("express").Router();
@@ -26,12 +27,26 @@ categoryRouter.post("/", async (req, res, next) => {
   }
 });
 // get category by ID
-categoryRouter.get("/:id", async (req, res, next) => {
+categoryRouter.get("/categoryid/:id", async (req, res, next) => {
   try {
     const { id } = req.params;
     const category = await getCategoryByID(id);
     if (!category) {
       res.status(404).send(`No category with the ID ${id} exists`);
+    }
+    res.send(category);
+  } catch ({ name, message }) {
+    next({ name, message });
+  }
+});
+
+//get category by platform
+categoryRouter.get("/platform/:platform", async (req, res, next) => {
+  try {
+    const { platform } = req.params;
+    const category = await getCategoryByPlatform(platform);
+    if (category.length === 0) {
+      res.status(404).send(`We do not have ${platform} games or products`);
     }
     res.send(category);
   } catch ({ name, message }) {
