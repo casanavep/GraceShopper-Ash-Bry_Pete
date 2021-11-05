@@ -1,5 +1,6 @@
 const express = require("express");
 const apiRouter = express.Router();
+const cors = require("cors");
 const {} = require("../db");
 
 const usersRouter = require("./users");
@@ -10,6 +11,8 @@ const productOrdersRouter = require("./productOrders");
 const categoyRouter = require("./categories");
 const categoryRouter = require("./categories");
 
+apiRouter.use(cors());
+apiRouter.use(express.json());
 apiRouter.use("/users", usersRouter);
 apiRouter.use("/products", productsRouter);
 // apiRouter.use("/reviews", reviewsRouter);
