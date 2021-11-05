@@ -14,11 +14,8 @@ async function seedDB() {
     
     CREATE TABLE categories (
             id SERIAL PRIMARY KEY,
-            platform VARCHAR(255) NOT NULL,
-            console_type VARCHAR(255) NOT NULL 
-            
-            
-        );
+            platform VARCHAR(255) NOT NULL
+            );
 
         CREATE TABLE products (
 
@@ -27,7 +24,8 @@ async function seedDB() {
             description VARCHAR(255),
             price DEC (8,2),
             quantity INT NOT NULL,
-            category_id INT REFERENCES categories(id)
+            category_id INT REFERENCES categories(id),
+            image VARCHAR(255)
             
 
         );
@@ -65,21 +63,21 @@ async function seedDB() {
    
         `);
   let categories = [
-    { platform: "PC", console_type: "PC" },
-    { platform: "Console", console_type: "XBox" },
-    { platform: "Console", console_type: "Playstation" },
-    { platform: "Console", console_type: "Nintendo Switch" },
-    { platform: "Console", console_type: "Nintendo 64" },
-    { platform: "Console", console_type: "Nintendo GameCube" },
-    { platform: "Console", console_type: "Sega Dreamcast" },
+    { platform: "PC" },
+    { platform: "XBox" },
+    { platform: "Playstation" },
+    { platform: "Nintendo Switch" },
+    { platform: "Nintendo 64" },
+    { platform: "Nintendo GameCube" },
+    { platform: "Sega Dreamcast" },
   ];
   for (let category of categories) {
     await client.query(
       `
-    INSERT INTO categories(platform, console_type) VALUES($1, $2)
+    INSERT INTO categories(platform) VALUES($1)
     
     `,
-      [category.platform, category.console_type]
+      [category.platform]
     );
   }
 
@@ -1109,3 +1107,17 @@ seedDB();
 //         rating INT NOT NULL
 
 //     );
+
+//uploading pictures of products
+//  -in React, use input tag with type file, in onChange save e.target.files[0] in state
+//  -in form onSubmit want to send to server using POST request (fetch, method: POST)
+/*  
+when were sending a file, we have to use form data instead of json.stringify 
+(const formData = new FormData()
+formData.append())
+
+npm i multer, const upload = multer({dest: "public/images"}), upload.single("image (name for formData)")
+
+DATABASE: 
+  -images are VARCHAR
+*/
