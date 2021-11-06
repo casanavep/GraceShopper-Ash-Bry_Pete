@@ -1,9 +1,9 @@
-import Chart from "../../components/chart/Chart";
-import FeaturedInfo from "../../components/featuredInfo/FeaturedInfo";
+import Chart from "../../adminComponents/chart/Chart
+import FeaturedInfo from "../../adminComponents/featuredInfo/FeaturedInfo";
 import "./home.css";
-import { userData } from "../../dummyData";
-import WidgetSm from "../../components/widgetSm/WidgetSm";
-import WidgetLg from "../../components/widgetLg/WidgetLg";
+import { userData } from "../../adminComponents/dummyData";
+import WidgetSm from "../../adminComponents/widgetSm/WidgetSm";
+import WidgetLg from "../../adminComponents/widgetLg/WidgetLg";
 
 export default function Home() {
   return (
