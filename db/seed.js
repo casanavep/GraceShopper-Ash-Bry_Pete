@@ -25,7 +25,8 @@ async function seedDB() {
             price DEC (8,2),
             quantity INT NOT NULL,
             category_id INT REFERENCES categories(id),
-            image VARCHAR(255)
+            
+            active BOOLEAN NOT NULL DEFAULT true
             
 
         );
@@ -41,7 +42,8 @@ async function seedDB() {
           address VARCHAR(255) NOT NULL,
           city VARCHAR(255) NOT NULL,
           state VARCHAR(255) NOT NULL,
-          zip INT NOT NULL
+          zip INT NOT NULL,
+          active BOOLEAN NOT NULL DEFAULT true
       );
 
       CREATE TABLE orders (

@@ -63,9 +63,35 @@ async function getCategoryByPlatform(platform) {
 }
 
 // getCategoryByPlatform("nintendo").then(console.log);
+async function destroyCategory(id) {
+  try {
+    await client.query(
+      `
+    DELETE FROM products WHERE category_id = $1
+    RETURNING *
+    `,
+      [id]
+    );
+
+    const resp = await client.query(
+      `
+    DELETE FROM categories WHERE id=$1
+    RETURNING *
+    `,
+      [id]
+    );
+
+    return resp.rows;
+  } catch (error) {
+    throw error;
+  }
+}
+
+// destroyCategory(1).then(console.log);
 module.exports = {
   getAllCategories,
   createCategory,
   getCategoryByID,
   getCategoryByPlatform,
+  destroyCategory,
 };

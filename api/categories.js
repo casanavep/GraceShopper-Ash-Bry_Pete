@@ -3,6 +3,7 @@ const {
   createCategory,
   getCategoryByID,
   getCategoryByPlatform,
+  destroyCategory,
 } = require("../db/categories");
 
 const categoryRouter = require("express").Router();
@@ -54,4 +55,17 @@ categoryRouter.get("/platform/:platform", async (req, res, next) => {
   }
 });
 
+//delete category
+categoryRouter.delete("/categoryid/:id", async (req, res, next) => {
+  try {
+    const { id } = req.params;
+    const resp = await destroyCategory(id);
+    if (resp.length === 0) {
+      res.status(404).send(`Category with ID ${id} does not exist`);
+    }
+    res.send(resp);
+  } catch ({ name, message }) {
+    next({ name, message });
+  }
+});
 module.exports = categoryRouter;
