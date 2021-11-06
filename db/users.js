@@ -129,7 +129,6 @@ async function getUserByEmail(email) {
   }
 }
 // getUserByEmail("bob@aol.com").then(console.log);
-//  Create a patch function to update users
 
 async function destroyUser(id) {
   try {
@@ -158,8 +157,148 @@ async function destroyUser(id) {
 }
 // destroyUser(3).then(console.log);
 
-//need to add patches
+async function updateUser({
+  id,
+  email,
+  password,
+  admin,
+  country,
+  fullname,
+  phone,
+  address,
+  city,
+  state,
+  zip,
+  active,
+}) {
+  try {
+    if (email != undefined) {
+      await client.query(
+        `
+      UPDATE users
+      SET email = $1
+      WHERE id = $2
+      `,
+        [email, id]
+      );
+    }
+    if (password != undefined) {
+      await client.query(
+        `
+      UPDATE users
+      SET pasword = $1
+      WHERE id = $2
+      `,
+        [password, id]
+      );
+    }
+    if (admin != undefined) {
+      await client.query(
+        `
+      UPDATE users
+      SET admin = $1
+      WHERE id = $2
+      `,
+        [admin, id]
+      );
+    }
+    if (country != undefined) {
+      await client.query(
+        `
+      UPDATE users
+      SET country = $1
+      WHERE id = $2
+      `,
+        [country, id]
+      );
+    }
+    if (fullname != undefined) {
+      await client.query(
+        `
+      UPDATE users
+      SET fullname = $1
+      WHERE id = $2
+      `,
+        [fullname, id]
+      );
+    }
+    if (phone != undefined) {
+      await client.query(
+        `
+      UPDATE users
+      SET phone = $1
+      WHERE id = $2
+      `,
+        [phone, id]
+      );
+    }
+    if (address != undefined) {
+      await client.query(
+        `
+      UPDATE users
+      SET address = $1
+      WHERE id = $2
+      `,
+        [address, id]
+      );
+    }
+    if (city != undefined) {
+      await client.query(
+        `
+      UPDATE users
+      SET city = $1
+      WHERE id = $2
+      `,
+        [city, id]
+      );
+    }
+    if (state != undefined) {
+      await client.query(
+        `
+      UPDATE users
+      SET state = $1
+      WHERE id = $2
+      `,
+        [state, id]
+      );
+    }
+    if (zip != undefined) {
+      await client.query(
+        `
+      UPDATE users
+      SET zip = $1
+      WHERE id = $2
+      `,
+        [zip, id]
+      );
+    }
+    if (active != undefined) {
+      await client.query(
+        `
+      UPDATE users
+      SET email = $1
+      WHERE id = $2
+      `,
+        [active, id]
+      );
+    }
 
+    const {
+      rows: [user],
+    } = await client.query(
+      `
+    SELECT * FROM users WHERE id=$1
+    `,
+      [id]
+    );
+    return user;
+  } catch (error) {
+    throw error;
+  }
+}
+// updateUser({ id: 3, email: "brian@aol.com", city: "Baton Rouge" }).then(
+//   console.log
+// );
 module.exports = {
   destroyUser,
   createUser,
@@ -167,4 +306,5 @@ module.exports = {
   getUserById,
   getUserByEmail,
   getAllUsers,
+  updateUser,
 };
