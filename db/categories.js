@@ -46,8 +46,52 @@ async function getCategoryByID(id) {
 }
 
 // getCategoryByID(7).then(console.log);
+
+async function getCategoryByPlatform(platform) {
+  try {
+    const resp = await client.query(
+      `
+        SELECT * FROM categories WHERE lower(platform) LIKE $1
+        `,
+      [`%` + platform + `%`]
+    );
+
+    return resp.rows;
+  } catch (error) {
+    throw error;
+  }
+}
+
+// getCategoryByPlatform("nintendo").then(console.log);
+async function destroyCategory(id) {
+  try {
+    await client.query(
+      `
+    DELETE FROM products WHERE category_id = $1
+    RETURNING *
+    `,
+      [id]
+    );
+
+    const resp = await client.query(
+      `
+    DELETE FROM categories WHERE id=$1
+    RETURNING *
+    `,
+      [id]
+    );
+
+    return resp.rows;
+  } catch (error) {
+    throw error;
+  }
+}
+
+// destroyCategory(1).then(console.log);
 module.exports = {
   getAllCategories,
   createCategory,
   getCategoryByID,
+  getCategoryByPlatform,
+  destroyCategory,
 };

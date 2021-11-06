@@ -115,6 +115,7 @@ async function destroyProducts(id) {
     `,
       [id]
     );
+    return resp.rows[0];
     // console.log("finsihed");
   } catch (error) {
     throw error;
@@ -123,6 +124,86 @@ async function destroyProducts(id) {
 // destroyProducts(1).then(console.log);
 
 //need to add patches
+
+async function updateProduct({
+  id,
+  title,
+  description,
+  price,
+  quantity,
+  category_id,
+  active,
+}) {
+  try {
+    if (title != undefined) {
+      await client.query(
+        `
+      UPDATE products
+      SET title = $1
+      WHERE id = $2
+      `,
+        [title, id]
+      );
+    }
+    if (description != undefined) {
+      await client.query(
+        `
+      UPDATE products
+      SET description = $1
+      WHERE id = $2
+      `,
+        [description, id]
+      );
+    }
+    if (price != undefined) {
+      await client.query(
+        `
+      UPDATE products
+      SET price = $1
+      WHERE id = $2
+      `,
+        [price, id]
+      );
+    }
+    if (quantity != undefined) {
+      await client.query(
+        `
+      UPDATE products
+      SET quantity = $1
+      WHERE id = $2
+      `,
+        [quantity, id]
+      );
+    }
+    if (category_id != undefined) {
+      await client.query(
+        `
+      UPDATE products
+      SET category_id = $1
+      WHERE id = $2
+      `,
+        [category_id, id]
+      );
+    }
+    if (active != undefined) {
+      await client.query(
+        `
+      UPDATE products
+      SET active = $1
+      WHERE id = $2
+      `,
+        [active, id]
+      );
+    }
+    const {
+      rows: [product],
+    } = await client.query(`SELECT * FROM products WHERE id = $1`, [id]);
+    return product;
+  } catch (error) {
+    throw error;
+  }
+}
+// updateProduct({ id: 1, price: 15.99 }).then(console.log);
 module.exports = {
   getProducts,
   getProductByTitle,
@@ -130,4 +211,5 @@ module.exports = {
   createProduct,
   getProductByCategoryId,
   destroyProducts,
+  updateProduct,
 };

@@ -3,6 +3,7 @@ const {
   getOrderByOrderId,
   getAllOrders,
   createOrder,
+  updateOrder,
 } = require("../db/orders");
 const ordersRouter = require("express").Router();
 
@@ -53,5 +54,17 @@ ordersRouter.get("/userid/:user_id", async (req, res, next) => {
     next({ name, message });
   }
 });
-
+ordersRouter.patch("/orderid/:id", async (req, res, next) => {
+  try {
+    const { id } = req.params;
+    const { status } = req.body;
+    const updatedOrder = await updateOrder({ id, status });
+    if (!updatedOrder) {
+      res.status(404).send(`Order with ID ${id} does not exist`);
+    }
+    res.send(updatedOrder);
+  } catch ({ name, message }) {
+    next({ name, message });
+  }
+});
 module.exports = ordersRouter;

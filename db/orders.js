@@ -70,9 +70,28 @@ async function getAllOrdersByUser(user_id) {
   }
 }
 // getAllOrdersByUser(2).then(console.log);
+
+async function updateOrder({ id, status }) {
+  try {
+    const resp = await client.query(
+      `
+    UPDATE orders
+    SET status = $1
+    WHERE id = $2
+    RETURNING *
+    `,
+      [status, id]
+    );
+    return resp.rows[0];
+  } catch (error) {
+    throw error;
+  }
+}
+// updateOrder({ id: 2, status: "warehouse" }).then(console.log);
 module.exports = {
   createOrder,
   getAllOrders,
   getOrderByOrderId,
   getAllOrdersByUser,
+  updateOrder,
 };

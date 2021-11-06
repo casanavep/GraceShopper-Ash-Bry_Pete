@@ -6,6 +6,8 @@ const {
   getProductByCategoryId,
   getProducts,
   createProduct,
+  destroyProducts,
+  updateProduct,
 } = require("../db/products");
 const productsRouter = require("express").Router();
 
@@ -73,6 +75,45 @@ productsRouter.get("/category/:category_id", async (req, res, next) => {
     }
   } catch ({ name, message }) {
     next(name, message);
+  }
+});
+
+//delete product
+productsRouter.delete("/productid/:id", async (req, res, next) => {
+  const { id } = req.params;
+  try {
+    const resp = await destroyProducts(id);
+    if (!resp) {
+      res.status(404).send(`Products with ID ${id} does not exist`);
+    }
+
+    res.send(resp);
+  } catch ({ name, message }) {
+    next({ name, message });
+  }
+});
+
+//update product
+productsRouter.patch("/productid/:id", async (req, res, next) => {
+  const { id } = req.params;
+  const { title, description, price, quantity, category_id, active } = req.body;
+
+  try {
+    const updatedProduct = await updateProduct({
+      id,
+      title,
+      description,
+      price,
+      quantity,
+      category_id,
+      active,
+    });
+    if (!updatedProduct) {
+      res.status(404).send(`Product with ID ${id} does not exist`);
+    }
+    res.send(updatedProduct);
+  } catch ({ name, message }) {
+    next({ name, message });
   }
 });
 module.exports = productsRouter;
