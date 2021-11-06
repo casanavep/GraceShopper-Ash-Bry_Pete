@@ -8,12 +8,12 @@ import WidgetLg from "../../adminComponents/widgetLg/WidgetLg";
 export default function Home() {
   return (
     <div className="home">
-      <FeaturedInfo />
+      {/* <FeaturedInfo />
       <Chart data={userData} title="User Analytics" grid dataKey="Active User"/>
       <div className="homeWidgets">
      <WidgetSm/>
-      <WidgetLg/>
-      </div>
+      <WidgetLg/> */}
+      {/* </div> */}
     </div>
   );
 }

@@ -8,6 +8,7 @@ import User from "../adminPages/user/User";
 import ProductList from "../adminPages/productList/ProductList";
 import Product from "../adminPages/product/Product";
 import NewProduct from "../adminPages/newProduct/NewProduct";
+import CategoryList from "../adminPages/categories/CategoryList";
 
 function AdminApp() {
   return (
@@ -29,8 +30,15 @@ function AdminApp() {
           <Route path="/products">
             <ProductList />
           </Route>
+
           <Route path="/product/:productId">
             <Product />
+          </Route>
+          {/* <Route path="/categories/:categoryId">
+            <Category />
+          </Route> */}
+          <Route path="/categories">
+            <CategoryList />
           </Route>
           <Route path="/newproduct">
             <NewProduct />
