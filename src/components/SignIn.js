@@ -40,7 +40,7 @@ const SignIn = (props) => {
   };
   console.log(props.user);
   return (
-    <div>
+    <div className="container">
       <form onSubmit={handleSubmit}>
         <input
           value={email}
@@ -48,6 +48,7 @@ const SignIn = (props) => {
             setEmail(e.target.value);
           }}
           placeholder="Enter email"
+          type="email"
         ></input>
         <input
           value={password}

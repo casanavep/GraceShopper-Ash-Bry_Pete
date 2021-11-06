@@ -1,4 +1,4 @@
-import Chart from "../../adminComponents/chart/Chart
+import Chart from "../../adminComponents/chart/Chart";
 import FeaturedInfo from "../../adminComponents/featuredInfo/FeaturedInfo";
 import "./home.css";
 import { userData } from "../../adminComponents/dummyData";
