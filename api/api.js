@@ -8,7 +8,7 @@ const productsRouter = require("./products");
 // const reviewsRouter = require("./reviews");
 const ordersRouter = require("./orders");
 const productOrdersRouter = require("./productOrders");
-const categoyRouter = require("./categories");
+
 const categoryRouter = require("./categories");
 
 apiRouter.use(cors());

@@ -81,6 +81,20 @@ async function getUser({ email, password }) {
 //   password: "dddddddddd",
 // }).then(console.log);
 
+async function getAllUsers() {
+  try {
+    const resp = await client.query(`
+    SELECT * FROM users;
+    `);
+
+    return resp.rows;
+  } catch (error) {
+    throw error;
+  }
+}
+
+// getAllUsers().then(console.log);
+
 async function getUserById(id) {
   // console.log("Getting User By ID");
   try {
@@ -145,10 +159,12 @@ async function destroyUser(id) {
 // destroyUser(3).then(console.log);
 
 //need to add patches
+
 module.exports = {
   destroyUser,
   createUser,
   getUser,
   getUserById,
   getUserByEmail,
+  getAllUsers,
 };
