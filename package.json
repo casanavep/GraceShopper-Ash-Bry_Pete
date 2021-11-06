@@ -26,6 +26,7 @@
   },
   "scripts": {
     "seed:dev": "nodemon ./db/seed.js",
+    "start-pc": "set PORT=3005 && react-scripts start",
     "start": "react-scripts start",
     "start-pc": "set PORT=3005 && react-scripts start",
     "build": "react-scripts build",
