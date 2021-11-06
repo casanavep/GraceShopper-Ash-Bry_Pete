@@ -43,8 +43,8 @@ const Register = (props) => {
 
     console.log(info);
 
-    if (info.errorMessage) {
-      return setErrorMessage(info.errorMessage);
+    if (info.message !== "you are registered") {
+      return setErrorMessage(info.message);
     }
 
     localStorage.setItem("token", info.token);
@@ -54,6 +54,7 @@ const Register = (props) => {
       token: info.token,
       email: info.user.email,
     });
+    history.push("/");
   };
 
   return (

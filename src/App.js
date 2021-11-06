@@ -1,3 +1,4 @@
+import { AppBar } from "@material-ui/core";
 import { useState } from "react";
 import { Route } from "react-router";
 import "./App.css";
@@ -10,13 +11,16 @@ function App() {
   const [user, setUser] = useState(null);
   return (
     <div className="App">
-      <Navbar setUser={setUser} />
-      <Route path="/signin">
-        <SignIn setUser={setUser} />
-      </Route>
-      <Route path="/register">
-        <Register setUser={setUser} />
-      </Route>
+      <AppBar />
+      <Navbar setUser={setUser} user={user} />
+      <div className="container">
+        <Route path="/login">
+          <SignIn setUser={setUser} />
+        </Route>
+        <Route path="/register">
+          <Register setUser={setUser} />
+        </Route>
+      </div>
       <Footer />
     </div>
   );
