@@ -108,6 +108,9 @@ productsRouter.patch("/productid/:id", async (req, res, next) => {
       category_id,
       active,
     });
+    if (!updatedProduct) {
+      res.status(404).send(`Product with ID ${id} does not exist`);
+    }
     res.send(updatedProduct);
   } catch ({ name, message }) {
     next({ name, message });

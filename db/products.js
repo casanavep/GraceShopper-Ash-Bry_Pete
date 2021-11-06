@@ -134,7 +134,6 @@ async function updateProduct({
   category_id,
   active,
 }) {
-  console.log("updating...");
   try {
     if (title != undefined) {
       await client.query(
