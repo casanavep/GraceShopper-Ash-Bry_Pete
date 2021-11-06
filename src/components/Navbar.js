@@ -13,7 +13,7 @@ const Navbar = (props) => {
     <>
       <h1>BAP Gaming</h1>
       <Link to="profile">Profile</Link>|<Link to="register">Register</Link>|
-      <Link to="signin">Sign In</Link>|{" "}
+      <Link to="signin">Sign In</Link>| <Link to="admin">Admin</Link> |
       <Link onClick={handleSignOut} to="/">
         Sign Out
       </Link>
