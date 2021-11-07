@@ -14,7 +14,7 @@ function AdminApp() {
   return (
     <Router>
       {/* <Topbar /> */}
-      <div className="container">
+      <div className="adminApp">
         <Sidebar />
         <Switch>
           <Route exact path="/">

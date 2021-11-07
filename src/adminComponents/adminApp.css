@@ -1,6 +1,8 @@
-.container {
+.adminApp {
   display: flex;
-  margin-top: 10px;
+  align-content: center;
+  height: 500px;
+  width: 80%;
 }
 
 .link {
