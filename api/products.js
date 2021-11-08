@@ -96,7 +96,8 @@ productsRouter.delete("/productid/:id", async (req, res, next) => {
 //update product
 productsRouter.patch("/productid/:id", async (req, res, next) => {
   const { id } = req.params;
-  const { title, description, price, quantity, category_id, active } = req.body;
+  const { title, description, price, quantity, category_id, image, active } =
+    req.body;
 
   try {
     const updatedProduct = await updateProduct({
@@ -106,6 +107,7 @@ productsRouter.patch("/productid/:id", async (req, res, next) => {
       price,
       quantity,
       category_id,
+      image,
       active,
     });
     if (!updatedProduct) {

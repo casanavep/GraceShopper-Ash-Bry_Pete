@@ -6,6 +6,7 @@ async function createProduct({
   price,
   quantity,
   category_id,
+  image,
 }) {
   try {
     const resp = await client.query(
@@ -14,11 +15,12 @@ async function createProduct({
             description,
             price,
             quantity,
-            category_id)
-        VALUES ($1,$2,$3,$4,$5)
+            category_id,
+            image)
+        VALUES ($1,$2,$3,$4,$5, $6)
         RETURNING *;
       `,
-      [title, description, price, quantity, category_id]
+      [title, description, price, quantity, category_id, image]
     );
     const product = resp.rows[0];
     return product;
@@ -132,6 +134,7 @@ async function updateProduct({
   price,
   quantity,
   category_id,
+  image,
   active,
 }) {
   try {
@@ -183,6 +186,16 @@ async function updateProduct({
       WHERE id = $2
       `,
         [category_id, id]
+      );
+    }
+    if (image != undefined) {
+      await client.query(
+        `
+      UPDATE products
+      SET image = $1
+      WHERE id = $2
+      `,
+        [image, id]
       );
     }
     if (active != undefined) {
