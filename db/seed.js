@@ -25,7 +25,7 @@ async function seedDB() {
             price DEC (8,2),
             quantity INT NOT NULL,
             category_id INT REFERENCES categories(id),
-            
+            image VARCHAR(255),
             active BOOLEAN NOT NULL DEFAULT true
             
 
@@ -90,6 +90,7 @@ async function seedDB() {
       price: 20.99,
       quantity: 50,
       categoryId: 1,
+      image: "https://iconape.com/wp-content/files/mz/133421/svg/133421.svg",
     },
     {
       title: "Mortal Kombat",
@@ -97,6 +98,7 @@ async function seedDB() {
       price: 20.99,
       quantity: 50,
       categoryId: 2,
+      image: "https://iconape.com/wp-content/files/mz/133421/svg/133421.svg",
     },
     {
       title: "Mortal Kombat",
@@ -104,6 +106,7 @@ async function seedDB() {
       price: 20.99,
       quantity: 50,
       categoryId: 3,
+      image: "https://iconape.com/wp-content/files/mz/133421/svg/133421.svg",
     },
     {
       title: "Mortal Kombat",
@@ -111,6 +114,7 @@ async function seedDB() {
       price: 20.99,
       quantity: 50,
       categoryId: 7,
+      image: "https://iconape.com/wp-content/files/mz/133421/svg/133421.svg",
     },
     {
       title: "Mortal Kombat 4",
@@ -119,6 +123,8 @@ async function seedDB() {
       price: 25.99,
       quantity: 50,
       categoryId: 1,
+      image:
+        "https://images.gog-statics.com/344ef1668564cd4255fd069fa560db4e1aa1edaef7cec668ef68daf9037d7fdc.jpg",
     },
     {
       title: "Mortal Kombat 4",
@@ -127,6 +133,8 @@ async function seedDB() {
       price: 25.99,
       quantity: 50,
       categoryId: 3,
+      image:
+        "https://images.gog-statics.com/344ef1668564cd4255fd069fa560db4e1aa1edaef7cec668ef68daf9037d7fdc.jpg",
     },
     {
       title: "Mortal Kombat 4",
@@ -135,6 +143,8 @@ async function seedDB() {
       price: 25.99,
       quantity: 50,
       categoryId: 5,
+      image:
+        "https://images.gog-statics.com/344ef1668564cd4255fd069fa560db4e1aa1edaef7cec668ef68daf9037d7fdc.jpg",
     },
     {
       title: "Mortal Kombat 11",
@@ -143,6 +153,8 @@ async function seedDB() {
       price: 35.99,
       quantity: 5000,
       categoryId: 3,
+      image:
+        "https://mortalkombatgamessupport.wbgames.com/hc/article_attachments/360058831074/MK_11_-_Logo.jpg",
     },
     {
       title: "Mortal Kombat 11",
@@ -151,6 +163,8 @@ async function seedDB() {
       price: 35.99,
       quantity: 5000,
       categoryId: 1,
+      image:
+        "https://mortalkombatgamessupport.wbgames.com/hc/article_attachments/360058831074/MK_11_-_Logo.jpg",
     },
     {
       title: "Mortal Kombat 11",
@@ -159,6 +173,8 @@ async function seedDB() {
       price: 25.99,
       quantity: 5000,
       categoryId: 2,
+      image:
+        "https://mortalkombatgamessupport.wbgames.com/hc/article_attachments/360058831074/MK_11_-_Logo.jpg",
     },
     {
       title: "Mortal Kombat 11",
@@ -167,6 +183,8 @@ async function seedDB() {
       price: 35.99,
       quantity: 5000,
       categoryId: 4,
+      image:
+        "https://mortalkombatgamessupport.wbgames.com/hc/article_attachments/360058831074/MK_11_-_Logo.jpg",
     },
     {
       title: "Fallout",
@@ -175,6 +193,8 @@ async function seedDB() {
       price: 25.99,
       quantity: 57,
       categoryId: 1,
+      image:
+        "https://www.mobygames.com/images/promo/original/1472789273-2517358647.jpg",
     },
     {
       title: "Fallout 2",
@@ -183,6 +203,8 @@ async function seedDB() {
       price: 30.99,
       quantity: 107,
       categoryId: 1,
+      image:
+        "https://static.wikia.nocookie.net/logopedia/images/4/46/FALLOUT.png/revision/latest?cb=20151109231600",
     },
     {
       title: "Fallout 3",
@@ -191,6 +213,8 @@ async function seedDB() {
       price: 35.99,
       quantity: 206,
       categoryId: 1,
+      image:
+        "https://lh3.googleusercontent.com/proxy/Z5JjMCKjMWcZ_hirVacee4uXDci9Fqffd7mrkgQlHk2CCm90yRScJ7K69tLbrziSJtx_AUYMWw8d_uXYAs03gyEBQBaxEXHVhTiGgHZyOyYctGQIPjdcqOsc2g",
     },
     {
       title: "Fallout 3",
@@ -199,6 +223,8 @@ async function seedDB() {
       price: 35.99,
       quantity: 203,
       categoryId: 2,
+      image:
+        "https://lh3.googleusercontent.com/proxy/Z5JjMCKjMWcZ_hirVacee4uXDci9Fqffd7mrkgQlHk2CCm90yRScJ7K69tLbrziSJtx_AUYMWw8d_uXYAs03gyEBQBaxEXHVhTiGgHZyOyYctGQIPjdcqOsc2g",
     },
     {
       title: "Fallout 3",
@@ -207,6 +233,8 @@ async function seedDB() {
       price: 35.99,
       quantity: 203,
       categoryId: 3,
+      image:
+        "https://lh3.googleusercontent.com/proxy/Z5JjMCKjMWcZ_hirVacee4uXDci9Fqffd7mrkgQlHk2CCm90yRScJ7K69tLbrziSJtx_AUYMWw8d_uXYAs03gyEBQBaxEXHVhTiGgHZyOyYctGQIPjdcqOsc2g",
     },
     {
       title: "Fallout 4",
@@ -214,6 +242,8 @@ async function seedDB() {
       price: 45.99,
       quantity: 203,
       categoryId: 3,
+      image:
+        "https://external-preview.redd.it/4DH_dMAEPIEeDPgXZpzcDtndRgvNbdFM3nXhrCfwVo4.png?auto=webp&s=09efdd83e9885cddffbef217b7fbecd97d821adc",
     },
     {
       title: "Fallout 4",
@@ -221,6 +251,8 @@ async function seedDB() {
       price: 45.99,
       quantity: 203,
       categoryId: 2,
+      image:
+        "https://external-preview.redd.it/4DH_dMAEPIEeDPgXZpzcDtndRgvNbdFM3nXhrCfwVo4.png?auto=webp&s=09efdd83e9885cddffbef217b7fbecd97d821adc",
     },
     {
       title: "Fallout 4",
@@ -228,6 +260,8 @@ async function seedDB() {
       price: 45.99,
       quantity: 203,
       categoryId: 1,
+      image:
+        "https://external-preview.redd.it/4DH_dMAEPIEeDPgXZpzcDtndRgvNbdFM3nXhrCfwVo4.png?auto=webp&s=09efdd83e9885cddffbef217b7fbecd97d821adc",
     },
     {
       title: "Gears of War",
@@ -235,6 +269,8 @@ async function seedDB() {
       price: 23.99,
       quantity: 63,
       categoryId: 1,
+      image:
+        "https://upload.wikimedia.org/wikipedia/en/d/d2/Gears_of_War_logo.PNG",
     },
     {
       title: "Gears of War",
@@ -242,6 +278,8 @@ async function seedDB() {
       price: 23.99,
       quantity: 63,
       categoryId: 2,
+      image:
+        "https://upload.wikimedia.org/wikipedia/en/d/d2/Gears_of_War_logo.PNG",
     },
     {
       title: "Gears of War",
@@ -249,6 +287,8 @@ async function seedDB() {
       price: 23.99,
       quantity: 63,
       categoryId: 3,
+      image:
+        "https://upload.wikimedia.org/wikipedia/en/d/d2/Gears_of_War_logo.PNG",
     },
     {
       title: "Gears of War 2",
@@ -256,6 +296,8 @@ async function seedDB() {
       price: 29.99,
       quantity: 98,
       categoryId: 1,
+      image:
+        "https://upload.wikimedia.org/wikipedia/en/thumb/e/e0/Gears_of_War_2_Game_Cover.jpg/220px-Gears_of_War_2_Game_Cover.jpg",
     },
     {
       title: "Gears of War 2",
@@ -263,6 +305,8 @@ async function seedDB() {
       price: 29.99,
       quantity: 98,
       categoryId: 2,
+      image:
+        "https://upload.wikimedia.org/wikipedia/en/thumb/e/e0/Gears_of_War_2_Game_Cover.jpg/220px-Gears_of_War_2_Game_Cover.jpg",
     },
     {
       title: "Gears of War 2",
@@ -270,6 +314,8 @@ async function seedDB() {
       price: 29.99,
       quantity: 98,
       categoryId: 3,
+      image:
+        "https://upload.wikimedia.org/wikipedia/en/thumb/e/e0/Gears_of_War_2_Game_Cover.jpg/220px-Gears_of_War_2_Game_Cover.jpg",
     },
     {
       title: "Gears of War 3",
@@ -278,6 +324,7 @@ async function seedDB() {
       price: 32.99,
       quantity: 1500,
       categoryId: 1,
+      image: "https://assets.vg247.com/current//2011/02/gow3cover.jpg",
     },
     {
       title: "Gears of War 3",
@@ -286,6 +333,7 @@ async function seedDB() {
       price: 32.99,
       quantity: 1500,
       categoryId: 2,
+      image: "https://assets.vg247.com/current//2011/02/gow3cover.jpg",
     },
     {
       title: "Gears of War 3",
@@ -294,6 +342,7 @@ async function seedDB() {
       price: 32.99,
       quantity: 1500,
       categoryId: 3,
+      image: "https://assets.vg247.com/current//2011/02/gow3cover.jpg",
     },
     {
       title: "Gears of War 4",
@@ -301,6 +350,8 @@ async function seedDB() {
       price: 40.99,
       quantity: 3500,
       categoryId: 1,
+      image:
+        "https://upload.wikimedia.org/wikipedia/en/f/ff/Gears_of_War_4.jpg",
     },
     {
       title: "Gears of War 4",
@@ -308,6 +359,8 @@ async function seedDB() {
       price: 40.99,
       quantity: 3500,
       categoryId: 2,
+      image:
+        "https://upload.wikimedia.org/wikipedia/en/f/ff/Gears_of_War_4.jpg",
     },
     {
       title: "Gears of War 4",
@@ -315,6 +368,8 @@ async function seedDB() {
       price: 40.99,
       quantity: 3500,
       categoryId: 3,
+      image:
+        "https://upload.wikimedia.org/wikipedia/en/f/ff/Gears_of_War_4.jpg",
     },
     {
       title: "Gears of War 5",
@@ -322,6 +377,8 @@ async function seedDB() {
       price: 55.99,
       quantity: 5500,
       categoryId: 1,
+      image:
+        "https://www.gears5.com/static/e7317a2bb749f0510dd21561fdfdd03a/gears5.jpg",
     },
     {
       title: "Gears of War 5",
@@ -329,6 +386,8 @@ async function seedDB() {
       price: 55.99,
       quantity: 5500,
       categoryId: 2,
+      image:
+        "https://www.gears5.com/static/e7317a2bb749f0510dd21561fdfdd03a/gears5.jpg",
     },
     {
       title: "Gears of War 5",
@@ -336,6 +395,8 @@ async function seedDB() {
       price: 55.99,
       quantity: 5500,
       categoryId: 3,
+      image:
+        "https://www.gears5.com/static/e7317a2bb749f0510dd21561fdfdd03a/gears5.jpg",
     },
     {
       title: "FIFA 22",
@@ -343,6 +404,8 @@ async function seedDB() {
       price: 59.99,
       quantity: 50000,
       categoryId: 1,
+      image:
+        "https://cdn.cloudflare.steamstatic.com/steam/apps/1506830/header.jpg?t=1633113405",
     },
 
     {
@@ -351,6 +414,8 @@ async function seedDB() {
       price: 59.99,
       quantity: 50000,
       categoryId: 2,
+      image:
+        "https://cdn.cloudflare.steamstatic.com/steam/apps/1506830/header.jpg?t=1633113405",
     },
     {
       title: "FIFA 22",
@@ -358,6 +423,8 @@ async function seedDB() {
       price: 59.99,
       quantity: 50000,
       categoryId: 3,
+      image:
+        "https://cdn.cloudflare.steamstatic.com/steam/apps/1506830/header.jpg?t=1633113405",
     },
     {
       title: "FIFA 22",
@@ -365,6 +432,8 @@ async function seedDB() {
       price: 59.99,
       quantity: 50000,
       categoryId: 4,
+      image:
+        "https://cdn.cloudflare.steamstatic.com/steam/apps/1506830/header.jpg?t=1633113405",
     },
     {
       title: "NBA 2k22",
@@ -372,6 +441,8 @@ async function seedDB() {
       price: 59.99,
       quantity: 75000,
       categoryId: 1,
+      image:
+        "https://img.bleacherreport.net/img/images/photos/003/915/388/994bc06eea22279cfab905ae30a6754a_crop_north.jpg?1626196611&w=3072&h=2048",
     },
     {
       title: "NBA 2k22",
@@ -379,6 +450,8 @@ async function seedDB() {
       price: 59.99,
       quantity: 75000,
       categoryId: 2,
+      image:
+        "https://img.bleacherreport.net/img/images/photos/003/915/388/994bc06eea22279cfab905ae30a6754a_crop_north.jpg?1626196611&w=3072&h=2048",
     },
     {
       title: "NBA 2k22",
@@ -386,6 +459,8 @@ async function seedDB() {
       price: 59.99,
       quantity: 75000,
       categoryId: 3,
+      image:
+        "https://img.bleacherreport.net/img/images/photos/003/915/388/994bc06eea22279cfab905ae30a6754a_crop_north.jpg?1626196611&w=3072&h=2048",
     },
     {
       title: "NBA 2k22",
@@ -393,6 +468,8 @@ async function seedDB() {
       price: 59.99,
       quantity: 75000,
       categoryId: 4,
+      image:
+        "https://img.bleacherreport.net/img/images/photos/003/915/388/994bc06eea22279cfab905ae30a6754a_crop_north.jpg?1626196611&w=3072&h=2048",
     },
 
     {
@@ -402,6 +479,8 @@ async function seedDB() {
       price: 40.99,
       quantity: 4300,
       categoryId: 1,
+      image:
+        "https://imgs.callofduty.com/content/dam/atvi/callofduty/cod-touchui/kronos/common/social-share/social-share-image.jpg",
     },
     {
       title: "Call of Duty Modern Warfare",
@@ -410,6 +489,8 @@ async function seedDB() {
       price: 40.99,
       quantity: 4300,
       categoryId: 2,
+      image:
+        "https://imgs.callofduty.com/content/dam/atvi/callofduty/cod-touchui/kronos/common/social-share/social-share-image.jpg",
     },
     {
       title: "Call of Duty Modern Warfare",
@@ -418,6 +499,8 @@ async function seedDB() {
       price: 40.99,
       quantity: 4300,
       categoryId: 3,
+      image:
+        "https://imgs.callofduty.com/content/dam/atvi/callofduty/cod-touchui/kronos/common/social-share/social-share-image.jpg",
     },
     {
       title: "Call of Duty Modern Warfare",
@@ -426,6 +509,8 @@ async function seedDB() {
       price: 40.99,
       quantity: 4300,
       categoryId: 4,
+      image:
+        "https://imgs.callofduty.com/content/dam/atvi/callofduty/cod-touchui/kronos/common/social-share/social-share-image.jpg",
     },
     {
       title: "Call of Duty Warzone",
@@ -434,6 +519,8 @@ async function seedDB() {
       price: 40.99,
       quantity: 7000,
       categoryId: 1,
+      image:
+        "https://static.wikia.nocookie.net/callofduty/images/3/3d/Warzone_Artwork_CoDWarzone_MW.jpg/revision/latest?cb=20200331223136",
     },
     {
       title: "Call of Duty Warzone",
@@ -442,6 +529,8 @@ async function seedDB() {
       price: 40.99,
       quantity: 7000,
       categoryId: 2,
+      image:
+        "https://static.wikia.nocookie.net/callofduty/images/3/3d/Warzone_Artwork_CoDWarzone_MW.jpg/revision/latest?cb=20200331223136",
     },
     {
       title: "Call of Duty Warzone",
@@ -450,6 +539,8 @@ async function seedDB() {
       price: 40.99,
       quantity: 7000,
       categoryId: 3,
+      image:
+        "https://static.wikia.nocookie.net/callofduty/images/3/3d/Warzone_Artwork_CoDWarzone_MW.jpg/revision/latest?cb=20200331223136",
     },
     {
       title: "Call of Duty Warzone",
@@ -458,6 +549,8 @@ async function seedDB() {
       price: 40.99,
       quantity: 7000,
       categoryId: 4,
+      image:
+        "https://static.wikia.nocookie.net/callofduty/images/3/3d/Warzone_Artwork_CoDWarzone_MW.jpg/revision/latest?cb=20200331223136",
     },
     {
       title: "Call of Duty Vanguard",
@@ -465,6 +558,8 @@ async function seedDB() {
       price: 40.99,
       quantity: 100000,
       categoryId: 1,
+      image:
+        "https://static.wikia.nocookie.net/callofduty/images/3/3c/COD_Vanguard_Artwork.jpg/revision/latest?cb=20210816171308",
     },
     {
       title: "Call of Duty Vanguard",
@@ -472,6 +567,8 @@ async function seedDB() {
       price: 40.99,
       quantity: 100000,
       categoryId: 2,
+      image:
+        "https://static.wikia.nocookie.net/callofduty/images/3/3c/COD_Vanguard_Artwork.jpg/revision/latest?cb=20210816171308",
     },
     {
       title: "Call of Duty Vanguard",
@@ -479,6 +576,8 @@ async function seedDB() {
       price: 40.99,
       quantity: 100000,
       categoryId: 3,
+      image:
+        "https://static.wikia.nocookie.net/callofduty/images/3/3c/COD_Vanguard_Artwork.jpg/revision/latest?cb=20210816171308",
     },
     {
       title: "Call of Duty Vanguard",
@@ -486,6 +585,8 @@ async function seedDB() {
       price: 40.99,
       quantity: 100000,
       categoryId: 4,
+      image:
+        "https://static.wikia.nocookie.net/callofduty/images/3/3c/COD_Vanguard_Artwork.jpg/revision/latest?cb=20210816171308",
     },
     {
       title: "Diablo",
@@ -494,6 +595,8 @@ async function seedDB() {
       price: 35.99,
       quantity: 67,
       categoryId: 1,
+      image:
+        "https://storage.googleapis.com/gamebyte/2019/03/Diablo-OG-796x417.jpg",
     },
     {
       title: "Diablo",
@@ -502,6 +605,8 @@ async function seedDB() {
       price: 35.99,
       quantity: 67,
       categoryId: 3,
+      image:
+        "https://storage.googleapis.com/gamebyte/2019/03/Diablo-OG-796x417.jpg",
     },
     {
       title: "Diablo 2",
@@ -510,6 +615,8 @@ async function seedDB() {
       price: 45.99,
       quantity: 670,
       categoryId: 1,
+      image:
+        "https://upload.wikimedia.org/wikipedia/en/d/d5/Diablo_II_Coverart.png",
     },
     {
       title: "Diablo 2",
@@ -518,6 +625,8 @@ async function seedDB() {
       price: 45.99,
       quantity: 670,
       categoryId: 2,
+      image:
+        "https://upload.wikimedia.org/wikipedia/en/d/d5/Diablo_II_Coverart.png",
     },
     {
       title: "Diablo 2",
@@ -526,6 +635,8 @@ async function seedDB() {
       price: 45.99,
       quantity: 670,
       categoryId: 3,
+      image:
+        "https://upload.wikimedia.org/wikipedia/en/d/d5/Diablo_II_Coverart.png",
     },
     {
       title: "Diablo 2",
@@ -534,6 +645,8 @@ async function seedDB() {
       price: 45.99,
       quantity: 670,
       categoryId: 4,
+      image:
+        "https://upload.wikimedia.org/wikipedia/en/d/d5/Diablo_II_Coverart.png",
     },
     {
       title: "Diablo 3",
@@ -542,6 +655,8 @@ async function seedDB() {
       price: 49.99,
       quantity: 7500,
       categoryId: 1,
+      image:
+        "https://upload.wikimedia.org/wikipedia/en/8/80/Diablo_III_cover.png",
     },
     {
       title: "Diablo 3",
@@ -550,6 +665,8 @@ async function seedDB() {
       price: 49.99,
       quantity: 7500,
       categoryId: 2,
+      image:
+        "https://upload.wikimedia.org/wikipedia/en/8/80/Diablo_III_cover.png",
     },
     {
       title: "Diablo 3",
@@ -558,6 +675,8 @@ async function seedDB() {
       price: 49.99,
       quantity: 7500,
       categoryId: 3,
+      image:
+        "https://upload.wikimedia.org/wikipedia/en/8/80/Diablo_III_cover.png",
     },
     {
       title: "Diablo 3",
@@ -566,6 +685,8 @@ async function seedDB() {
       price: 49.99,
       quantity: 7500,
       categoryId: 4,
+      image:
+        "https://upload.wikimedia.org/wikipedia/en/8/80/Diablo_III_cover.png",
     },
     {
       title: "Fortnight",
@@ -574,6 +695,8 @@ async function seedDB() {
       price: 45.99,
       quantity: 20000,
       categoryId: 1,
+      image:
+        "https://fiverr-res.cloudinary.com/images/q_auto,f_auto/gigs/107508274/original/03df8c86694f57de4fde1c8898f8233a8fb02c0b/this-is-a-fortnite-logo.jpg",
     },
     {
       title: "Fortnight",
@@ -582,6 +705,8 @@ async function seedDB() {
       price: 45.99,
       quantity: 20000,
       categoryId: 2,
+      image:
+        "https://fiverr-res.cloudinary.com/images/q_auto,f_auto/gigs/107508274/original/03df8c86694f57de4fde1c8898f8233a8fb02c0b/this-is-a-fortnite-logo.jpg",
     },
     {
       title: "Fortnight",
@@ -590,6 +715,8 @@ async function seedDB() {
       price: 45.99,
       quantity: 20000,
       categoryId: 3,
+      image:
+        "https://fiverr-res.cloudinary.com/images/q_auto,f_auto/gigs/107508274/original/03df8c86694f57de4fde1c8898f8233a8fb02c0b/this-is-a-fortnite-logo.jpg",
     },
     {
       title: "Fortnight",
@@ -598,6 +725,8 @@ async function seedDB() {
       price: 45.99,
       quantity: 20000,
       categoryId: 4,
+      image:
+        "https://fiverr-res.cloudinary.com/images/q_auto,f_auto/gigs/107508274/original/03df8c86694f57de4fde1c8898f8233a8fb02c0b/this-is-a-fortnite-logo.jpg",
     },
     {
       title: "Overwatch",
@@ -606,6 +735,8 @@ async function seedDB() {
       price: 50.99,
       quantity: 15000,
       categoryId: 1,
+      image:
+        "https://1000logos.net/wp-content/uploads/2018/03/Overwatch-Logo.png",
     },
     {
       title: "Overwatch",
@@ -614,6 +745,8 @@ async function seedDB() {
       price: 50.99,
       quantity: 15000,
       categoryId: 2,
+      image:
+        "https://1000logos.net/wp-content/uploads/2018/03/Overwatch-Logo.png",
     },
     {
       title: "Overwatch",
@@ -622,6 +755,8 @@ async function seedDB() {
       price: 50.99,
       quantity: 15000,
       categoryId: 3,
+      image:
+        "https://1000logos.net/wp-content/uploads/2018/03/Overwatch-Logo.png",
     },
     {
       title: "Overwatch",
@@ -630,6 +765,8 @@ async function seedDB() {
       price: 50.99,
       quantity: 15000,
       categoryId: 4,
+      image:
+        "https://1000logos.net/wp-content/uploads/2018/03/Overwatch-Logo.png",
     },
     {
       title: "Super Smash Bros",
@@ -638,6 +775,8 @@ async function seedDB() {
       price: 35.99,
       quantity: 4300,
       categoryId: 4,
+      image:
+        "https://spng.pngfind.com/pngs/s/71-719498_super-smash-bros-64-logo-png-png-download.png",
     },
     {
       title: "Super Smash Bros",
@@ -646,6 +785,8 @@ async function seedDB() {
       price: 35.99,
       quantity: 4300,
       categoryId: 5,
+      image:
+        "https://spng.pngfind.com/pngs/s/71-719498_super-smash-bros-64-logo-png-png-download.png",
     },
     {
       title: "Super Smash Bros",
@@ -654,6 +795,8 @@ async function seedDB() {
       price: 35.99,
       quantity: 4300,
       categoryId: 6,
+      image:
+        "https://spng.pngfind.com/pngs/s/71-719498_super-smash-bros-64-logo-png-png-download.png",
     },
     {
       title: "Super Smash Bros",
@@ -662,6 +805,8 @@ async function seedDB() {
       price: 35.99,
       quantity: 4300,
       categoryId: 7,
+      image:
+        "https://spng.pngfind.com/pngs/s/71-719498_super-smash-bros-64-logo-png-png-download.png",
     },
     {
       title: "Super Smash Bros Brawl",
@@ -670,6 +815,8 @@ async function seedDB() {
       price: 40.99,
       quantity: 7000,
       categoryId: 4,
+      image:
+        "https://cdn02.nintendo-europe.com/media/images/10_share_images/games_15/wii_24/SI_Wii_SuperSmashBrosBrawl_image1600w.jpg",
     },
 
     {
@@ -679,6 +826,8 @@ async function seedDB() {
       price: 40.99,
       quantity: 7000,
       categoryId: 6,
+      image:
+        "https://cdn02.nintendo-europe.com/media/images/10_share_images/games_15/wii_24/SI_Wii_SuperSmashBrosBrawl_image1600w.jpg",
     },
     {
       title: "Super Smash Bros Ultimate",
@@ -687,6 +836,8 @@ async function seedDB() {
       price: 50.99,
       quantity: 73000,
       categoryId: 4,
+      image:
+        "https://upload.wikimedia.org/wikipedia/en/5/50/Super_Smash_Bros._Ultimate.jpg",
     },
     {
       title: "Super Smash Bros Ultimate",
@@ -695,6 +846,8 @@ async function seedDB() {
       price: 50.99,
       quantity: 73000,
       categoryId: 3,
+      image:
+        "https://upload.wikimedia.org/wikipedia/en/5/50/Super_Smash_Bros._Ultimate.jpg",
     },
     {
       title: "Super Smash Bros Ultimate",
@@ -703,6 +856,8 @@ async function seedDB() {
       price: 50.99,
       quantity: 73000,
       categoryId: 2,
+      image:
+        "https://upload.wikimedia.org/wikipedia/en/5/50/Super_Smash_Bros._Ultimate.jpg",
     },
     {
       title: "Star Fox 64",
@@ -711,6 +866,7 @@ async function seedDB() {
       price: 45.99,
       quantity: 430,
       categoryId: 5,
+      image: "https://tcrf.net/images/c/c7/StarFox64_Title.png",
     },
     {
       title: "Star Fox Adventures",
@@ -718,6 +874,8 @@ async function seedDB() {
       price: 40.99,
       quantity: 2350,
       categoryId: 6,
+      image:
+        "https://p.kindpng.com/picc/s/43-434406_logopedia10-star-fox-adventures-hd-png-download.png",
     },
     {
       title: "Star Fox Assault",
@@ -726,6 +884,8 @@ async function seedDB() {
       price: 50.99,
       quantity: 3600,
       categoryId: 6,
+      image:
+        "https://pressthebuttons.typepad.com/.a/6a00d83452033569e20240a495e5df200c-350wi",
     },
     {
       title: "PlayerUnknown's Battlegrounds",
@@ -733,6 +893,8 @@ async function seedDB() {
       price: 45.99,
       quantity: 7800,
       categoryId: 1,
+      image:
+        "https://upload.wikimedia.org/wikipedia/en/thumb/9/9f/Pubgbattlegrounds.png/220px-Pubgbattlegrounds.png",
     },
     {
       title: "League of Legends",
@@ -740,6 +902,7 @@ async function seedDB() {
       price: 50.99,
       quantity: 8500,
       categoryId: 1,
+      image: "https://cdn.mos.cms.futurecdn.net/qPibdLSyYHnTX5NymkEb8M.jpeg",
     },
     {
       title: "Minecraft",
@@ -756,6 +919,8 @@ async function seedDB() {
       price: 45.99,
       quantity: 4300,
       categoryId: 2,
+      image:
+        "https://logos-world.net/wp-content/uploads/2020/04/Minecraft-Symbol.jpg",
     },
     {
       title: "Minecraft",
@@ -764,6 +929,8 @@ async function seedDB() {
       price: 45.99,
       quantity: 4300,
       categoryId: 3,
+      image:
+        "https://logos-world.net/wp-content/uploads/2020/04/Minecraft-Symbol.jpg",
     },
     {
       title: "Minecraft",
@@ -772,6 +939,8 @@ async function seedDB() {
       price: 45.99,
       quantity: 4300,
       categoryId: 4,
+      image:
+        "https://logos-world.net/wp-content/uploads/2020/04/Minecraft-Symbol.jpg",
     },
     {
       title: "The Elder Scrolls: Arena",
@@ -780,6 +949,8 @@ async function seedDB() {
       price: 35.99,
       quantity: 650,
       categoryId: 1,
+      image:
+        "https://lparchive.org/The-Elder-Scrolls-Arena/Images/1-arenaboxlogo.png",
     },
     {
       title: "The Elder Scrolls II: Daggerfall",
@@ -788,6 +959,8 @@ async function seedDB() {
       price: 37.99,
       quantity: 840,
       categoryId: 1,
+      image:
+        "https://m.media-amazon.com/images/M/MV5BNjczZTc4ODUtMTVmOC00ZGZiLWI0Y2YtNDYzNzk1YzQ4MmJkXkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_.jpg",
     },
     {
       title: "The Elder Scrolls III: Morrowind",
@@ -796,6 +969,8 @@ async function seedDB() {
       price: 40.99,
       quantity: 1100,
       categoryId: 1,
+      image:
+        "https://static.wikia.nocookie.net/elderscrolls/images/3/38/Morrowind_Cover.png/revision/latest?cb=20160812144154",
     },
     {
       title: "The Elder Scrolls III: Morrowind",
@@ -804,6 +979,8 @@ async function seedDB() {
       price: 40.99,
       quantity: 1100,
       categoryId: 2,
+      image:
+        "https://static.wikia.nocookie.net/elderscrolls/images/3/38/Morrowind_Cover.png/revision/latest?cb=20160812144154",
     },
     {
       title: "The Elder Scrolls III: Morrowind",
@@ -812,6 +989,8 @@ async function seedDB() {
       price: 40.99,
       quantity: 1100,
       categoryId: 3,
+      image:
+        "https://static.wikia.nocookie.net/elderscrolls/images/3/38/Morrowind_Cover.png/revision/latest?cb=20160812144154",
     },
     {
       title: "The Elder Scrolls IV: Oblivion",
@@ -820,6 +999,8 @@ async function seedDB() {
       price: 43.99,
       quantity: 1750,
       categoryId: 1,
+      image:
+        "https://gamingbolt.com/wp-content/uploads/2010/06/bkgd_parchment_w-logo.jpg",
     },
     {
       title: "The Elder Scrolls IV: Oblivion",
@@ -828,6 +1009,8 @@ async function seedDB() {
       price: 43.99,
       quantity: 1750,
       categoryId: 2,
+      image:
+        "https://gamingbolt.com/wp-content/uploads/2010/06/bkgd_parchment_w-logo.jpg",
     },
     {
       title: "The Elder Scrolls IV: Oblivion",
@@ -836,6 +1019,8 @@ async function seedDB() {
       price: 43.99,
       quantity: 1750,
       categoryId: 3,
+      image:
+        "https://gamingbolt.com/wp-content/uploads/2010/06/bkgd_parchment_w-logo.jpg",
     },
     {
       title: "The Elder Scrolls V: Skyrim",
@@ -844,6 +1029,8 @@ async function seedDB() {
       price: 50.99,
       quantity: 5500,
       categoryId: 1,
+      image:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTT40kRQEVa_tixzz7mQD_feUIRbEeSCSF2AA&usqp=CAU",
     },
     {
       title: "The Elder Scrolls V: Skyrim",
@@ -852,6 +1039,8 @@ async function seedDB() {
       price: 50.99,
       quantity: 5500,
       categoryId: 2,
+      image:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTT40kRQEVa_tixzz7mQD_feUIRbEeSCSF2AA&usqp=CAU",
     },
     {
       title: "The Elder Scrolls V: Skyrim",
@@ -860,6 +1049,8 @@ async function seedDB() {
       price: 50.99,
       quantity: 5500,
       categoryId: 3,
+      image:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTT40kRQEVa_tixzz7mQD_feUIRbEeSCSF2AA&usqp=CAU",
     },
     {
       title: "The Elder Scrolls V: Skyrim",
@@ -868,6 +1059,8 @@ async function seedDB() {
       price: 50.99,
       quantity: 5500,
       categoryId: 4,
+      image:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTT40kRQEVa_tixzz7mQD_feUIRbEeSCSF2AA&usqp=CAU",
     },
     {
       title: "Apex Legends",
@@ -875,6 +1068,8 @@ async function seedDB() {
       price: 0.0,
       quantity: 10000,
       categoryId: 1,
+      image:
+        "https://preview.redd.it/njdna87sy3431.png?auto=webp&s=3f74fbec3c3b230d0b81ce5412bd3438d8883a72",
     },
     {
       title: "Apex Legends",
@@ -882,6 +1077,8 @@ async function seedDB() {
       price: 0.0,
       quantity: 10000,
       categoryId: 2,
+      image:
+        "https://preview.redd.it/njdna87sy3431.png?auto=webp&s=3f74fbec3c3b230d0b81ce5412bd3438d8883a72",
     },
     {
       title: "Apex Legends",
@@ -889,6 +1086,8 @@ async function seedDB() {
       price: 0.0,
       quantity: 10000,
       categoryId: 3,
+      image:
+        "https://preview.redd.it/njdna87sy3431.png?auto=webp&s=3f74fbec3c3b230d0b81ce5412bd3438d8883a72",
     },
     {
       title: "Apex Legends",
@@ -896,6 +1095,8 @@ async function seedDB() {
       price: 0.0,
       quantity: 10000,
       categoryId: 4,
+      image:
+        "https://preview.redd.it/njdna87sy3431.png?auto=webp&s=3f74fbec3c3b230d0b81ce5412bd3438d8883a72",
     },
     {
       title: "Final Fantasy",
@@ -903,6 +1104,8 @@ async function seedDB() {
       price: 150.37,
       quantity: 43,
       categoryId: 3,
+      image:
+        "https://ih0.redbubble.net/image.493983514.5958/flat,800x800,075,f.jpg",
     },
     {
       title: "Super Mario",
@@ -910,6 +1113,8 @@ async function seedDB() {
       price: 150.37,
       quantity: 43,
       categoryId: 3,
+      image:
+        "https://static.wikia.nocookie.net/logopedia/images/d/d4/Super_Mario_%281996-2014%29.svg/revision/latest?cb=20181206060417",
     },
     {
       title: "Mario Kart",
@@ -917,6 +1122,8 @@ async function seedDB() {
       price: 150.37,
       quantity: 43,
       categoryId: 3,
+      image:
+        "https://upload.wikimedia.org/wikipedia/commons/3/30/Mario_kart_first_logo.png",
     },
     {
       title: "Halo",
@@ -924,6 +1131,7 @@ async function seedDB() {
       price: 150.37,
       quantity: 43,
       categoryId: 3,
+      image: "https://i.redd.it/x2nthi03s2g11.jpg",
     },
     {
       title: "007 Golden Eye",
@@ -931,6 +1139,8 @@ async function seedDB() {
       price: 150.37,
       quantity: 43,
       categoryId: 3,
+      image:
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Logo_goldeneye_eu.svg/1280px-Logo_goldeneye_eu.svg.png",
     },
     {
       title: "Zelda",
@@ -938,6 +1148,8 @@ async function seedDB() {
       price: 150.37,
       quantity: 43,
       categoryId: 3,
+      image:
+        "https://i.pinimg.com/736x/c4/b8/11/c4b811057b5e5c838504914d09eea209.jpg",
     },
     {
       title: "Sonic",
@@ -945,6 +1157,8 @@ async function seedDB() {
       price: 150.37,
       quantity: 43,
       categoryId: 3,
+      image:
+        "https://venturebeat.com/wp-content/uploads/2018/03/sonicemblem2.jpg?fit=1920%2C1080&strip=all",
     },
     {
       title: "Crazy taxi",
@@ -952,6 +1166,8 @@ async function seedDB() {
       price: 150.37,
       quantity: 43,
       categoryId: 3,
+      image:
+        "https://images2.minutemediacdn.com/image/fetch/w_2000,h_2000,c_fit/https%3A%2F%2Fapptrigger.com%2Ffiles%2F2017%2F05%2Fcrazy-taxi-header.jpg",
     },
     {
       title: "Half-life",
@@ -959,6 +1175,8 @@ async function seedDB() {
       price: 150.37,
       quantity: 43,
       categoryId: 3,
+      image:
+        "https://upload.wikimedia.org/wikipedia/en/thumb/f/fa/Half-Life_Cover_Art.jpg/220px-Half-Life_Cover_Art.jpg",
     },
     {
       title: "Resident Evil",
@@ -966,6 +1184,8 @@ async function seedDB() {
       price: 150.37,
       quantity: 43,
       categoryId: 3,
+      image:
+        "https://upload.wikimedia.org/wikipedia/en/thumb/a/a6/Resident_Evil_1_cover.png/220px-Resident_Evil_1_cover.png",
     },
     {
       title: "Pokemon",
@@ -973,6 +1193,7 @@ async function seedDB() {
       price: 150.37,
       quantity: 43,
       categoryId: 3,
+      image: "http://i.imgur.com/iPvcyJv.png",
     },
     {
       title: "Animal Crossing",
@@ -980,6 +1201,8 @@ async function seedDB() {
       price: 150.37,
       quantity: 43,
       categoryId: 3,
+      image:
+        "https://static.wikia.nocookie.net/ultimatepopculture/images/8/82/Animal_Crossing_Coverart.png/revision/latest?cb=20190922185519",
     },
     {
       title: "Sims",
@@ -987,13 +1210,14 @@ async function seedDB() {
       price: 150.37,
       quantity: 43,
       categoryId: 3,
+      image: "https://www.decalsplanet.com/img_b/vinyl-decal-sticker-1728.jpg",
     },
   ];
 
   for (let product of products) {
     await client.query(
       `
-    INSERT INTO products(title, description, price, quantity, category_id) VALUES ($1,$2,$3,$4,$5);
+    INSERT INTO products(title, description, price, quantity, category_id, image) VALUES ($1,$2,$3,$4,$5,$6);
     `,
       [
         product.title,
@@ -1001,6 +1225,7 @@ async function seedDB() {
         product.price,
         product.quantity,
         product.categoryId,
+        product.image,
       ]
     );
   }
