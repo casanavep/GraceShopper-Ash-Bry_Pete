@@ -53,12 +53,27 @@ async function getProductByTitle(title) {
 // getProductByTitle("muffler").then(console.log);
 async function getProducts() {
   try {
-    const resp = await client.query(
+    const productsData = await client.query(
       `
-      SELECT * FROM products
+      SELECT * FROM products;
       `
     );
-    return resp.rows;
+    const products = productsData.rows;
+    const categoriesData = await client.query(`
+    SELECT * FROM categories;
+    `);
+    const categories = categoriesData.rows;
+    for (product of products) {
+      productCatId = product.category_id;
+
+      for (category of categories) {
+        if (category.id === productCatId) {
+          product.platform = category.platform;
+        }
+      }
+    }
+
+    return products;
   } catch (error) {
     throw error;
   }
