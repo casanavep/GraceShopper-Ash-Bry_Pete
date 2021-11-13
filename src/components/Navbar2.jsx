@@ -18,6 +18,11 @@ const useStyles = makeStyles((theme) => ({
   toolbar: {
     display: "flex",
     justifyContent: "space-between",
+    alignContent: "center",
+    position: "absolute",
+    marginTop: "65px",
+    backgroundColor: "#232f3e",
+    width: "98%",
   },
   logoLg: {
     display: "none",
@@ -67,9 +72,22 @@ const useStyles = makeStyles((theme) => ({
   badge: {
     marginRight: theme.spacing(2),
   },
+  buttons: {
+    display: "flex",
+    marginLeft: "auto",
+    marginRight: "auto",
+    backgroundColor: "inherit",
+    color: "white",
+    border: "none",
+    outline: "none",
+    justifyContent: "space-evenly",
+    paddingLeft: "25px",
+    paddingRight: "25px",
+  }
+
 }));
 
-const Navbar = (props) => {
+const Navbar2 = (props) => {
   const [open, setOpen] = useState(false);
   const classes = useStyles({ open });
   let history = useHistory()
@@ -87,53 +105,17 @@ const Navbar = (props) => {
       }
 
   return (
-    <AppBar position="fixed">
+    <AppBar>
       <Toolbar className={classes.toolbar}>
-        <Typography variant="h6" className={classes.logoLg}>
-          BAP GAMING
-        </Typography>
-        <Typography variant="h6" className={classes.logoSm}>
-          BAP GAMING
-        </Typography>
-        <div className={classes.search}>
-          <Search />
-          <InputBase placeholder="Search here..." className={classes.input} />
-          <Cancel className={classes.cancel} onClick={() => setOpen(false)} />
-        </div>
-        <div className={classes.icons}>
-          <Search
-            className={classes.searchButton}
-            onClick={() => setOpen(true)}
-          />
-          {props.user && (
-            <>
-          <Badge badgeContent={0} color="secondary" className={classes.badge}>
-            <Mail />
-          </Badge>
-          <Badge badgeContent={0} color="secondary" className={classes.badge}>
-            <Notifications />
-          </Badge>
-          <div>
-         <Button onClick={handleLogout} to="/" color="inherit">Logout</Button>
-          </div>
-          </>
-          )}
-          {/* <Avatar
-            alt="Remy Sharp"
-            src="https://images.pexels.com/photos/8647814/pexels-photo-8647814.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
-          /> */}
-          {!props.user && (
-            <>
-          <Badge className={classes.badge}>
-          <Button onClick={handleRoute} to="/login" color="inherit">Login
-            </Button>
-          </Badge>
-          <Badge badgeContent={0} color="secondary" className={classes.badge}>
-            <ShoppingCart/>
-          </Badge>
-          </>
-          )} 
-          </div>
+        <div className={classes.buttons}>
+        <button className={classes.buttons}>Xbox</button>
+        <button className={classes.buttons}>Playstation</button>
+        <button className={classes.buttons}>Switch</button>    
+        <button className={classes.buttons}>Nintendo 64</button> 
+        <button className={classes.buttons}>Nintendo GameCube</button>
+        <button className={classes.buttons}>SEGA DreamCast</button>
+        <button className={classes.buttons}>PC</button>
+      </div>   
       </Toolbar>
     </AppBar>
   );
@@ -143,7 +125,7 @@ const Navbar = (props) => {
 //clickable link to route to cart, messages, and notifications(?)
 
 
-export default Navbar;
+export default Navbar2;
 
 
 

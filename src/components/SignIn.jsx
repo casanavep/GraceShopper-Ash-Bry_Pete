@@ -38,6 +38,7 @@ const SignIn = (props) => {
       id: info.user.id,
       token: info.token,
       email: info.user.email,
+      admin: info.user.admin,
     });
     history.push("/")
   }
