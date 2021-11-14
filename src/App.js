@@ -49,7 +49,7 @@ function App() {
         setUser={setUser}
         user={user}
       />
-      <Navbar2 />
+      <Navbar2 setSearchFilter={setSearchFilter} />
       <div className="container">
         {/* <Route exact path="/">
           <Product />
