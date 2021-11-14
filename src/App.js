@@ -47,19 +47,20 @@ function App() {
       <Navbar setUser={setUser} user={user} />
       <Navbar2 />
       <div className="container">
-        <Route exact path="/">
+        {/* <Route exact path="/">
           <Product />
-        </Route>
+        </Route> */}
         <Route path="/login">
           <SignIn setUser={setUser} />
         </Route>
         <Route path="/register">
           <Register setUser={setUser} />
         </Route>
+        <Route exact path="/admin">
+          <AdminApp setUser={setUser} />
+        </Route>
       </div>
-      <Route exact path="/admin">
-        <AdminApp setUser={setUser} />
-      </Route>
+
       <div className="container">
         <MainProducts />
       </div>
