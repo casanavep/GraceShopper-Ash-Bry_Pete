@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { useHistory } from "react-router";
+// import ReactTooltip from "react-tooltip";
 import {
   alpha,
   AppBar,
@@ -21,7 +22,7 @@ import {
   AccountCircle,
   ImageOutlined,
 } from "@material-ui/icons";
-
+import AdminPanelSettingsIcon from "@mui/icons-material/AdminPanelSettings";
 const useStyles = makeStyles((theme) => ({
   toolbar: {
     display: "flex",
@@ -96,6 +97,9 @@ const Navbar = (props) => {
 
   return (
     <AppBar position="fixed">
+      {/* <ReactTooltip id="checkout">
+        <span>Go to checkout</span>
+      </ReactTooltip> */}
       <Toolbar className={classes.toolbar}>
         <Typography variant="h6" className={classes.logoLg}>
           BAP GAMING
@@ -122,6 +126,18 @@ const Navbar = (props) => {
           />
           {props.user && (
             <>
+              {props.user.admin && (
+                <Badge
+                  badgeContent={0}
+                  color="secondary"
+                  className={classes.badge}
+                  title="Admin Dashboard"
+                  to="/admin"
+                  component={Link}
+                >
+                  <AdminPanelSettingsIcon />
+                </Badge>
+              )}
               <Badge
                 badgeContent={0}
                 color="secondary"
@@ -136,8 +152,23 @@ const Navbar = (props) => {
               >
                 <Notifications />
               </Badge>
+              <Badge
+                badgeContent={0}
+                color="secondary"
+                className={classes.badge}
+                // data-tip
+                // data-for="checkout"
+                title="Go to Checkout"
+              >
+                <ShoppingCart />
+              </Badge>
               <div>
-                <Button onClick={handleLogout} to="/" color="inherit">
+                <Button
+                  onClick={handleLogout}
+                  title="Click to Logout"
+                  to="/"
+                  color="inherit"
+                >
                   Logout
                 </Button>
               </div>
@@ -149,7 +180,7 @@ const Navbar = (props) => {
           /> */}
           {!props.user && (
             <>
-              <Badge className={classes.badge}>
+              <Badge className={classes.badge} title="Click to Login">
                 <Button onClick={handleRoute} to="/login" color="inherit">
                   Login
                 </Button>
@@ -158,6 +189,7 @@ const Navbar = (props) => {
                 badgeContent={0}
                 color="secondary"
                 className={classes.badge}
+                title="Go to Checkout"
               >
                 <ShoppingCart />
               </Badge>

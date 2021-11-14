@@ -38,6 +38,7 @@ const CustomCard = ({
           >
             {product.title}
           </Typography>
+          {product.platform}
         </CardContent>
       </CardActionArea>
       {basket && (

@@ -50,25 +50,23 @@ function App() {
         user={user}
       />
       <Navbar2 setSearchFilter={setSearchFilter} />
-      <div className="container">
-        {/* <Route exact path="/">
-          <Product />
-        </Route> */}
-        <Route path="/login">
-          <SignIn setUser={setUser} />
-        </Route>
-        <Route path="/register">
-          <Register setUser={setUser} />
-        </Route>
-        <Route exact path="/admin">
-          <AdminApp setUser={setUser} />
-        </Route>
-      </div>
-
-      <div className="container">
-        <MainProducts searchFilter={searchFilter} />
-      </div>
-      <Footer />
+      <Switch>
+        <div className="container">
+          <Route exact path="/">
+            <MainProducts searchFilter={searchFilter} />
+          </Route>
+          <Route path="/login">
+            <SignIn setUser={setUser} />
+          </Route>
+          <Route path="/register">
+            <Register setUser={setUser} />
+          </Route>
+          <Route exact path="/admin">
+            <AdminApp setUser={setUser} />
+          </Route>
+        </div>
+      </Switch>
+      {/* <Footer /> */}
     </div>
   );
 }
