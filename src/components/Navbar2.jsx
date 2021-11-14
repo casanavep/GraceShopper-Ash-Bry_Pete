@@ -160,6 +160,12 @@ const Navbar2 = (props) => {
           >
             PC
           </button>
+          <button
+            className={classes.buttons}
+            onClick={() => props.setSearchFilter("")}
+          >
+            Clear/Reset
+          </button>
         </div>
       </Toolbar>
     </AppBar>
