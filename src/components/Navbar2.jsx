@@ -12,17 +12,28 @@ import {
   Toolbar,
   Typography,
 } from "@material-ui/core";
-import { Cancel, Mail, Notifications, Search, ShoppingCart, AccountCircle, ImageOutlined } from "@material-ui/icons";
+import {
+  Cancel,
+  Mail,
+  Notifications,
+  Search,
+  ShoppingCart,
+  AccountCircle,
+  ImageOutlined,
+} from "@material-ui/icons";
 
 const useStyles = makeStyles((theme) => ({
   toolbar: {
     display: "flex",
+    float: "none",
     justifyContent: "space-between",
     alignContent: "center",
     position: "absolute",
-    marginTop: "65px",
+    marginTop: "64px",
     backgroundColor: "#232f3e",
     width: "98%",
+    height: "20px",
+    marginBottom: "10px",
   },
   logoLg: {
     display: "none",
@@ -83,39 +94,38 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "space-evenly",
     paddingLeft: "25px",
     paddingRight: "25px",
-  }
-
+  },
 }));
 
 const Navbar2 = (props) => {
   const [open, setOpen] = useState(false);
   const classes = useStyles({ open });
-  let history = useHistory()
+  let history = useHistory();
 
   const handleRoute = (event) => {
-    event.preventDefault()
-    history.push("/login")
-  }
+    event.preventDefault();
+    history.push("/login");
+  };
 
   const handleLogout = (event) => {
-        event.preventDefault()
-        localStorage.removeItem("token")
-        props.setUser(null);
-        history.push("/")
-      }
+    event.preventDefault();
+    localStorage.removeItem("token");
+    props.setUser(null);
+    history.push("/");
+  };
 
   return (
     <AppBar>
       <Toolbar className={classes.toolbar}>
         <div className={classes.buttons}>
-        <button className={classes.buttons}>Xbox</button>
-        <button className={classes.buttons}>Playstation</button>
-        <button className={classes.buttons}>Switch</button>    
-        <button className={classes.buttons}>Nintendo 64</button> 
-        <button className={classes.buttons}>Nintendo GameCube</button>
-        <button className={classes.buttons}>SEGA DreamCast</button>
-        <button className={classes.buttons}>PC</button>
-      </div>   
+          <button className={classes.buttons}>Xbox</button>
+          <button className={classes.buttons}>Playstation</button>
+          <button className={classes.buttons}>Switch</button>
+          <button className={classes.buttons}>Nintendo 64</button>
+          <button className={classes.buttons}>Nintendo GameCube</button>
+          <button className={classes.buttons}>SEGA DreamCast</button>
+          <button className={classes.buttons}>PC</button>
+        </div>
       </Toolbar>
     </AppBar>
   );
@@ -124,11 +134,7 @@ const Navbar2 = (props) => {
 //need onClick to route to signin in from account badge
 //clickable link to route to cart, messages, and notifications(?)
 
-
 export default Navbar2;
-
-
-
 
 /////////////////////////////////////////////////
 // import { useEffect, useState } from "react";
@@ -226,8 +232,6 @@ export default Navbar2;
 //   //  const adminUser = props.user.admin
 //   //  const noUser = !props.user
 
-   
-  
 // // if (!props.user) {
 // //  const userLoggedIn = "noUser"
 // // } else if (props.user.admin) {
@@ -286,7 +290,7 @@ export default Navbar2;
 //           </Badge>
 //           <div>
 //           <Button onClick={handleLogout} to="/" color="inherit">Logout</Button>
-//           </div>  
+//           </div>
 //           </>
 //           )}
 //           { standardUser && (
@@ -302,7 +306,7 @@ export default Navbar2;
 //           </Badge>
 //           <div>
 //           <Button onClick={handleLogout} to="/" color="inherit">Logout</Button>
-//           </div>  
+//           </div>
 //           </>
 //           )}
 //           {/* <Avatar
@@ -325,6 +329,5 @@ export default Navbar2;
 
 // //need onClick to route to signin in from account badge
 // //clickable link to route to cart, messages, and notifications(?)
-
 
 // export default Navbar;
