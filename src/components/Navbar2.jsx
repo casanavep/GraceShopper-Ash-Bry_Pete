@@ -118,13 +118,48 @@ const Navbar2 = (props) => {
     <AppBar>
       <Toolbar className={classes.toolbar}>
         <div className={classes.buttons}>
-          <button className={classes.buttons}>Xbox</button>
-          <button className={classes.buttons}>Playstation</button>
-          <button className={classes.buttons}>Switch</button>
-          <button className={classes.buttons}>Nintendo 64</button>
-          <button className={classes.buttons}>Nintendo GameCube</button>
-          <button className={classes.buttons}>SEGA DreamCast</button>
-          <button className={classes.buttons}>PC</button>
+          <button
+            className={classes.buttons}
+            onClick={() => props.setSearchFilter("xbox")}
+          >
+            Xbox
+          </button>
+          <button
+            className={classes.buttons}
+            onClick={() => props.setSearchFilter("playstation")}
+          >
+            Playstation
+          </button>
+          <button
+            className={classes.buttons}
+            onClick={() => props.setSearchFilter("switch")}
+          >
+            Switch
+          </button>
+          <button
+            className={classes.buttons}
+            onClick={() => props.setSearchFilter("Nintendo 64")}
+          >
+            Nintendo 64
+          </button>
+          <button
+            className={classes.buttons}
+            onClick={() => props.setSearchFilter("Nintendo GameCube")}
+          >
+            Nintendo GameCube
+          </button>
+          <button
+            className={classes.buttons}
+            onClick={() => props.setSearchFilter("SEGA DreamCast")}
+          >
+            SEGA DreamCast
+          </button>
+          <button
+            className={classes.buttons}
+            onClick={() => props.setSearchFilter("PC")}
+          >
+            PC
+          </button>
         </div>
       </Toolbar>
     </AppBar>
