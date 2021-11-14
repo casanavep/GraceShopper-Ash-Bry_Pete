@@ -23,7 +23,7 @@ export default function MainProducts(props) {
   useEffect(() => {
     fetchProducts();
   }, []);
-  console.log(data);
+  // console.log(data);
   return (
     <div>
       <Container id="products">
