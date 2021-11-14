@@ -12,7 +12,15 @@ import {
   Toolbar,
   Typography,
 } from "@material-ui/core";
-import { Cancel, Mail, Notifications, Search, ShoppingCart, AccountCircle, ImageOutlined } from "@material-ui/icons";
+import {
+  Cancel,
+  Mail,
+  Notifications,
+  Search,
+  ShoppingCart,
+  AccountCircle,
+  ImageOutlined,
+} from "@material-ui/icons";
 
 const useStyles = makeStyles((theme) => ({
   toolbar: {
@@ -72,19 +80,19 @@ const useStyles = makeStyles((theme) => ({
 const Navbar = (props) => {
   const [open, setOpen] = useState(false);
   const classes = useStyles({ open });
-  let history = useHistory()
+  let history = useHistory();
 
   const handleRoute = (event) => {
-    event.preventDefault()
-    history.push("/login")
-  }
+    event.preventDefault();
+    history.push("/login");
+  };
 
   const handleLogout = (event) => {
-        event.preventDefault()
-        localStorage.removeItem("token")
-        props.setUser(null);
-        history.push("/")
-      }
+    event.preventDefault();
+    localStorage.removeItem("token");
+    props.setUser(null);
+    history.push("/");
+  };
 
   return (
     <AppBar position="fixed">
@@ -97,7 +105,14 @@ const Navbar = (props) => {
         </Typography>
         <div className={classes.search}>
           <Search />
-          <InputBase placeholder="Search here..." className={classes.input} />
+          <InputBase
+            placeholder="Search here..."
+            className={classes.input}
+            onChange={(event) => {
+              event.preventDefault();
+              props.setSearchFilter(event.target.value);
+            }}
+          />
           <Cancel className={classes.cancel} onClick={() => setOpen(false)} />
         </div>
         <div className={classes.icons}>
@@ -107,16 +122,26 @@ const Navbar = (props) => {
           />
           {props.user && (
             <>
-          <Badge badgeContent={0} color="secondary" className={classes.badge}>
-            <Mail />
-          </Badge>
-          <Badge badgeContent={0} color="secondary" className={classes.badge}>
-            <Notifications />
-          </Badge>
-          <div>
-         <Button onClick={handleLogout} to="/" color="inherit">Logout</Button>
-          </div>
-          </>
+              <Badge
+                badgeContent={0}
+                color="secondary"
+                className={classes.badge}
+              >
+                <Mail />
+              </Badge>
+              <Badge
+                badgeContent={0}
+                color="secondary"
+                className={classes.badge}
+              >
+                <Notifications />
+              </Badge>
+              <div>
+                <Button onClick={handleLogout} to="/" color="inherit">
+                  Logout
+                </Button>
+              </div>
+            </>
           )}
           {/* <Avatar
             alt="Remy Sharp"
@@ -124,16 +149,21 @@ const Navbar = (props) => {
           /> */}
           {!props.user && (
             <>
-          <Badge className={classes.badge}>
-          <Button onClick={handleRoute} to="/login" color="inherit">Login
-            </Button>
-          </Badge>
-          <Badge badgeContent={0} color="secondary" className={classes.badge}>
-            <ShoppingCart/>
-          </Badge>
-          </>
-          )} 
-          </div>
+              <Badge className={classes.badge}>
+                <Button onClick={handleRoute} to="/login" color="inherit">
+                  Login
+                </Button>
+              </Badge>
+              <Badge
+                badgeContent={0}
+                color="secondary"
+                className={classes.badge}
+              >
+                <ShoppingCart />
+              </Badge>
+            </>
+          )}
+        </div>
       </Toolbar>
     </AppBar>
   );
@@ -142,11 +172,7 @@ const Navbar = (props) => {
 //need onClick to route to signin in from account badge
 //clickable link to route to cart, messages, and notifications(?)
 
-
 export default Navbar;
-
-
-
 
 /////////////////////////////////////////////////
 // import { useEffect, useState } from "react";
@@ -244,8 +270,6 @@ export default Navbar;
 //   //  const adminUser = props.user.admin
 //   //  const noUser = !props.user
 
-   
-  
 // // if (!props.user) {
 // //  const userLoggedIn = "noUser"
 // // } else if (props.user.admin) {
@@ -304,7 +328,7 @@ export default Navbar;
 //           </Badge>
 //           <div>
 //           <Button onClick={handleLogout} to="/" color="inherit">Logout</Button>
-//           </div>  
+//           </div>
 //           </>
 //           )}
 //           { standardUser && (
@@ -320,7 +344,7 @@ export default Navbar;
 //           </Badge>
 //           <div>
 //           <Button onClick={handleLogout} to="/" color="inherit">Logout</Button>
-//           </div>  
+//           </div>
 //           </>
 //           )}
 //           {/* <Avatar
@@ -343,6 +367,5 @@ export default Navbar;
 
 // //need onClick to route to signin in from account badge
 // //clickable link to route to cart, messages, and notifications(?)
-
 
 // export default Navbar;

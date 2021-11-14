@@ -16,8 +16,7 @@ import Product from "./adminPages/product/Product";
 
 function App() {
   const [user, setUser] = useState(null);
-
-  console.log(user);
+  const [searchFilter, setSearchFilter] = useState("");
 
   useEffect(() => {
     console.log("Fetch user starting");
@@ -44,7 +43,12 @@ function App() {
   return (
     <div className="App">
       <AppBar />
-      <Navbar setUser={setUser} user={user} />
+      <Navbar
+        searchFilter={searchFilter}
+        setSearchFilter={setSearchFilter}
+        setUser={setUser}
+        user={user}
+      />
       <Navbar2 />
       <div className="container">
         {/* <Route exact path="/">
@@ -62,7 +66,7 @@ function App() {
       </div>
 
       <div className="container">
-        <MainProducts />
+        <MainProducts searchFilter={searchFilter} />
       </div>
       <Footer />
     </div>
