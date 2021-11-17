@@ -68,69 +68,67 @@ const Basket = ({
   // },
   // ];
   // console.log(columns);
+  // return (
+  //   <div>
+  //     {data.map((item) => {
+  //       return (
+  //         <div>
+  //           <h1>{item.title}</h1>
+  //           {item.platform}
+  //           {item.price}
+  //         </div>
+  //       );
+  //     })}
+  //   </div>
+  // );
+  // };
+
+  // const [showSpinner, setShowSpinner] = useState(true);
+  // const loading = () => {
+  //   setTimeout(() => {
+  //     setShowSpinner(false);
+  //   }, 2000);
+  //   if (showSpinner) {
+  //     return <Spinner />;
+  //   }
+  //   return <Banner />;
+  // };
+
+  // if (!data.line_items || !data.line_items.length) {
+  //   return;
+  // } else;
+  // // loading();
+
   return (
     <div>
+      {" "}
       {data.map((item) => {
-        console.log(item);
         return (
-          <div>
-            <h1>{item.title}</h1>
-            {item.price}
-          </div>
+          <Container id="basket">
+            <Grid container justify="center" spacing={4}></Grid>
+          </Container>
         );
       })}
-      ;
+      <div className="actions">
+        <Button
+          size="small"
+          color="secondary"
+          variant="contained"
+          // onClick={handleEmptyBasket}
+        >
+          Empty Basket
+        </Button>
+
+        <Button
+          size="small"
+          variant="contained"
+          component={Link}
+          to="/checkout"
+        >
+          Checkout
+        </Button>
+      </div>
     </div>
   );
 };
-
-// .map((product) => (
-//   <Grid key={product.id} item xs={12} sm={6} md={4}>
-//     <Product product={product} addProduct={props.addProduct} />
-//   </Grid>
-// ))}
-
-//   const [showSpinner, setShowSpinner] = useState(true);
-//   const loading = () => {
-//     setTimeout(() => {
-//       setShowSpinner(false);
-//     }, 2000);
-//     if (showSpinner) {
-//       return <Spinner />;
-//     }
-//     return <Banner />;
-//   };
-
-//   if (!basketData.line_items || !basketData.line_items.length) return loading();
-
-// {basketData.line_items.map((item) => {
-// return (
-//   <div>
-//     <Container id="basket">
-//       <Grid container justify="center" spacing={4}>
-//         <div className="actions">
-//           <Button
-//             size="small"
-//             color="secondary"
-//             variant="contained"
-//             // onClick={handleEmptyBasket}
-//           >
-//             Empty Basket
-//           </Button>
-
-//           <Button
-//             size="small"
-//             variant="contained"
-//             component={Link}
-//             to="/checkout"
-//           >
-//             Checkout
-//           </Button>
-//         </div>
-//       </Grid>
-//     </Container>
-//   </div>
-// );
-// };
-
 export default Basket;
