@@ -17,7 +17,9 @@ const Basket = ({
   // handleEmptyBasket,
   // RemoveItemFromBasket,
 }) => {
-  const [data, setData] = useState([]);
+  const [data, setData] = useState(
+    JSON.parse(localStorage.getItem("cart")) || []
+  );
   // const fetchProductsById = async () => {
   //   const resp = await fetch(`${BASE_URL}/productid/:id`, {
   //     headers: {
@@ -32,9 +34,12 @@ const Basket = ({
   // useEffect(() => {
   //   fetchProductsById();
   // }, []);
-  useEffect(() => {
-    setData(localStorage.getItem("cart"));
-  }, []);
+  // useEffect(() => {
+  //   console.log("fetching local storage data");
+  //   setData(localStorage.getItem("cart"));
+  //   console.log("end of fetching local storage data");
+  //   console.log(data);
+  // }, []);
   console.log(data);
   // const columns = [
   //   { field: "title", headerName: "Item", width: 90 },
@@ -63,7 +68,20 @@ const Basket = ({
   // },
   // ];
   // console.log(columns);
-  data.map((item) => <h1>{item.title}</h1>);
+  return (
+    <div>
+      {data.map((item) => {
+        console.log(item);
+        return (
+          <div>
+            <h1>{item.title}</h1>
+            {item.price}
+          </div>
+        );
+      })}
+      ;
+    </div>
+  );
 };
 
 // .map((product) => (
