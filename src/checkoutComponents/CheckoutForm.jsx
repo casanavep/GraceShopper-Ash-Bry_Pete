@@ -10,13 +10,14 @@ import {
   import { Link } from "react-router-dom";
   
   const CheckoutForm = ({
-    user = {},
+    user,
     orderInfo,
     handleChange,
     handleSubmit,
     checkoutData,
     handleSelectChange,
   }) => (
+    <h1>Checkout
     <form onSubmit={handleSubmit} autoComplete="off">
       <Grid container spacing={4}>
         <Grid item xs={12} sm={6}>
@@ -26,7 +27,7 @@ import {
             id="first-name"
             name="firstName"
             label="First Name"
-            value={user.firstName}
+            // value={user.fullname}
             onChange={handleChange}
           />
         </Grid>
@@ -37,7 +38,7 @@ import {
             id="first-name"
             name="lastName"
             label="First Name"
-            value={user.lastName}
+            // value={user.lastName}
             onChange={handleChange}
           />
         </Grid>
@@ -49,7 +50,7 @@ import {
             name="email"
             type="email"
             label="Email"
-            value={user.email}
+            // value={user.email}
             onChange={handleChange}
           />
         </Grid>
@@ -59,7 +60,7 @@ import {
             fullWidth
             id="address"
             name="address"
-            value={user.address}
+            // value={user.address}
             label="Address line 1"
             onChange={handleChange}
           />
@@ -71,7 +72,7 @@ import {
             id="city"
             name="city"
             label="City"
-            value={user.city}
+            // value={user.city}
             onChange={handleChange}
           />
         </Grid>
@@ -81,7 +82,7 @@ import {
             fullWidth
             id="post-code"
             name="postCode"
-            value={user.postCode}
+            // value={user.postCode}
             onChange={handleChange}
             label="Zip / Postal code"
           />
@@ -96,15 +97,15 @@ import {
               required
               name="shippingCountry"
               id="shipping-country-select"
-              value={user.shippingCountry.code || ""}
+              // value={user.shippingCountry.code || ""}
               labelId="shipping-country-select-label"
               onChange={(e) => handleSelectChange(e, "shippingCountries")}
             >
-              {user.shippingCountries.map((country) => (
+              {/* {user.shippingCountries.map((country) => (
                 <MenuItem key={country.code} value={country.code}>
                   {country.name}
                 </MenuItem>
-              ))}
+              ))} */}
             </Select>
           </FormControl>
         </Grid>
@@ -119,14 +120,14 @@ import {
               name="shippingSubdivision"
               id="shipping-subdivision-select"
               labelId="shipping-subdivision-select-label"
-              value={user.shippingSubdivision.code || ""}
+              // value={user.shippingSubdivision.code || ""}
               onChange={(e) => handleSelectChange(e, "shippingSubdivisions")}
             >
-              {user.shippingSubdivisions.map((subdivision) => (
+              {/* {user.shippingSubdivisions.map((subdivision) => (
                 <MenuItem key={subdivision.code} value={subdivision.code}>
                   {subdivision.name}
                 </MenuItem>
-              ))}
+              ))} */}
             </Select>
           </FormControl>
         </Grid>
@@ -139,16 +140,16 @@ import {
             <Select
               required
               name="shippingOptions"
-              value={user.shippingOption.id}
+              // value={user.shippingOption.id}
               id="shipping-options-select"
               labelId="shipping-options-select-label"
               onChange={(e) => handleSelectChange(e, "shippingOptions")}
             >
-              {user.shippingOptions.map((option) => (
+              {/* {user.shippingOptions.map((option) => (
                 <MenuItem key={option.id} value={option.id}>
                   {`${option.description} - (${option.price.formatted_with_symbol})`}
                 </MenuItem>
-              ))}
+              ))} */}
             </Select>
           </FormControl>
         </Grid>
@@ -163,6 +164,7 @@ import {
         </Button>
       </div>
     </form>
+    </h1>
   );
   
   export default CheckoutForm;

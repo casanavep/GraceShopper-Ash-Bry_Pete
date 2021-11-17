@@ -3,6 +3,7 @@ import { useState } from "react";
 import { useHistory } from "react-router";
 import "./SignIn.css";
 import BASE_URL from "../util";
+import BAPgaming from "../Images/BAPgaming.png"
 
 const SignIn = (props) => {
   console.log("Launched SignIn");
@@ -51,8 +52,13 @@ const SignIn = (props) => {
 
   return (
     <>
+    <div className="logo">
+      <img src={BAPgaming} alt="BAP Gaming Logo"/>
+    </div>
     <form onSubmit={handleSubmit}>
+      <div className="Login">
       <h2>Login In</h2>
+      <div className="Inputs">
       <input
         value={email}
         onChange={(e) => {
@@ -60,6 +66,8 @@ const SignIn = (props) => {
         }}
         placeholder="Enter email"
       ></input>
+      </div>
+      <div className="Password">
       <input
         value={password}
         onChange={(e) => {
@@ -69,9 +77,13 @@ const SignIn = (props) => {
         minLength={8}
         placeholder="Enter password"
       ></input>
-      <button>Sign In</button>
+      </div>
+      <div className="Buttons">
       <p>{errorMessage}</p>
-      <div><button onClick={handleRoute} to="/register">Create Account</button></div>
+      <button>Sign In</button>
+      <button onClick={handleRoute} to="/register">Create Account</button>
+      </div>
+      </div>
     </form>
     
     </>

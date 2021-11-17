@@ -8,6 +8,8 @@ import Product from "../components/Product";
 
 export default function MainProducts(props) {
   const [data, setData] = useState([]);
+  const [page, setPage] = React.useState(0);
+
 
   const fetchProducts = async () => {
     const resp = await fetch(`${BASE_URL}/products`, {
@@ -51,7 +53,7 @@ export default function MainProducts(props) {
                 <Product product={product} />
               </Grid>
             ))}
-        </Grid>
+            </Grid>
       </Container>
     </div>
   );
