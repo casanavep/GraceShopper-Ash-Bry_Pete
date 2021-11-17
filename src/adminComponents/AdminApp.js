@@ -9,6 +9,7 @@ import ProductList from "../adminPages/productList/ProductList";
 import Product from "../adminPages/product/Product";
 import NewProduct from "../adminPages/newProduct/NewProduct";
 import CategoryList from "../adminPages/categories/CategoryList";
+import MainProducts from "../components/MainProducts";
 
 function AdminApp() {
   return (
@@ -18,7 +19,7 @@ function AdminApp() {
         <Sidebar />
         <Switch>
           <Route exact path="/">
-            <Home />
+            <MainProducts />
           </Route>
           <Route path="/users">
             <UserList />
