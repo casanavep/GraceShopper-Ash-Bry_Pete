@@ -1,11 +1,11 @@
 import Basket from "../Basket";
 import CustomCard from "../CustomCard";
 
-const Product = ({ basket, product, addToBasket, RemoveItemFromBasket }) => (
+const Product = ({ basket, product, addProduct, RemoveItemFromBasket }) => (
   <CustomCard
     basket={basket}
     product={product}
-    addToBasket={addToBasket}
+    addProduct={addProduct}
     RemoveItemFromBasket={RemoveItemFromBasket}
   />
 );

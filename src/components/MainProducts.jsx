@@ -11,7 +11,6 @@ export default function MainProducts(props) {
   const [data, setData] = useState([]);
   const [page, setPage] = React.useState(0);
 
-
   const fetchProducts = async () => {
     const resp = await fetch(`${BASE_URL}/products`, {
       headers: {
@@ -51,10 +50,10 @@ export default function MainProducts(props) {
             })
             .map((product) => (
               <Grid key={product.id} item xs={12} sm={6} md={4}>
-                <Product product={product} />
+                <Product product={product} addProduct={props.addProduct} />
               </Grid>
             ))}
-            </Grid>
+        </Grid>
       </Container>
     </div>
   );

@@ -67,9 +67,8 @@ const CustomCard = ({
             <Button
               size="large"
               className="custom-button"
-
               onClick={() => {
-                addProduct(product.id)
+                addProduct(product.id);
               }}
             >
               <ShoppingCart /> Add to basket

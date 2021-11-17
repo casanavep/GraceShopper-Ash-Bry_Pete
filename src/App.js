@@ -28,9 +28,6 @@ function App() {
   const updateItem = (itemID, amount) => {};
   const removeItem = (itemID) => {};
 
-  
-
-
   useEffect(() => {
     console.log("Fetch user starting");
     const fetchUser = async () => {
@@ -107,7 +104,7 @@ function App() {
             <AdminApp setUser={setUser} />
           </Route>
           <Route exact path="/cart">
-            <Basket basket={basket} setBasket={setBasket} />
+            <Basket cart={cart} setCart={setCart} />
           </Route>
           <Route exact path="/checkout">
             <CheckoutForm user={user} />
