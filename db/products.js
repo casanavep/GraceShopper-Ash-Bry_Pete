@@ -83,19 +83,31 @@ async function getProducts() {
 // getProductById
 async function getProductById(id) {
   try {
-    const resp = await client.query(
+    const productData = await client.query(
       `
       SELECT * FROM products
       WHERE id = $1
       `,
       [id]
     );
-    return resp.rows[0];
+    const product = productData.rows[0];
+
+    const categoriesData = await client.query(`
+    SELECT * FROM categories;
+    `);
+    const categories = categoriesData.rows;
+
+    for (category of categories) {
+      if (category.id === product.category_id) {
+        product.platform = category.platform;
+      }
+    }
+    return product;
   } catch (error) {
     throw error;
   }
 }
-// getProductById(4).then(console.log);
+// getProductById(2).then(console.log);
 
 // getProductByCategoryId
 async function getProductByCategoryId(category_id) {
