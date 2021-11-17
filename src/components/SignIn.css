@@ -1,4 +1,32 @@
 .container {
   display: flex;
-  margin-top: 10px;
+  text-align: center;
+  font-size: large;
+  flex-flow: column;
 }
+
+.logo {
+  display: flex;
+}
+
+img {
+  height: 35vh;
+  border-radius: 15px;
+}
+.Login {
+  display: flex;
+  flex-flow: column;
+}
+
+.Inputs {
+  justify-content: space-around;
+  padding: 10px;
+}
+
+.Password {
+  padding: 10px;
+}
+
+/* .Buttons {
+  padding: 10px;
+} */
