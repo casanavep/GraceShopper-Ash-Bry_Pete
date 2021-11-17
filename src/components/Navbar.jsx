@@ -19,8 +19,10 @@ import {
   Notifications,
   Search,
   ShoppingCart,
+  Home,
   AccountCircle,
   ImageOutlined,
+  HomeWorkRounded,
 } from "@material-ui/icons";
 import AdminPanelSettingsIcon from "@mui/icons-material/AdminPanelSettings";
 const useStyles = makeStyles((theme) => ({
@@ -95,6 +97,11 @@ const Navbar = (props) => {
     history.push("/");
   };
 
+  const handleCartRoute = (event) => {
+    event.preventDefault();
+    history.push("/cart");
+  };
+
   return (
     <AppBar position="fixed">
       {/* <ReactTooltip id="checkout">
@@ -127,6 +134,15 @@ const Navbar = (props) => {
           {props.user && (
             <>
               {props.user.admin && (
+                <>
+                <Badge
+                color="inherit"
+                className={classes.badge}
+                title="Home"
+                to="/"
+                component={Link}>
+                  <Home/>
+                </Badge>
                 <Badge
                   badgeContent={0}
                   color="secondary"
@@ -137,6 +153,7 @@ const Navbar = (props) => {
                 >
                   <AdminPanelSettingsIcon />
                 </Badge>
+                </>
               )}
               <Badge
                 badgeContent={0}
@@ -160,7 +177,9 @@ const Navbar = (props) => {
                 // data-for="checkout"
                 title="Go to Checkout"
               >
+                <Button onClick={handleCartRoute}>
                 <ShoppingCart />
+                </Button>
               </Badge>
               <div>
                 <Button
@@ -180,6 +199,14 @@ const Navbar = (props) => {
           /> */}
           {!props.user && (
             <>
+            <Badge
+            color="inherit"
+            className={classes.badge}
+            title="Home"
+            to="/"
+            component={Link}>
+                  <Home/>
+                </Badge>
               <Badge className={classes.badge} title="Click to Login">
                 <Button onClick={handleRoute} to="/login" color="inherit">
                   Login
@@ -191,7 +218,9 @@ const Navbar = (props) => {
                 className={classes.badge}
                 title="Go to Checkout"
               >
+                <Button onClick={handleCartRoute}>
                 <ShoppingCart />
+                </Button>
               </Badge>
             </>
           )}

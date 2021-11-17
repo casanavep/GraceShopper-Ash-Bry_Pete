@@ -12,17 +12,24 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Navbar2 from "./components/Navbar2";
 import MainProducts from "./components/MainProducts";
 import Product from "./adminPages/product/Product";
+import Basket from "./components/Basket";
+import { useHistory } from "react-router";
+import CheckoutForm from "./checkoutComponents/CheckoutForm";
 // import NewUser from "./pages/newUser/NewUser";
 
 function App() {
   const [user, setUser] = useState(null);
   const [searchFilter, setSearchFilter] = useState("");
+
   const [cart, setCart] = useState([]);
 
   let localCart = localStorage.getItem("cart");
 
   const updateItem = (itemID, amount) => {};
   const removeItem = (itemID) => {};
+
+  
+
 
   useEffect(() => {
     console.log("Fetch user starting");
@@ -98,6 +105,12 @@ function App() {
           </Route>
           <Route exact path="/admin">
             <AdminApp setUser={setUser} />
+          </Route>
+          <Route exact path="/cart">
+            <Basket basket={basket} setBasket={setBasket} />
+          </Route>
+          <Route exact path="/checkout">
+            <CheckoutForm user={user} />
           </Route>
         </div>
       </Switch>
