@@ -20,7 +20,16 @@ import CheckoutForm from "./checkoutComponents/CheckoutForm";
 function App() {
   const [user, setUser] = useState(null);
   const [searchFilter, setSearchFilter] = useState("");
-  const [basket, setBasket] = useState([]);
+
+  const [cart, setCart] = useState([]);
+
+  let localCart = localStorage.getItem("cart");
+
+  const updateItem = (itemID, amount) => {};
+  const removeItem = (itemID) => {};
+
+  
+
 
   useEffect(() => {
     console.log("Fetch user starting");
@@ -44,6 +53,35 @@ function App() {
     fetchUser();
   }, []);
 
+  useEffect(() => {
+    localCart = JSON.parse(localCart);
+    if (localCart) {
+      setCart(localCart);
+    }
+  }, []);
+  const addProduct = (id) => {
+    console.log("fetching product");
+    const fetchProduct = async () => {
+      const resp = await fetch(`${BASE_URL}/products/productid/${id}`);
+
+      const product = await resp.json();
+      console.log(product);
+      let cartCopy = [...cart];
+
+      let existingProduct = cartCopy.find((product) => product.id == id);
+
+      if (existingProduct) {
+        existingProduct.quantity++;
+      } else {
+        cartCopy.push(product);
+      }
+      setCart(cartCopy);
+
+      let stringCart = JSON.stringify(cartCopy);
+      localStorage.setItem("cart", stringCart);
+    };
+    fetchProduct();
+  };
   return (
     <div className="App">
       <AppBar />
@@ -57,7 +95,7 @@ function App() {
       <Switch>
         <div className="container">
           <Route exact path="/">
-            <MainProducts searchFilter={searchFilter} />
+            <MainProducts addProduct={addProduct} searchFilter={searchFilter} />
           </Route>
           <Route path="/login">
             <SignIn setUser={setUser} />
