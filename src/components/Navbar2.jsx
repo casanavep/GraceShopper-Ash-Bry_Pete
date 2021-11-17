@@ -172,7 +172,6 @@ const Navbar2 = (props) => {
   );
 };
 
-//need onClick to route to signin in from account badge
 //clickable link to route to cart, messages, and notifications(?)
 
 export default Navbar2;

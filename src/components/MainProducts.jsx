@@ -9,6 +9,8 @@ import { Pagination } from "@mui/material";
 
 export default function MainProducts(props) {
   const [data, setData] = useState([]);
+  const [page, setPage] = React.useState(0);
+
 
   const fetchProducts = async () => {
     const resp = await fetch(`${BASE_URL}/products`, {
@@ -49,12 +51,10 @@ export default function MainProducts(props) {
             })
             .map((product) => (
               <Grid key={product.id} item xs={12} sm={6} md={4}>
-                {/* <Pagination count={3}> */}
                 <Product product={product} />
-                {/* </Pagination> */}
               </Grid>
             ))}
-        </Grid>
+            </Grid>
       </Container>
     </div>
   );
