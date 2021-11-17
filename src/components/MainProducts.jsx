@@ -5,6 +5,7 @@ import BASE_URL from "../util";
 import { useEffect } from "react";
 import { Grid, Container } from "@material-ui/core";
 import Product from "../components/Product";
+import { Pagination } from "@mui/material";
 
 export default function MainProducts(props) {
   const [data, setData] = useState([]);
@@ -50,7 +51,7 @@ export default function MainProducts(props) {
             })
             .map((product) => (
               <Grid key={product.id} item xs={12} sm={6} md={4}>
-                <Product addProduct={props.addProduct} product={product} />
+                <Product product={product} />
               </Grid>
             ))}
             </Grid>
