@@ -13,7 +13,7 @@ import "./style.css";
 const CustomCard = ({
   basket,
   product,
-  // addProduct,
+  addProduct,
   // updateProduct,
   // RemoveItemFromBasket,
 }) => {
@@ -68,9 +68,9 @@ const CustomCard = ({
               size="large"
               className="custom-button"
 
-              // onClick={() => {
-              //   addProduct(product.id, 1);
-              // }}
+              onClick={() => {
+                addProduct(product.id)
+              }}
             >
               <ShoppingCart /> Add to basket
             </Button>

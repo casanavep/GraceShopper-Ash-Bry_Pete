@@ -48,7 +48,7 @@ export default function MainProducts(props) {
             })
             .map((product) => (
               <Grid key={product.id} item xs={12} sm={6} md={4}>
-                <Product product={product} />
+                <Product addProduct={props.addProduct} product={product} />
               </Grid>
             ))}
         </Grid>
