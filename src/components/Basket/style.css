@@ -8,7 +8,7 @@
 }
 
 .actions {
-  margin-top: 20px;
+  margin-top: 0px;
 }
 
 .actions a {
@@ -54,4 +54,45 @@
 .basket-banner a.shopping-button {
   color: #000000;
   background-color: #03dac5;
+}
+.userList {
+  flex: 2;
+  min-width: 1000px;
+  max-width: 100%;
+  flex: auto;
+  margin-right: 20px;
+  margin-left: 20px;
+  margin-top: 5px;
+  min-height: 400px;
+  max-height: 100px;
+  flex-flow: column;
+  align-items: flex-start;
+}
+
+.userListUser {
+  display: flex;
+  align-items: center;
+}
+
+.userListImg {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 10px;
+}
+
+.userListEdit {
+  border: none;
+  border-radius: 10px;
+  padding: 5px 10px;
+  background-color: #3bb077;
+  color: white;
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+.userListDelete {
+  color: red;
+  cursor: pointer;
 }
