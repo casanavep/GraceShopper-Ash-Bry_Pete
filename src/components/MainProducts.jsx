@@ -5,26 +5,35 @@ import BASE_URL from "../util";
 import { useEffect } from "react";
 import { Grid, Container } from "@material-ui/core";
 import Product from "../components/Product";
-import { Pagination } from "@mui/material";
+import ReactPaginate from "react-paginate";
 
 export default function MainProducts(props) {
   const [data, setData] = useState([]);
-  const [page, setPage] = React.useState(0);
+  const [page, setPage] = useState(0);
+  const [currentPage, setCurrentPage] = useState(1)
+  const [postsPerPage, setPostsPerPage] = useState(25)
 
   const fetchProducts = async () => {
     const resp = await fetch(`${BASE_URL}/products`, {
+      // setLoading(true)
       headers: {
         // "Content-Type": "application/json",
       },
     });
     const products = await resp.json();
     setData(products);
+    // setLoading(false)
     // console.log(products);
     return products;
   };
   useEffect(() => {
     fetchProducts();
   }, []);
+
+  const handlePage = async (data) => {
+    console.log(data)
+    
+  }
   // console.log(data);
   return (
     <div>
@@ -54,6 +63,28 @@ export default function MainProducts(props) {
               </Grid>
             ))}
         </Grid>
+        <div>
+            <ReactPaginate
+            previousLabel={'previous'}
+            nextLabel={'next'}
+            breakLabel={'...'}
+            pageCount={12}
+            marginPagesDisplayed={3}
+            pageRangeDisplayed={6}
+            onPageChange={handlePage}
+            containerClassName={'pagination justify-content-center'}
+            pageClassName={'page-item'}
+            pageLinkClassName={'page-link'}
+            previousClassName={'page-item'}
+            previousLinkClassName={'page-link'}
+            nextClassName={'page-item'}
+            nextLinkClassName={'page-link'}
+            breakClassName={'page-item'}
+            breakLinkClassName={'page-link'}
+            activeClassName={'active'}
+            />
+          </div>
+        
       </Container>
     </div>
   );

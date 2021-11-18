@@ -16,6 +16,7 @@ import {
     handleSubmit,
     checkoutData,
     handleSelectChange,
+    shippingCountry,
   }) => (
     <h1>Checkout
     <form onSubmit={handleSubmit} autoComplete="off">
@@ -35,9 +36,9 @@ import {
           <TextField
             required
             fullWidth
-            id="first-name"
+            id="last-name"
             name="lastName"
-            label="First Name"
+            label="Last Name"
             // value={user.lastName}
             onChange={handleChange}
           />
@@ -87,52 +88,40 @@ import {
             label="Zip / Postal code"
           />
         </Grid>
-  
         <Grid item xs={12} sm={6}>
-          <FormControl fullWidth>
-            <InputLabel id="shipping-country-select-label">
-              Shipping Country
-            </InputLabel>
-            <Select
+            <TextField
               required
-              name="shippingCountry"
+              fullWidth
               id="shipping-country-select"
-              // value={user.shippingCountry.code || ""}
-              labelId="shipping-country-select-label"
-              onChange={(e) => handleSelectChange(e, "shippingCountries")}
-            >
-              {/* {user.shippingCountries.map((country) => (
-                <MenuItem key={country.code} value={country.code}>
-                  {country.name}
-                </MenuItem>
-              ))} */}
-            </Select>
-          </FormControl>
+              name="shippingCountry"
+              onChange={handleChange}
+              label="Country"            
+            />
         </Grid>
   
-        <Grid item xs={12} sm={6}>
+        {/* <Grid item xs={12} sm={6}>
           <FormControl fullWidth>
-            <InputLabel id="shipping-subdivision-select-label">
+            {/* <InputLabel id="shipping-subdivision-select-label">
               Shipping Subdivision
-            </InputLabel>
-            <Select
+            </InputLabel> */}
+            {/* <Select
               required
               name="shippingSubdivision"
               id="shipping-subdivision-select"
               labelId="shipping-subdivision-select-label"
               // value={user.shippingSubdivision.code || ""}
               onChange={(e) => handleSelectChange(e, "shippingSubdivisions")}
-            >
+            > */}
               {/* {user.shippingSubdivisions.map((subdivision) => (
                 <MenuItem key={subdivision.code} value={subdivision.code}>
                   {subdivision.name}
                 </MenuItem>
               ))} */}
-            </Select>
+            {/* </Select>
           </FormControl>
-        </Grid>
+        // </Grid> */} 
   
-        <Grid item xs={12} sm={6}>
+        {/* <Grid item xs={12} sm={6}>
           <FormControl fullWidth>
             <InputLabel id="shipping-options-select-label">
               Shipping Options
@@ -150,16 +139,15 @@ import {
                   {`${option.description} - (${option.price.formatted_with_symbol})`}
                 </MenuItem>
               ))} */}
-            </Select>
+            {/* </Select>
           </FormControl>
-        </Grid>
+        </Grid> */} 
       </Grid>
-  
       <div className="actions">
-        <Button size="medium" to="/basket" component={Link} variant="contained">
+        <Button size="medium" to="/cart" component={Link} variant="contained">
           Go Back
         </Button>
-        <Button type="submit" size="medium" color="secondary" variant="contained">
+        <Button type="submit" size="medium" to="/payment" component={Link} color="secondary" variant="contained">
           Next
         </Button>
       </div>

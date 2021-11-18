@@ -15,13 +15,15 @@ import Product from "./adminPages/product/Product";
 import Basket from "./components/Basket";
 import { useHistory } from "react-router";
 import CheckoutForm from "./checkoutComponents/CheckoutForm";
+import Payment from "./checkoutComponents/Payment";
+import Confirmation from "./checkoutComponents/Confirmation";
 // import NewUser from "./pages/newUser/NewUser";
 
 function App() {
   const [user, setUser] = useState(null);
   const [searchFilter, setSearchFilter] = useState("");
-
   const [cart, setCart] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
 
   let localCart = localStorage.getItem("cart");
 
@@ -56,6 +58,7 @@ function App() {
       setCart(localCart);
     }
   }, []);
+
   const addProduct = (id) => {
     console.log("fetching product");
     const fetchProduct = async () => {
@@ -108,6 +111,12 @@ function App() {
           </Route>
           <Route exact path="/checkout">
             <CheckoutForm user={user} />
+          </Route>
+          <Route exact path="/payment">
+            <Payment />
+          </Route>
+          <Route exact path="/confirmation">
+            <Confirmation />
           </Route>
         </div>
       </Switch>

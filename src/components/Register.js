@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useHistory } from "react-router";
 import BASE_URL from "../util";
+import BAPgaming from "../Images/BAPgaming.png";
 
 const Register = (props) => {
   const [email, setEmail] = useState("");
@@ -58,79 +59,103 @@ const Register = (props) => {
   };
 
   return (
-    <div className="Register">
-      <h2>Register</h2>
-      <form onSubmit={handleSubmit}>
-        <input
-          value={fullname}
-          onChange={(e) => {
-            setFullname(e.target.value);
-          }}
-          placeholder="Full Name"
-        ></input>
-        <input
-          value={email}
-          onChange={(e) => {
-            setEmail(e.target.value);
-          }}
-          placeholder="Enter email"
-        ></input>
-        <input
-          value={password}
-          onChange={(e) => {
-            setPassword(e.target.value);
-          }}
-          type="password"
-          minLength={8}
-          placeholder="Enter password"
-        ></input>
-
-        <input
-          value={address}
-          onChange={(e) => {
-            setAddress(e.target.value);
-          }}
-          placeholder="Street Address"
-        ></input>
-        <input
-          value={city}
-          onChange={(e) => {
-            setCity(e.target.value);
-          }}
-          placeholder="City"
-        ></input>
-        <input
-          value={state}
-          onChange={(e) => {
-            setState(e.target.value);
-          }}
-          placeholder="State"
-        ></input>
-        <input
-          value={zip}
-          onChange={(e) => {
-            setZip(e.target.value);
-          }}
-          placeholder="Zip"
-        ></input>
-        <input
-          value={phone}
-          onChange={(e) => {
-            setPhone(e.target.value);
-          }}
-          placeholder="Phone Number"
-        ></input>
-        <input
-          value={country}
-          onChange={(e) => {
-            setCountry(e.target.value);
-          }}
-          placeholder="Country"
-        ></input>
-        <button>Register</button>
-      </form>
-      <p>{errorMessage}</p>
-    </div>
+    <>
+      <div className="Register">
+        <div className="logo">
+          <img src={BAPgaming} alt="BAP Gaming Logo" />
+        </div>
+        <h2>Register</h2>
+        <form onSubmit={handleSubmit}>
+          <div className="Name">
+            <input
+              value={fullname}
+              onChange={(e) => {
+                setFullname(e.target.value);
+              }}
+              placeholder="Full Name"
+            ></input>
+          </div>
+          <div>
+            <input
+              value={email}
+              onChange={(e) => {
+                setEmail(e.target.value);
+              }}
+              placeholder="Enter email"
+            ></input>
+          </div>
+          <div>
+            <input
+              value={password}
+              onChange={(e) => {
+                setPassword(e.target.value);
+              }}
+              type="password"
+              minLength={8}
+              placeholder="Enter password"
+            ></input>
+          </div>
+          <div>
+            <input
+              value={address}
+              onChange={(e) => {
+                setAddress(e.target.value);
+              }}
+              placeholder="Street Address"
+            ></input>
+          </div>
+          <div>
+            <input
+              value={city}
+              onChange={(e) => {
+                setCity(e.target.value);
+              }}
+              placeholder="City"
+            ></input>
+          </div>
+          <div>
+            <input
+              value={state}
+              onChange={(e) => {
+                setState(e.target.value);
+              }}
+              placeholder="State"
+            ></input>
+          </div>
+          <div>
+            <input
+              value={zip}
+              onChange={(e) => {
+                setZip(e.target.value);
+              }}
+              placeholder="Zip"
+            ></input>
+          </div>
+          <div>
+            <input
+              value={phone}
+              onChange={(e) => {
+                setPhone(e.target.value);
+              }}
+              placeholder="Phone Number"
+            ></input>
+          </div>
+          <div>
+            <input
+              value={country}
+              onChange={(e) => {
+                setCountry(e.target.value);
+              }}
+              placeholder="Country"
+            ></input>
+          </div>
+          <div className="Button">
+            <p>{errorMessage}</p>
+            <button>Register</button>
+          </div>
+        </form>
+      </div>
+    </>
   );
 };
 

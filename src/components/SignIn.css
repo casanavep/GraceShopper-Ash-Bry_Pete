@@ -5,10 +5,6 @@
   flex-flow: column;
 }
 
-.logo {
-  display: flex;
-}
-
 img {
   height: 35vh;
   border-radius: 15px;
@@ -26,7 +22,3 @@ img {
 .Password {
   padding: 10px;
 }
-
-/* .Buttons {
-  padding: 10px;
-} */
