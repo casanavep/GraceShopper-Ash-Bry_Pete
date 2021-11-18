@@ -25,7 +25,7 @@ async function seedDB() {
             price DEC (8,2),
             quantity INT NOT NULL,
             category_id INT REFERENCES categories(id),
-            image VARCHAR(255),
+            image VARCHAR(5000),
             active BOOLEAN NOT NULL DEFAULT true
             
 
@@ -516,7 +516,7 @@ async function seedDB() {
       quantity: 7000,
       categoryId: 1,
       image:
-        "https://static.wikia.nocookie.net/callofduty/images/3/3d/Warzone_Artwork_CoDWarzone_MW.jpg/revision/latest?cb=20200331223136",
+        "https://www.techadvisor.com/cmsdata/features/3783623/cod_warzone_logo_thumb1200_16-9.jpg",
     },
     {
       title: "Call of Duty Warzone",
@@ -526,7 +526,7 @@ async function seedDB() {
       quantity: 7000,
       categoryId: 2,
       image:
-        "https://static.wikia.nocookie.net/callofduty/images/3/3d/Warzone_Artwork_CoDWarzone_MW.jpg/revision/latest?cb=20200331223136",
+        "https://www.techadvisor.com/cmsdata/features/3783623/cod_warzone_logo_thumb1200_16-9.jpg",
     },
     {
       title: "Call of Duty Warzone",
@@ -536,7 +536,7 @@ async function seedDB() {
       quantity: 7000,
       categoryId: 3,
       image:
-        "https://static.wikia.nocookie.net/callofduty/images/3/3d/Warzone_Artwork_CoDWarzone_MW.jpg/revision/latest?cb=20200331223136",
+        "https://www.techadvisor.com/cmsdata/features/3783623/cod_warzone_logo_thumb1200_16-9.jpg",
     },
     {
       title: "Call of Duty Warzone",
@@ -546,7 +546,7 @@ async function seedDB() {
       quantity: 7000,
       categoryId: 4,
       image:
-        "https://static.wikia.nocookie.net/callofduty/images/3/3d/Warzone_Artwork_CoDWarzone_MW.jpg/revision/latest?cb=20200331223136",
+        "https://www.techadvisor.com/cmsdata/features/3783623/cod_warzone_logo_thumb1200_16-9.jpg",
     },
     {
       title: "Call of Duty Vanguard",
@@ -564,7 +564,7 @@ async function seedDB() {
       quantity: 100000,
       categoryId: 2,
       image:
-        "https://static.wikia.nocookie.net/callofduty/images/3/3c/COD_Vanguard_Artwork.jpg/revision/latest?cb=20210816171308",
+        "https://www.callofduty.com/content/dam/atvi/callofduty/cod-touchui/blog/hero/vgd/VGD_SEE_THEM_RISE.jpg",
     },
     {
       title: "Call of Duty Vanguard",
@@ -968,7 +968,7 @@ async function seedDB() {
       quantity: 1100,
       categoryId: 1,
       image:
-        "https://static.wikia.nocookie.net/elderscrolls/images/3/38/Morrowind_Cover.png/revision/latest?cb=20160812144154",
+        "https://cdn.vox-cdn.com/thumbor/AVG6p4rjfpw9fpr1qvECDzl4h0E=/0x0:1920x1200/1200x800/filters:focal(807x447:1113x753)/cdn.vox-cdn.com/uploads/chorus_image/image/63295805/morrowind.0.jpg",
     },
     {
       title: "The Elder Scrolls III: Morrowind",
@@ -978,7 +978,7 @@ async function seedDB() {
       quantity: 1100,
       categoryId: 2,
       image:
-        "https://static.wikia.nocookie.net/elderscrolls/images/3/38/Morrowind_Cover.png/revision/latest?cb=20160812144154",
+        "https://cdn.vox-cdn.com/thumbor/AVG6p4rjfpw9fpr1qvECDzl4h0E=/0x0:1920x1200/1200x800/filters:focal(807x447:1113x753)/cdn.vox-cdn.com/uploads/chorus_image/image/63295805/morrowind.0.jpg",
     },
     {
       title: "The Elder Scrolls III: Morrowind",
@@ -988,7 +988,7 @@ async function seedDB() {
       quantity: 1100,
       categoryId: 3,
       image:
-        "https://static.wikia.nocookie.net/elderscrolls/images/3/38/Morrowind_Cover.png/revision/latest?cb=20160812144154",
+        "https://cdn.vox-cdn.com/thumbor/AVG6p4rjfpw9fpr1qvECDzl4h0E=/0x0:1920x1200/1200x800/filters:focal(807x447:1113x753)/cdn.vox-cdn.com/uploads/chorus_image/image/63295805/morrowind.0.jpg",
     },
     {
       title: "The Elder Scrolls IV: Oblivion",
@@ -1127,8 +1127,7 @@ async function seedDB() {
       price: 34.99,
       quantity: 670,
       categoryId: 1,
-      image:
-        "https://static.wikia.nocookie.net/finalfantasy/images/6/69/FFII_logo.png/revision/latest?cb=20160920111833",
+      image: "http://www.finalfantasykingdom.net/2ps1/logo.jpg",
     },
     {
       title: "Final Fantasy II",
@@ -1137,8 +1136,7 @@ async function seedDB() {
       price: 34.99,
       quantity: 670,
       categoryId: 3,
-      image:
-        "https://static.wikia.nocookie.net/finalfantasy/images/6/69/FFII_logo.png/revision/latest?cb=20160920111833",
+      image: "http://www.finalfantasykingdom.net/2ps1/logo.jpg",
     },
     {
       title: "Final Fantasy III",
@@ -1176,7 +1174,7 @@ async function seedDB() {
       quantity: 1500,
       categoryId: 1,
       image:
-        "https://static.wikia.nocookie.net/finalfantasy/images/0/0a/FFV_logo.png/revision/latest?cb=20160920112302",
+        "https://gh.cdn.sewest.net/assets/original/ff-pixelremaster/images/5.png",
     },
     {
       title: "Final Fantasy V",
@@ -1186,7 +1184,7 @@ async function seedDB() {
       quantity: 1500,
       categoryId: 3,
       image:
-        "https://static.wikia.nocookie.net/finalfantasy/images/0/0a/FFV_logo.png/revision/latest?cb=20160920112302",
+        "https://gh.cdn.sewest.net/assets/original/ff-pixelremaster/images/5.png",
     },
     {
       title: "Final Fantasy VI",
@@ -1196,7 +1194,7 @@ async function seedDB() {
       quantity: 1645,
       categoryId: 1,
       image:
-        "https://static.wikia.nocookie.net/finalfantasy/images/3/36/FFVI_logo.png/revision/latest?cb=20160920112443",
+        "https://cdn.freebiesupply.com/logos/large/2x/final-fantasy-vi-logo-png-transparent.png",
     },
     {
       title: "Final Fantasy VI",
@@ -1206,7 +1204,7 @@ async function seedDB() {
       quantity: 1645,
       categoryId: 3,
       image:
-        "https://static.wikia.nocookie.net/finalfantasy/images/3/36/FFVI_logo.png/revision/latest?cb=20160920112443",
+        "https://cdn.freebiesupply.com/logos/large/2x/final-fantasy-vi-logo-png-transparent.png",
     },
     {
       title: "Final Fantasy VII",
@@ -1296,7 +1294,7 @@ async function seedDB() {
       quantity: 3200,
       categoryId: 1,
       image:
-        "https://static.wikia.nocookie.net/finalfantasy/images/7/7f/FFIX_Title_Logo_Concept.jpg/revision/latest/scale-to-width-down/250?cb=20130323070321",
+        "https://www.pngitem.com/pimgs/m/525-5259501_icona-gabranth-final-fantasy-ix-logo-hd-png.png",
     },
     {
       title: "Final Fantasy IX",
@@ -1306,7 +1304,7 @@ async function seedDB() {
       quantity: 3200,
       categoryId: 2,
       image:
-        "https://static.wikia.nocookie.net/finalfantasy/images/7/7f/FFIX_Title_Logo_Concept.jpg/revision/latest/scale-to-width-down/250?cb=20130323070321",
+        "https://www.pngitem.com/pimgs/m/525-5259501_icona-gabranth-final-fantasy-ix-logo-hd-png.png",
     },
     {
       title: "Final Fantasy IX",
@@ -1316,7 +1314,7 @@ async function seedDB() {
       quantity: 3200,
       categoryId: 3,
       image:
-        "https://static.wikia.nocookie.net/finalfantasy/images/7/7f/FFIX_Title_Logo_Concept.jpg/revision/latest/scale-to-width-down/250?cb=20130323070321",
+        "https://www.pngitem.com/pimgs/m/525-5259501_icona-gabranth-final-fantasy-ix-logo-hd-png.png",
     },
     {
       title: "Final Fantasy IX",
@@ -1326,7 +1324,7 @@ async function seedDB() {
       quantity: 3200,
       categoryId: 4,
       image:
-        "https://static.wikia.nocookie.net/finalfantasy/images/7/7f/FFIX_Title_Logo_Concept.jpg/revision/latest/scale-to-width-down/250?cb=20130323070321",
+        "https://www.pngitem.com/pimgs/m/525-5259501_icona-gabranth-final-fantasy-ix-logo-hd-png.png",
     },
     {
       title: "Final Fantasy X",
@@ -1336,7 +1334,7 @@ async function seedDB() {
       quantity: 6000,
       categoryId: 1,
       image:
-        "https://static.wikia.nocookie.net/finalfantasy/images/8/82/FFX_logo.png/revision/latest?cb=20160920112920",
+        "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/d1cec3ab-18e2-4db8-a5b6-0e2723694736/d4204zv-9b4fe5c1-f631-4901-b667-965d0f35c36e.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2QxY2VjM2FiLTE4ZTItNGRiOC1hNWI2LTBlMjcyMzY5NDczNlwvZDQyMDR6di05YjRmZTVjMS1mNjMxLTQ5MDEtYjY2Ny05NjVkMGYzNWMzNmUucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.BTtsQV8XFO8jf6D0ZdhT1XE_ZiFMAlBLcklz82F75Gw",
     },
     {
       title: "Final Fantasy X",
@@ -1346,7 +1344,7 @@ async function seedDB() {
       quantity: 6000,
       categoryId: 2,
       image:
-        "https://static.wikia.nocookie.net/finalfantasy/images/8/82/FFX_logo.png/revision/latest?cb=20160920112920",
+        "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/d1cec3ab-18e2-4db8-a5b6-0e2723694736/d4204zv-9b4fe5c1-f631-4901-b667-965d0f35c36e.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2QxY2VjM2FiLTE4ZTItNGRiOC1hNWI2LTBlMjcyMzY5NDczNlwvZDQyMDR6di05YjRmZTVjMS1mNjMxLTQ5MDEtYjY2Ny05NjVkMGYzNWMzNmUucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.BTtsQV8XFO8jf6D0ZdhT1XE_ZiFMAlBLcklz82F75Gw",
     },
     {
       title: "Final Fantasy X",
@@ -1356,7 +1354,7 @@ async function seedDB() {
       quantity: 6000,
       categoryId: 3,
       image:
-        "https://static.wikia.nocookie.net/finalfantasy/images/8/82/FFX_logo.png/revision/latest?cb=20160920112920",
+        "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/d1cec3ab-18e2-4db8-a5b6-0e2723694736/d4204zv-9b4fe5c1-f631-4901-b667-965d0f35c36e.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2QxY2VjM2FiLTE4ZTItNGRiOC1hNWI2LTBlMjcyMzY5NDczNlwvZDQyMDR6di05YjRmZTVjMS1mNjMxLTQ5MDEtYjY2Ny05NjVkMGYzNWMzNmUucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.BTtsQV8XFO8jf6D0ZdhT1XE_ZiFMAlBLcklz82F75Gw",
     },
     {
       title: "Final Fantasy X",
@@ -1366,7 +1364,7 @@ async function seedDB() {
       quantity: 6000,
       categoryId: 4,
       image:
-        "https://static.wikia.nocookie.net/finalfantasy/images/8/82/FFX_logo.png/revision/latest?cb=20160920112920",
+        "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/d1cec3ab-18e2-4db8-a5b6-0e2723694736/d4204zv-9b4fe5c1-f631-4901-b667-965d0f35c36e.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2QxY2VjM2FiLTE4ZTItNGRiOC1hNWI2LTBlMjcyMzY5NDczNlwvZDQyMDR6di05YjRmZTVjMS1mNjMxLTQ5MDEtYjY2Ny05NjVkMGYzNWMzNmUucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.BTtsQV8XFO8jf6D0ZdhT1XE_ZiFMAlBLcklz82F75Gw",
     },
     {
       title: "Final Fantasy XI: Online",
@@ -1447,7 +1445,7 @@ async function seedDB() {
       quantity: 10000,
       categoryId: 1,
       image:
-        "https://static.wikia.nocookie.net/finalfantasy/images/7/7a/FFXIII_logo.png/revision/latest?cb=20160920113249",
+        "https://www.pngkey.com/png/detail/143-1431063_final-fantasy-xiii-logo-final-fantasy-xiii-transparent.png",
     },
     {
       title: "Final Fantasy XIII",
@@ -1457,7 +1455,7 @@ async function seedDB() {
       quantity: 10000,
       categoryId: 2,
       image:
-        "https://static.wikia.nocookie.net/finalfantasy/images/7/7a/FFXIII_logo.png/revision/latest?cb=20160920113249",
+        "https://www.pngkey.com/png/detail/143-1431063_final-fantasy-xiii-logo-final-fantasy-xiii-transparent.png",
     },
     {
       title: "Final Fantasy XIII",
@@ -1467,7 +1465,7 @@ async function seedDB() {
       quantity: 10000,
       categoryId: 3,
       image:
-        "https://static.wikia.nocookie.net/finalfantasy/images/7/7a/FFXIII_logo.png/revision/latest?cb=20160920113249",
+        "https://www.pngkey.com/png/detail/143-1431063_final-fantasy-xiii-logo-final-fantasy-xiii-transparent.png",
     },
     {
       title: "Final Fantasy XIV: A Realm Reborn",
@@ -1477,7 +1475,7 @@ async function seedDB() {
       quantity: 15000,
       categoryId: 1,
       image:
-        "https://static.wikia.nocookie.net/finalfantasy/images/b/b3/FFXIV_logo.png/revision/latest?cb=20160920113420",
+        "https://www.nicepng.com/png/detail/143-1433168_final-fantasy-xiv-final-fantasy-xiv-logo.png",
     },
     {
       title: "Final Fantasy XIV: A Realm Reborn",
@@ -1487,7 +1485,7 @@ async function seedDB() {
       quantity: 15000,
       categoryId: 2,
       image:
-        "https://static.wikia.nocookie.net/finalfantasy/images/b/b3/FFXIV_logo.png/revision/latest?cb=20160920113420",
+        "https://www.nicepng.com/png/detail/143-1433168_final-fantasy-xiv-final-fantasy-xiv-logo.png",
     },
     {
       title: "Final Fantasy XIV: A Realm Reborn",
@@ -1497,7 +1495,7 @@ async function seedDB() {
       quantity: 15000,
       categoryId: 3,
       image:
-        "https://static.wikia.nocookie.net/finalfantasy/images/b/b3/FFXIV_logo.png/revision/latest?cb=20160920113420",
+        "https://www.nicepng.com/png/detail/143-1433168_final-fantasy-xiv-final-fantasy-xiv-logo.png",
     },
     {
       title: "Final Fantasy XV",
@@ -1566,7 +1564,7 @@ async function seedDB() {
       quantity: 10320,
       categoryId: 4,
       image:
-        "https://static.wikia.nocookie.net/logopedia/images/0/0c/Logo-Super_Mario_3D_World_Bowser%E2%80%99s_Fury.png/revision/latest?cb=20200903173636",
+        "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6414/6414113_sd.jpg",
     },
     {
       title: "Super Mario Kart",
@@ -1575,8 +1573,7 @@ async function seedDB() {
       price: 35.99,
       quantity: 4500,
       categoryId: 4,
-      image:
-        "https://static.wikia.nocookie.net/logopedia/images/9/99/Super-Mario-Kart-Logo.png/revision/latest?cb=20140211221159",
+      image: "https://i.redd.it/rsgp6bte7fu61.png",
     },
     {
       title: "Mario Kart 64",
@@ -1605,7 +1602,7 @@ async function seedDB() {
       quantity: 12500,
       categoryId: 4,
       image:
-        "https://static.wikia.nocookie.net/logopedia/images/7/78/Mario_Kart_8_Deluxe_logo.png/revision/latest/scale-to-width-down/2000?cb=20170503002757",
+        "https://www.pinclipart.com/picdir/middle/227-2273022_mario-kart-8-deluxe-logo-png-clipart.png",
     },
     {
       title: "Mario Kart Live: Home Circuit",
@@ -1624,7 +1621,7 @@ async function seedDB() {
       quantity: 4300,
       categoryId: 1,
       image:
-        "https://lh3.googleusercontent.com/proxy/vbDFJp1qOtjGyK-Weie54ume4fEESWOWNKGWv-BzBsOHll8_SxTfJTZLSBQVhEUlH6NBFVgYRScaqwqxCEdEGgTc2-nR",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwDyJ5vaGahShH3AkoCS41dl1C49_jwfOHIA&usqp=CAU",
     },
     {
       title: "Halo",
@@ -1634,7 +1631,7 @@ async function seedDB() {
       quantity: 4300,
       categoryId: 2,
       image:
-        "https://lh3.googleusercontent.com/proxy/vbDFJp1qOtjGyK-Weie54ume4fEESWOWNKGWv-BzBsOHll8_SxTfJTZLSBQVhEUlH6NBFVgYRScaqwqxCEdEGgTc2-nR",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwDyJ5vaGahShH3AkoCS41dl1C49_jwfOHIA&usqp=CAU",
     },
     {
       title: "Halo 2",
@@ -1644,7 +1641,7 @@ async function seedDB() {
       quantity: 8000,
       categoryId: 1,
       image:
-        "https://static.wikia.nocookie.net/logopedia/images/b/b1/Halo_2_Symbol.png/revision/latest/scale-to-width-down/250?cb=20161229064006",
+        "https://www.logolynx.com/images/logolynx/ac/ac1628d06aa15cd58689f15ac44f5093.jpeg",
     },
     {
       title: "Halo 2",
@@ -1654,7 +1651,7 @@ async function seedDB() {
       quantity: 8000,
       categoryId: 2,
       image:
-        "https://static.wikia.nocookie.net/logopedia/images/b/b1/Halo_2_Symbol.png/revision/latest/scale-to-width-down/250?cb=20161229064006",
+        "https://www.logolynx.com/images/logolynx/ac/ac1628d06aa15cd58689f15ac44f5093.jpeg",
     },
     {
       title: "Halo 3",
@@ -1723,8 +1720,7 @@ async function seedDB() {
       price: 52.99,
       quantity: 15000,
       categoryId: 1,
-      image:
-        "https://static.wikia.nocookie.net/logopedia/images/8/8c/Halo4.png/revision/latest/scale-to-width-down/2000?cb=20170119093736",
+      image: "https://gotgame.com/wp-content/uploads/2012/09/Halo-4-Logo.jpg",
     },
     {
       title: "Halo 4",
@@ -1733,8 +1729,7 @@ async function seedDB() {
       price: 52.99,
       quantity: 15000,
       categoryId: 2,
-      image:
-        "https://static.wikia.nocookie.net/logopedia/images/8/8c/Halo4.png/revision/latest/scale-to-width-down/2000?cb=20170119093736",
+      image: "https://gotgame.com/wp-content/uploads/2012/09/Halo-4-Logo.jpg",
     },
     {
       title: "Halo 5: Guardians",
@@ -1794,7 +1789,7 @@ async function seedDB() {
       quantity: 2000,
       categoryId: 6,
       image:
-        "https://static.wikia.nocookie.net/logopedia/images/e/ed/Tloz.jpg/revision/latest?cb=20200804074609",
+        "https://cdn.gamer-network.net/2016/usgamer/zelda1header.jpg/EG11/thumbnail/1920x1080/format/jpg/quality/65/long-time-coming-finishing-the-original-legend-of-zelda-in-2016.jpg",
     },
     {
       title: "The Legend of Zelda",
@@ -1804,7 +1799,7 @@ async function seedDB() {
       quantity: 2000,
       categoryId: 4,
       image:
-        "https://static.wikia.nocookie.net/logopedia/images/e/ed/Tloz.jpg/revision/latest?cb=20200804074609",
+        "https://cdn.gamer-network.net/2016/usgamer/zelda1header.jpg/EG11/thumbnail/1920x1080/format/jpg/quality/65/long-time-coming-finishing-the-original-legend-of-zelda-in-2016.jpg",
     },
     {
       title: "Zelda II: The Adventure of Link",
@@ -1814,7 +1809,7 @@ async function seedDB() {
       quantity: 6437,
       categoryId: 4,
       image:
-        "https://static.wikia.nocookie.net/zelda_gamepedia_en/images/e/ee/TAoL_Black_Logo.png/revision/latest?cb=20170127043039",
+        "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/1760baf8-7504-4742-94ac-54f678ab1687/d3foves-96d13b61-c0fb-4915-8ee2-6a9a9126d4b5.png/v1/fill/w_300,h_202,strp/the_adventure_of_link_logo_by_vladictivo_d3foves-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MjAyIiwicGF0aCI6IlwvZlwvMTc2MGJhZjgtNzUwNC00NzQyLTk0YWMtNTRmNjc4YWIxNjg3XC9kM2ZvdmVzLTk2ZDEzYjYxLWMwZmItNDkxNS04ZWUyLTZhOWE5MTI2ZDRiNS5wbmciLCJ3aWR0aCI6Ijw9MzAwIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.coEpECnKu8CUxobsDqu-lr9ed-2dLVWO34P8ghweQ7E",
     },
     {
       title: "Zelda II: The Adventure of Link",
@@ -1824,7 +1819,7 @@ async function seedDB() {
       quantity: 6437,
       categoryId: 6,
       image:
-        "https://static.wikia.nocookie.net/zelda_gamepedia_en/images/e/ee/TAoL_Black_Logo.png/revision/latest?cb=20170127043039",
+        "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/1760baf8-7504-4742-94ac-54f678ab1687/d3foves-96d13b61-c0fb-4915-8ee2-6a9a9126d4b5.png/v1/fill/w_300,h_202,strp/the_adventure_of_link_logo_by_vladictivo_d3foves-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MjAyIiwicGF0aCI6IlwvZlwvMTc2MGJhZjgtNzUwNC00NzQyLTk0YWMtNTRmNjc4YWIxNjg3XC9kM2ZvdmVzLTk2ZDEzYjYxLWMwZmItNDkxNS04ZWUyLTZhOWE5MTI2ZDRiNS5wbmciLCJ3aWR0aCI6Ijw9MzAwIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.coEpECnKu8CUxobsDqu-lr9ed-2dLVWO34P8ghweQ7E",
     },
     {
       title: "The Legend of Zelda: A Link to the Past",
@@ -1834,7 +1829,7 @@ async function seedDB() {
       quantity: 8500,
       categoryId: 4,
       image:
-        "https://static.wikia.nocookie.net/zelda_gamepedia_en/images/c/cc/ALttP_Logo.png/revision/latest?cb=20170127003942",
+        "https://assets1.ignimgs.com/2019/06/04/legend-of-zelda-a-link-to-the-past---button-3-1559683061447.jpg",
     },
     {
       title: "The Legend of Zelda: Ocarina of Time",
@@ -1871,7 +1866,7 @@ async function seedDB() {
       quantity: 4350,
       categoryId: 5,
       image:
-        "https://static.wikia.nocookie.net/zelda_gamepedia_en/images/2/2d/MM_Logo.png/revision/latest?cb=20091127041259",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/The_Legend_of_Zelda_Majora%27s_Mask.svg/1024px-The_Legend_of_Zelda_Majora%27s_Mask.svg.png",
     },
     {
       title: "The Legend of Zelda: Majora's Mask",
@@ -1881,7 +1876,7 @@ async function seedDB() {
       quantity: 4350,
       categoryId: 6,
       image:
-        "https://static.wikia.nocookie.net/zelda_gamepedia_en/images/2/2d/MM_Logo.png/revision/latest?cb=20091127041259",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/The_Legend_of_Zelda_Majora%27s_Mask.svg/1024px-The_Legend_of_Zelda_Majora%27s_Mask.svg.png",
     },
     {
       title: "The Legend of Zelda: The Wind Waker",
@@ -1890,7 +1885,7 @@ async function seedDB() {
       quantity: 2100,
       categoryId: 6,
       image:
-        "https://static.wikia.nocookie.net/zelda_gamepedia_en/images/3/3b/TWW_logo.png/revision/latest/scale-to-width-down/1200?cb=20110511023616",
+        "https://gamingbolt.com/wp-content/uploads/2013/01/The-Legend-of-Zelda-The-Wind-Waker-Wii-U-Box-Art.jpg",
     },
     {
       title: "The Legend of Zelda: Four Swords Adventures",
@@ -1900,7 +1895,7 @@ async function seedDB() {
       quantity: 1850,
       categoryId: 6,
       image:
-        "https://static.wikia.nocookie.net/zelda_gamepedia_en/images/1/19/FSA_Logo.png/revision/latest/scale-to-width-down/1200?cb=20091121180037",
+        "https://upload.wikimedia.org/wikipedia/en/thumb/5/56/The_Legend_of_Zelda_Four_Swords_Adventures_Game_Cover.jpg/220px-The_Legend_of_Zelda_Four_Swords_Adventures_Game_Cover.jpg",
     },
     {
       title: "The Legend of Zelda: Twilight Princess",
@@ -1910,7 +1905,7 @@ async function seedDB() {
       quantity: 1545,
       categoryId: 6,
       image:
-        "https://static.wikia.nocookie.net/zelda_gamepedia_en/images/a/a0/TPHD_Logo.png/revision/latest/scale-to-width-down/1200?cb=20160126044740",
+        "https://www.pngkit.com/png/detail/178-1784034_bladeinthelights-profile-myanimelist-legend-of-zelda-twilight-princess.png",
     },
     {
       title: "The Legend of Zelda: Skyward Sword",
@@ -1920,7 +1915,7 @@ async function seedDB() {
       quantity: 15000,
       categoryId: 4,
       image:
-        "https://static.wikia.nocookie.net/zelda_gamepedia_en/images/6/62/SS_Logo.png/revision/latest/scale-to-width-down/1200?cb=20180810191429",
+        "https://primewikis.com/wp-content/uploads/The-Legend-of-Zelda-Skyward-Sword-HD-Cover.jpg",
     },
     {
       title: "The Legend of Zelda: Breath of the Wild",
@@ -1930,7 +1925,7 @@ async function seedDB() {
       quantity: 35000,
       categoryId: 4,
       image:
-        "https://static.wikia.nocookie.net/logopedia/images/5/53/763px-BotW_NA_Logo.png/revision/latest?cb=20160701154320",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTH7mW8A3doFSck7HeBzqJwEUxgZMmdrToUYA&usqp=CAU",
     },
     {
       title: "Sonic the Hedgehog CD",
@@ -1949,7 +1944,7 @@ async function seedDB() {
       quantity: 3200,
       categoryId: 1,
       image:
-        "https://static.wikia.nocookie.net/logopedia/images/9/95/Sonic-the-hedgehog-4-episode-1-cover.jpg/revision/latest?cb=20140208135414",
+        "https://upload.wikimedia.org/wikipedia/en/b/b3/S4%2CEP1_boxart.png",
     },
     {
       title: "Sonic the Hedgehog 4: Episode II",
@@ -1959,7 +1954,7 @@ async function seedDB() {
       quantity: 2900,
       categoryId: 1,
       image:
-        "https://static.wikia.nocookie.net/logopedia/images/c/c1/500px-sonic-the-hedgehog-4-episode-2.png/revision/latest?cb=20140208140020",
+        "https://fanatical.imgix.net/product/original/b8e51a2b-4ee5-43cc-946b-0ba7aad3e315.jpg?auto=compress,format&w=400&fit=crop&h=",
     },
     {
       title: "Sonic Mania",
@@ -1969,7 +1964,7 @@ async function seedDB() {
       quantity: 5600,
       categoryId: 1,
       image:
-        "https://static.wikia.nocookie.net/logopedia/images/8/8a/Sonic_Mania.svg/revision/latest/scale-to-width-down/300?cb=20210321123334",
+        "https://image.api.playstation.com/cdn/UP0177/CUSA07023_00/pvfMACRlDW27Agp9HjDxL8CcmqxZL1V5.png",
     },
     {
       title: "Sonic Mania",
@@ -1979,7 +1974,7 @@ async function seedDB() {
       quantity: 5600,
       categoryId: 2,
       image:
-        "https://static.wikia.nocookie.net/logopedia/images/8/8a/Sonic_Mania.svg/revision/latest/scale-to-width-down/300?cb=20210321123334",
+        "https://image.api.playstation.com/cdn/UP0177/CUSA07023_00/pvfMACRlDW27Agp9HjDxL8CcmqxZL1V5.png",
     },
     {
       title: "Sonic Mania",
@@ -1989,7 +1984,7 @@ async function seedDB() {
       quantity: 5600,
       categoryId: 3,
       image:
-        "https://static.wikia.nocookie.net/logopedia/images/8/8a/Sonic_Mania.svg/revision/latest/scale-to-width-down/300?cb=20210321123334",
+        "https://image.api.playstation.com/cdn/UP0177/CUSA07023_00/pvfMACRlDW27Agp9HjDxL8CcmqxZL1V5.png",
     },
     {
       title: "Sonic Mania",
@@ -1999,7 +1994,7 @@ async function seedDB() {
       quantity: 5600,
       categoryId: 4,
       image:
-        "https://static.wikia.nocookie.net/logopedia/images/8/8a/Sonic_Mania.svg/revision/latest/scale-to-width-down/300?cb=20210321123334",
+        "https://image.api.playstation.com/cdn/UP0177/CUSA07023_00/pvfMACRlDW27Agp9HjDxL8CcmqxZL1V5.png",
     },
     {
       title: "Sonic 3D Blast",
@@ -2009,7 +2004,7 @@ async function seedDB() {
       quantity: 2965,
       categoryId: 1,
       image:
-        "https://static.wikia.nocookie.net/logopedia/images/7/71/ME0001353085_2.jpg/revision/latest/scale-to-width-down/250?cb=20140209042044",
+        "https://www.pngfind.com/pngs/m/471-4713946_sonic3d-logo-sonic-3d-blast-logo-hd-png.png",
     },
     {
       title: "Sonic Adventure",
@@ -2019,7 +2014,7 @@ async function seedDB() {
       quantity: 4000,
       categoryId: 1,
       image:
-        "https://static.wikia.nocookie.net/logopedia/images/5/5c/Sonic_Adventure.png/revision/latest?cb=20190306080922",
+        "https://w7.pngwing.com/pngs/404/978/png-transparent-sonic-adventure-2-battle-sonic-the-hedgehog-sonic-unleashed-others.png",
     },
     {
       title: "Sonic Adventure",
@@ -2029,7 +2024,7 @@ async function seedDB() {
       quantity: 4000,
       categoryId: 6,
       image:
-        "https://static.wikia.nocookie.net/logopedia/images/5/5c/Sonic_Adventure.png/revision/latest?cb=20190306080922",
+        "https://w7.pngwing.com/pngs/404/978/png-transparent-sonic-adventure-2-battle-sonic-the-hedgehog-sonic-unleashed-others.png",
     },
     {
       title: "Sonic Adventure",
@@ -2039,7 +2034,7 @@ async function seedDB() {
       quantity: 4000,
       categoryId: 7,
       image:
-        "https://static.wikia.nocookie.net/logopedia/images/5/5c/Sonic_Adventure.png/revision/latest?cb=20190306080922",
+        "https://w7.pngwing.com/pngs/404/978/png-transparent-sonic-adventure-2-battle-sonic-the-hedgehog-sonic-unleashed-others.png",
     },
     {
       title: "Sonic Adventure 2",
@@ -2049,7 +2044,7 @@ async function seedDB() {
       quantity: 3200,
       categoryId: 1,
       image:
-        "https://static.wikia.nocookie.net/logopedia/images/3/37/500px-Sonic_Adventure_2_-_The_Trial.png/revision/latest?cb=20170131211028",
+        "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/1a036121-2ee1-4713-907c-3c88645565dc/dbtsl77-337a64ae-e247-4fbe-bf5d-b9ee76fd4d26.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzFhMDM2MTIxLTJlZTEtNDcxMy05MDdjLTNjODg2NDU1NjVkY1wvZGJ0c2w3Ny0zMzdhNjRhZS1lMjQ3LTRmYmUtYmY1ZC1iOWVlNzZmZDRkMjYucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.vIZn0uEARXqgd_4bzuDBPlFaI9jryJdSPiUaztnPX-Q",
     },
     {
       title: "Sonic Adventure 2",
@@ -2059,7 +2054,7 @@ async function seedDB() {
       quantity: 3200,
       categoryId: 6,
       image:
-        "https://static.wikia.nocookie.net/logopedia/images/3/37/500px-Sonic_Adventure_2_-_The_Trial.png/revision/latest?cb=20170131211028",
+        "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/1a036121-2ee1-4713-907c-3c88645565dc/dbtsl77-337a64ae-e247-4fbe-bf5d-b9ee76fd4d26.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzFhMDM2MTIxLTJlZTEtNDcxMy05MDdjLTNjODg2NDU1NjVkY1wvZGJ0c2w3Ny0zMzdhNjRhZS1lMjQ3LTRmYmUtYmY1ZC1iOWVlNzZmZDRkMjYucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.vIZn0uEARXqgd_4bzuDBPlFaI9jryJdSPiUaztnPX-Q",
     },
     {
       title: "Sonic Adventure 2",
@@ -2069,7 +2064,7 @@ async function seedDB() {
       quantity: 3200,
       categoryId: 7,
       image:
-        "https://static.wikia.nocookie.net/logopedia/images/3/37/500px-Sonic_Adventure_2_-_The_Trial.png/revision/latest?cb=20170131211028",
+        "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/1a036121-2ee1-4713-907c-3c88645565dc/dbtsl77-337a64ae-e247-4fbe-bf5d-b9ee76fd4d26.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzFhMDM2MTIxLTJlZTEtNDcxMy05MDdjLTNjODg2NDU1NjVkY1wvZGJ0c2w3Ny0zMzdhNjRhZS1lMjQ3LTRmYmUtYmY1ZC1iOWVlNzZmZDRkMjYucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.vIZn0uEARXqgd_4bzuDBPlFaI9jryJdSPiUaztnPX-Q",
     },
     {
       title: "Sonic Heroes",
@@ -2079,7 +2074,7 @@ async function seedDB() {
       quantity: 5560,
       categoryId: 1,
       image:
-        "https://static.wikia.nocookie.net/logopedia/images/c/ce/Sonic_Heroes.png/revision/latest?cb=20190306081734",
+        "https://i.pinimg.com/originals/96/68/8f/96688fa0eb2a5912db42cf90ee27fa30.jpg",
     },
     {
       title: "Sonic Heroes",
@@ -2089,7 +2084,7 @@ async function seedDB() {
       quantity: 5560,
       categoryId: 2,
       image:
-        "https://static.wikia.nocookie.net/logopedia/images/c/ce/Sonic_Heroes.png/revision/latest?cb=20190306081734",
+        "https://i.pinimg.com/originals/96/68/8f/96688fa0eb2a5912db42cf90ee27fa30.jpg",
     },
     {
       title: "Sonic Heroes",
@@ -2099,7 +2094,7 @@ async function seedDB() {
       quantity: 5560,
       categoryId: 3,
       image:
-        "https://static.wikia.nocookie.net/logopedia/images/c/ce/Sonic_Heroes.png/revision/latest?cb=20190306081734",
+        "https://i.pinimg.com/originals/96/68/8f/96688fa0eb2a5912db42cf90ee27fa30.jpg",
     },
     {
       title: "Sonic Heroes",
@@ -2109,7 +2104,7 @@ async function seedDB() {
       quantity: 5560,
       categoryId: 6,
       image:
-        "https://static.wikia.nocookie.net/logopedia/images/c/ce/Sonic_Heroes.png/revision/latest?cb=20190306081734",
+        "https://i.pinimg.com/originals/96/68/8f/96688fa0eb2a5912db42cf90ee27fa30.jpg",
     },
     {
       title: "Shadow the Hedgehog",
@@ -2119,7 +2114,7 @@ async function seedDB() {
       quantity: 4500,
       categoryId: 2,
       image:
-        "https://static.wikia.nocookie.net/logopedia/images/2/28/Shadow_the_Hedgehog_Logo.png/revision/latest?cb=20190404133358",
+        "https://e7.pngegg.com/pngimages/527/440/png-clipart-shadow-the-hedgehog-sonic-the-hedgehog-amy-rose-logo-others-emblem-text.png",
     },
     {
       title: "Shadow the Hedgehog",
@@ -2129,7 +2124,7 @@ async function seedDB() {
       quantity: 4500,
       categoryId: 3,
       image:
-        "https://static.wikia.nocookie.net/logopedia/images/2/28/Shadow_the_Hedgehog_Logo.png/revision/latest?cb=20190404133358",
+        "https://e7.pngegg.com/pngimages/527/440/png-clipart-shadow-the-hedgehog-sonic-the-hedgehog-amy-rose-logo-others-emblem-text.png",
     },
     {
       title: "Shadow the Hedgehog",
@@ -2139,7 +2134,7 @@ async function seedDB() {
       quantity: 4500,
       categoryId: 6,
       image:
-        "https://static.wikia.nocookie.net/logopedia/images/2/28/Shadow_the_Hedgehog_Logo.png/revision/latest?cb=20190404133358",
+        "https://e7.pngegg.com/pngimages/527/440/png-clipart-shadow-the-hedgehog-sonic-the-hedgehog-amy-rose-logo-others-emblem-text.png",
     },
     {
       title: "Sonic the Hedgehog",
@@ -2149,7 +2144,7 @@ async function seedDB() {
       quantity: 6800,
       categoryId: 2,
       image:
-        "https://static.wikia.nocookie.net/sonic/images/e/e5/Sonic_Next_Gen.jpg/revision/latest?cb=20191002075609",
+        "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/edb2d0a0-bb4d-4aa9-9bf0-faad934503f7/de6etqp-3831398c-fe4c-4389-8054-3d66c7ea4184.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2VkYjJkMGEwLWJiNGQtNGFhOS05YmYwLWZhYWQ5MzQ1MDNmN1wvZGU2ZXRxcC0zODMxMzk4Yy1mZTRjLTQzODktODA1NC0zZDY2YzdlYTQxODQucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.zHlSmQHSy9AG8teVraBZUUy5LeYHU2DDDawg-s0--Y8",
     },
     {
       title: "Sonic the Hedgehog",
@@ -2159,7 +2154,7 @@ async function seedDB() {
       quantity: 6800,
       categoryId: 3,
       image:
-        "https://static.wikia.nocookie.net/sonic/images/e/e5/Sonic_Next_Gen.jpg/revision/latest?cb=20191002075609",
+        "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/edb2d0a0-bb4d-4aa9-9bf0-faad934503f7/de6etqp-3831398c-fe4c-4389-8054-3d66c7ea4184.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2VkYjJkMGEwLWJiNGQtNGFhOS05YmYwLWZhYWQ5MzQ1MDNmN1wvZGU2ZXRxcC0zODMxMzk4Yy1mZTRjLTQzODktODA1NC0zZDY2YzdlYTQxODQucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.zHlSmQHSy9AG8teVraBZUUy5LeYHU2DDDawg-s0--Y8",
     },
     {
       title: "Sonic Unleashed",
@@ -2168,8 +2163,7 @@ async function seedDB() {
       price: 24.99,
       quantity: 6230,
       categoryId: 2,
-      image:
-        "https://static.wikia.nocookie.net/logopedia/images/7/7f/Sonic_Unleashed.png/revision/latest?cb=20200705150644",
+      image: "https://image.pngaaa.com/214/4115214-middle.png",
     },
     {
       title: "Sonic Unleashed",
@@ -2178,8 +2172,7 @@ async function seedDB() {
       price: 24.99,
       quantity: 6230,
       categoryId: 3,
-      image:
-        "https://static.wikia.nocookie.net/logopedia/images/7/7f/Sonic_Unleashed.png/revision/latest?cb=20200705150644",
+      image: "https://image.pngaaa.com/214/4115214-middle.png",
     },
     {
       title: "Sonic Colors",
@@ -2189,7 +2182,7 @@ async function seedDB() {
       quantity: 10050,
       categoryId: 1,
       image:
-        "https://static.wikia.nocookie.net/logopedia/images/7/77/Sonic_Colors%E2%84%A2_Logo.png/revision/latest?cb=20211002203650",
+        "https://upload.wikimedia.org/wikipedia/en/thumb/4/45/Sonic_Colors_box_artwork.png/220px-Sonic_Colors_box_artwork.png",
     },
     {
       title: "Sonic Colors",
@@ -2199,7 +2192,7 @@ async function seedDB() {
       quantity: 10050,
       categoryId: 2,
       image:
-        "https://static.wikia.nocookie.net/logopedia/images/7/77/Sonic_Colors%E2%84%A2_Logo.png/revision/latest?cb=20211002203650",
+        "https://upload.wikimedia.org/wikipedia/en/thumb/4/45/Sonic_Colors_box_artwork.png/220px-Sonic_Colors_box_artwork.png",
     },
     {
       title: "Sonic Colors",
@@ -2209,7 +2202,7 @@ async function seedDB() {
       quantity: 10050,
       categoryId: 3,
       image:
-        "https://static.wikia.nocookie.net/logopedia/images/7/77/Sonic_Colors%E2%84%A2_Logo.png/revision/latest?cb=20211002203650",
+        "https://upload.wikimedia.org/wikipedia/en/thumb/4/45/Sonic_Colors_box_artwork.png/220px-Sonic_Colors_box_artwork.png",
     },
     {
       title: "Sonic Colors",
@@ -2219,7 +2212,7 @@ async function seedDB() {
       quantity: 10050,
       categoryId: 4,
       image:
-        "https://static.wikia.nocookie.net/logopedia/images/7/77/Sonic_Colors%E2%84%A2_Logo.png/revision/latest?cb=20211002203650",
+        "https://upload.wikimedia.org/wikipedia/en/thumb/4/45/Sonic_Colors_box_artwork.png/220px-Sonic_Colors_box_artwork.png",
     },
     {
       title: "Sonic Generations",
@@ -2259,7 +2252,7 @@ async function seedDB() {
       quantity: 5690,
       categoryId: 1,
       image:
-        "https://static.wikia.nocookie.net/logopedia/images/6/6f/Sonic_Lost_World_Logo.png/revision/latest?cb=20200702223320",
+        "https://i.kym-cdn.com/entries/icons/original/000/020/668/sonic_lost_world.png",
     },
     {
       title: "Sonic Forces",
@@ -2339,7 +2332,7 @@ async function seedDB() {
       quantity: 5200,
       categoryId: 7,
       image:
-        "https://static.wikia.nocookie.net/logopedia/images/6/65/Crazy_Taxi_2_Logo_1_a.gif/revision/latest?cb=20140212145815",
+        "https://w1.pngwing.com/pngs/53/135/png-transparent-bicycle-crazy-taxi-2-video-games-dreamcast-playstation-2-forza-motorsport-2-tokyo-xtreme-racer-zero-bicycle-helmets.png",
     },
     {
       title: "Crazy Taxi 3: High Roller",
@@ -2348,8 +2341,7 @@ async function seedDB() {
       price: 27.99,
       quantity: 5200,
       categoryId: 1,
-      image:
-        "https://static.wikia.nocookie.net/logopedia/images/3/36/1170181-crazy_taxi_3.png/revision/latest?cb=20140212150240",
+      image: "https://segaretro.org/images/e/e4/Crazy_Taxi_3_title_screen.png",
     },
     {
       title: "Crazy Taxi 3: High Roller",
@@ -2358,8 +2350,7 @@ async function seedDB() {
       price: 27.99,
       quantity: 5200,
       categoryId: 2,
-      image:
-        "https://static.wikia.nocookie.net/logopedia/images/3/36/1170181-crazy_taxi_3.png/revision/latest?cb=20140212150240",
+      image: "https://segaretro.org/images/e/e4/Crazy_Taxi_3_title_screen.png",
     },
     {
       title: "Half-life",
@@ -2389,7 +2380,7 @@ async function seedDB() {
       quantity: 6500,
       categoryId: 1,
       image:
-        "https://static.wikia.nocookie.net/logopedia/images/b/b7/Half-Life_2.svg/revision/latest/scale-to-width-down/300?cb=20190608145642",
+        "https://seeklogo.com/images/H/Half_Life_2-logo-311E7C043C-seeklogo.com.png",
     },
     {
       title: "Half-life 2",
@@ -2399,7 +2390,7 @@ async function seedDB() {
       quantity: 6500,
       categoryId: 2,
       image:
-        "https://static.wikia.nocookie.net/logopedia/images/b/b7/Half-Life_2.svg/revision/latest/scale-to-width-down/300?cb=20190608145642",
+        "https://seeklogo.com/images/H/Half_Life_2-logo-311E7C043C-seeklogo.com.png",
     },
     {
       title: "Half-life 2",
@@ -2409,7 +2400,7 @@ async function seedDB() {
       quantity: 6500,
       categoryId: 3,
       image:
-        "https://static.wikia.nocookie.net/logopedia/images/b/b7/Half-Life_2.svg/revision/latest/scale-to-width-down/300?cb=20190608145642",
+        "https://seeklogo.com/images/H/Half_Life_2-logo-311E7C043C-seeklogo.com.png",
     },
     {
       title: "Half-life 2: Episode One",
@@ -2509,7 +2500,7 @@ async function seedDB() {
       quantity: 7500,
       categoryId: 6,
       image:
-        "https://static.wikia.nocookie.net/capcomdatabase/images/b/b8/RE_Remake_Logo.png/revision/latest?cb=20190712212722",
+        "https://fanart.tv/fanart/movies/1576/hdmovielogo/resident-evil-5129fce8667e0.png",
     },
     {
       title: "Resident Evil (2002 remake)",
@@ -2519,7 +2510,7 @@ async function seedDB() {
       quantity: 7500,
       categoryId: 1,
       image:
-        "https://static.wikia.nocookie.net/capcomdatabase/images/b/b8/RE_Remake_Logo.png/revision/latest?cb=20190712212722",
+        "https://fanart.tv/fanart/movies/1576/hdmovielogo/resident-evil-5129fce8667e0.png",
     },
     {
       title: "Resident Evil (2002 remake)",
@@ -2529,7 +2520,7 @@ async function seedDB() {
       quantity: 7500,
       categoryId: 2,
       image:
-        "https://static.wikia.nocookie.net/capcomdatabase/images/b/b8/RE_Remake_Logo.png/revision/latest?cb=20190712212722",
+        "https://fanart.tv/fanart/movies/1576/hdmovielogo/resident-evil-5129fce8667e0.png",
     },
     {
       title: "Resident Evil (2002 remake)",
@@ -2539,7 +2530,7 @@ async function seedDB() {
       quantity: 7500,
       categoryId: 3,
       image:
-        "https://static.wikia.nocookie.net/capcomdatabase/images/b/b8/RE_Remake_Logo.png/revision/latest?cb=20190712212722",
+        "https://fanart.tv/fanart/movies/1576/hdmovielogo/resident-evil-5129fce8667e0.png",
     },
     {
       title: "Resident Evil (2002 remake)",
@@ -2549,7 +2540,7 @@ async function seedDB() {
       quantity: 7500,
       categoryId: 4,
       image:
-        "https://static.wikia.nocookie.net/capcomdatabase/images/b/b8/RE_Remake_Logo.png/revision/latest?cb=20190712212722",
+        "https://fanart.tv/fanart/movies/1576/hdmovielogo/resident-evil-5129fce8667e0.png",
     },
     {
       title: "Resident Evil 2",
@@ -2559,7 +2550,7 @@ async function seedDB() {
       quantity: 8100,
       categoryId: 1,
       image:
-        "https://static.wikia.nocookie.net/logopedia/images/9/9d/Resident_Evil_2_logo.png/revision/latest?cb=20140309085835",
+        "https://gamingbolt.com/wp-content/uploads/2014/04/resident-evil-2.jpg",
     },
     {
       title: "Resident Evil 2",
@@ -2569,7 +2560,7 @@ async function seedDB() {
       quantity: 8100,
       categoryId: 3,
       image:
-        "https://static.wikia.nocookie.net/logopedia/images/9/9d/Resident_Evil_2_logo.png/revision/latest?cb=20140309085835",
+        "https://gamingbolt.com/wp-content/uploads/2014/04/resident-evil-2.jpg",
     },
     {
       title: "Resident Evil 2",
@@ -2579,7 +2570,7 @@ async function seedDB() {
       quantity: 8100,
       categoryId: 5,
       image:
-        "https://static.wikia.nocookie.net/logopedia/images/9/9d/Resident_Evil_2_logo.png/revision/latest?cb=20140309085835",
+        "https://gamingbolt.com/wp-content/uploads/2014/04/resident-evil-2.jpg",
     },
     {
       title: "Resident Evil 2",
@@ -2589,7 +2580,7 @@ async function seedDB() {
       quantity: 8100,
       categoryId: 6,
       image:
-        "https://static.wikia.nocookie.net/logopedia/images/9/9d/Resident_Evil_2_logo.png/revision/latest?cb=20140309085835",
+        "https://gamingbolt.com/wp-content/uploads/2014/04/resident-evil-2.jpg",
     },
     {
       title: "Resident Evil 2",
@@ -2599,7 +2590,7 @@ async function seedDB() {
       quantity: 8100,
       categoryId: 7,
       image:
-        "https://static.wikia.nocookie.net/logopedia/images/9/9d/Resident_Evil_2_logo.png/revision/latest?cb=20140309085835",
+        "https://gamingbolt.com/wp-content/uploads/2014/04/resident-evil-2.jpg",
     },
     {
       title: "Resident Evil 2 (2019 remake)",
@@ -2639,7 +2630,7 @@ async function seedDB() {
       quantity: 10000,
       categoryId: 1,
       image:
-        "https://static.wikia.nocookie.net/residentevil/images/c/c1/RE3logo.jpg/revision/latest?cb=20140126024556",
+        "https://deadentertainment.com/uploads/resident-evil-3-fan-made-hd-graphics-mod-75c099w06o.png",
     },
     {
       title: "Resident Evil 3: Nemesis",
@@ -2649,7 +2640,7 @@ async function seedDB() {
       quantity: 10000,
       categoryId: 3,
       image:
-        "https://static.wikia.nocookie.net/residentevil/images/c/c1/RE3logo.jpg/revision/latest?cb=20140126024556",
+        "https://deadentertainment.com/uploads/resident-evil-3-fan-made-hd-graphics-mod-75c099w06o.png",
     },
     {
       title: "Resident Evil 3: Nemesis",
@@ -2659,7 +2650,7 @@ async function seedDB() {
       quantity: 10000,
       categoryId: 6,
       image:
-        "https://static.wikia.nocookie.net/residentevil/images/c/c1/RE3logo.jpg/revision/latest?cb=20140126024556",
+        "https://deadentertainment.com/uploads/resident-evil-3-fan-made-hd-graphics-mod-75c099w06o.png",
     },
     {
       title: "Resident Evil 3: Nemesis",
@@ -2669,7 +2660,7 @@ async function seedDB() {
       quantity: 10000,
       categoryId: 7,
       image:
-        "https://static.wikia.nocookie.net/residentevil/images/c/c1/RE3logo.jpg/revision/latest?cb=20140126024556",
+        "https://deadentertainment.com/uploads/resident-evil-3-fan-made-hd-graphics-mod-75c099w06o.png",
     },
     {
       title: "Resident Evil 3 (2020 remake)",
@@ -2708,8 +2699,7 @@ async function seedDB() {
       price: 34.99,
       quantity: 9650,
       categoryId: 2,
-      image:
-        "https://static.wikia.nocookie.net/residentevil/images/2/26/Resident_Evil_CODE_Veronica.png/revision/latest?cb=20150529052207",
+      image: "https://m.media-amazon.com/images/I/517JMPHYKCL.jpg",
     },
     {
       title: "Resident Evil - Code: Veronica",
@@ -2718,8 +2708,7 @@ async function seedDB() {
       price: 34.99,
       quantity: 9650,
       categoryId: 3,
-      image:
-        "https://static.wikia.nocookie.net/residentevil/images/2/26/Resident_Evil_CODE_Veronica.png/revision/latest?cb=20150529052207",
+      image: "https://m.media-amazon.com/images/I/517JMPHYKCL.jpg",
     },
     {
       title: "Resident Evil - Code: Veronica",
@@ -2728,8 +2717,7 @@ async function seedDB() {
       price: 34.99,
       quantity: 9650,
       categoryId: 6,
-      image:
-        "https://static.wikia.nocookie.net/residentevil/images/2/26/Resident_Evil_CODE_Veronica.png/revision/latest?cb=20150529052207",
+      image: "https://m.media-amazon.com/images/I/517JMPHYKCL.jpg",
     },
     {
       title: "Resident Evil - Code: Veronica",
@@ -2738,8 +2726,7 @@ async function seedDB() {
       price: 34.99,
       quantity: 9650,
       categoryId: 7,
-      image:
-        "https://static.wikia.nocookie.net/residentevil/images/2/26/Resident_Evil_CODE_Veronica.png/revision/latest?cb=20150529052207",
+      image: "https://m.media-amazon.com/images/I/517JMPHYKCL.jpg",
     },
     {
       title: "Resident Evil Zero",
@@ -2749,7 +2736,7 @@ async function seedDB() {
       quantity: 7600,
       categoryId: 1,
       image:
-        "https://static.wikia.nocookie.net/logopedia/images/f/f6/Resident_Evil_Zero.png/revision/latest?cb=20140926215921",
+        "https://www.residentevil.com/0/_asset/images/bio0-share-global.png",
     },
     {
       title: "Resident Evil Zero",
@@ -2759,7 +2746,7 @@ async function seedDB() {
       quantity: 7600,
       categoryId: 2,
       image:
-        "https://static.wikia.nocookie.net/logopedia/images/f/f6/Resident_Evil_Zero.png/revision/latest?cb=20140926215921",
+        "https://www.residentevil.com/0/_asset/images/bio0-share-global.png",
     },
     {
       title: "Resident Evil Zero",
@@ -2769,7 +2756,7 @@ async function seedDB() {
       quantity: 7600,
       categoryId: 3,
       image:
-        "https://static.wikia.nocookie.net/logopedia/images/f/f6/Resident_Evil_Zero.png/revision/latest?cb=20140926215921",
+        "https://www.residentevil.com/0/_asset/images/bio0-share-global.png",
     },
     {
       title: "Resident Evil Zero",
@@ -2779,7 +2766,7 @@ async function seedDB() {
       quantity: 7600,
       categoryId: 4,
       image:
-        "https://static.wikia.nocookie.net/logopedia/images/f/f6/Resident_Evil_Zero.png/revision/latest?cb=20140926215921",
+        "https://www.residentevil.com/0/_asset/images/bio0-share-global.png",
     },
     {
       title: "Resident Evil Zero",
@@ -2789,7 +2776,7 @@ async function seedDB() {
       quantity: 7600,
       categoryId: 6,
       image:
-        "https://static.wikia.nocookie.net/logopedia/images/f/f6/Resident_Evil_Zero.png/revision/latest?cb=20140926215921",
+        "https://www.residentevil.com/0/_asset/images/bio0-share-global.png",
     },
     {
       title: "Resident Evil 4",
@@ -2799,7 +2786,7 @@ async function seedDB() {
       quantity: 16000,
       categoryId: 1,
       image:
-        "https://static.wikia.nocookie.net/logopedia/images/6/66/Re4_logo.jpg/revision/latest/scale-to-width-down/2000?cb=20140208001441",
+        "https://www.gamespot.com/a/uploads/scale_medium/536/5360430/3208280-untitled-1.jpg",
     },
     {
       title: "Resident Evil 4",
@@ -2809,7 +2796,7 @@ async function seedDB() {
       quantity: 16000,
       categoryId: 2,
       image:
-        "https://static.wikia.nocookie.net/logopedia/images/6/66/Re4_logo.jpg/revision/latest/scale-to-width-down/2000?cb=20140208001441",
+        "https://www.gamespot.com/a/uploads/scale_medium/536/5360430/3208280-untitled-1.jpg",
     },
     {
       title: "Resident Evil 4",
@@ -2819,7 +2806,7 @@ async function seedDB() {
       quantity: 16000,
       categoryId: 3,
       image:
-        "https://static.wikia.nocookie.net/logopedia/images/6/66/Re4_logo.jpg/revision/latest/scale-to-width-down/2000?cb=20140208001441",
+        "https://www.gamespot.com/a/uploads/scale_medium/536/5360430/3208280-untitled-1.jpg",
     },
     {
       title: "Resident Evil 4",
@@ -2829,7 +2816,7 @@ async function seedDB() {
       quantity: 16000,
       categoryId: 4,
       image:
-        "https://static.wikia.nocookie.net/logopedia/images/6/66/Re4_logo.jpg/revision/latest/scale-to-width-down/2000?cb=20140208001441",
+        "https://www.gamespot.com/a/uploads/scale_medium/536/5360430/3208280-untitled-1.jpg",
     },
     {
       title: "Resident Evil 4",
@@ -2839,7 +2826,7 @@ async function seedDB() {
       quantity: 16000,
       categoryId: 6,
       image:
-        "https://static.wikia.nocookie.net/logopedia/images/6/66/Re4_logo.jpg/revision/latest/scale-to-width-down/2000?cb=20140208001441",
+        "https://www.gamespot.com/a/uploads/scale_medium/536/5360430/3208280-untitled-1.jpg",
     },
     {
       title: "Resident Evil 5",
@@ -2848,8 +2835,7 @@ async function seedDB() {
       price: 39.99,
       quantity: 16500,
       categoryId: 1,
-      image:
-        "https://static.wikia.nocookie.net/logopedia/images/f/fb/REimage.png/revision/latest?cb=20140309090207",
+      image: "https://m.media-amazon.com/images/I/61u+ibniWuL._SY355_.jpg",
     },
     {
       title: "Resident Evil 5",
@@ -2858,8 +2844,7 @@ async function seedDB() {
       price: 39.99,
       quantity: 16500,
       categoryId: 2,
-      image:
-        "https://static.wikia.nocookie.net/logopedia/images/f/fb/REimage.png/revision/latest?cb=20140309090207",
+      image: "https://m.media-amazon.com/images/I/61u+ibniWuL._SY355_.jpg",
     },
     {
       title: "Resident Evil 5",
@@ -2868,8 +2853,7 @@ async function seedDB() {
       price: 39.99,
       quantity: 16500,
       categoryId: 3,
-      image:
-        "https://static.wikia.nocookie.net/logopedia/images/f/fb/REimage.png/revision/latest?cb=20140309090207",
+      image: "https://m.media-amazon.com/images/I/61u+ibniWuL._SY355_.jpg",
     },
     {
       title: "Resident Evil 5",
@@ -2878,8 +2862,7 @@ async function seedDB() {
       price: 39.99,
       quantity: 16500,
       categoryId: 4,
-      image:
-        "https://static.wikia.nocookie.net/logopedia/images/f/fb/REimage.png/revision/latest?cb=20140309090207",
+      image: "https://m.media-amazon.com/images/I/61u+ibniWuL._SY355_.jpg",
     },
     {
       title: "Resident Evil 6",
@@ -2928,8 +2911,7 @@ async function seedDB() {
       price: 49.99,
       quantity: 27000,
       categoryId: 1,
-      image:
-        "https://static.wikia.nocookie.net/capcomdatabase/images/3/35/Resident_Evil_7_Logo.png/revision/latest?cb=20191009140630",
+      image: "https://i.kym-cdn.com/photos/images/original/001/197/904/9a4.jpg",
     },
     {
       title: "Resident Evil 7: Biohazard",
@@ -2938,8 +2920,7 @@ async function seedDB() {
       price: 49.99,
       quantity: 27000,
       categoryId: 2,
-      image:
-        "https://static.wikia.nocookie.net/capcomdatabase/images/3/35/Resident_Evil_7_Logo.png/revision/latest?cb=20191009140630",
+      image: "https://i.kym-cdn.com/photos/images/original/001/197/904/9a4.jpg",
     },
     {
       title: "Resident Evil 7: Biohazard",
@@ -2948,8 +2929,7 @@ async function seedDB() {
       price: 49.99,
       quantity: 27000,
       categoryId: 3,
-      image:
-        "https://static.wikia.nocookie.net/capcomdatabase/images/3/35/Resident_Evil_7_Logo.png/revision/latest?cb=20191009140630",
+      image: "https://i.kym-cdn.com/photos/images/original/001/197/904/9a4.jpg",
     },
     {
       title: "Resident Evil Village",
@@ -3038,7 +3018,7 @@ async function seedDB() {
       quantity: 4000,
       categoryId: 5,
       image:
-        "https://static.wikia.nocookie.net/logopedia/images/0/09/A7abc1b2-ecc7-4979-90a7-6ebf5a11e53f.png/revision/latest?cb=20190527013350",
+        "https://cdn02.nintendo-europe.com/media/images/10_share_images/games_15/nintendo_7/SI_N64_PokemonStadium2_image1600w.jpg",
     },
     {
       title: "Pokemon Box",
@@ -3048,7 +3028,7 @@ async function seedDB() {
       quantity: 8900,
       categoryId: 6,
       image:
-        "https://static.wikia.nocookie.net/logopedia/images/6/62/E06e2ac1-af53-45f5-b078-2c0bdec42ff6.png/revision/latest?cb=20190527013738",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Pokemon_BOX_Ruby_Sapphire.svg/1280px-Pokemon_BOX_Ruby_Sapphire.svg.png",
     },
     {
       title: "Pokemon Home",
@@ -3068,7 +3048,7 @@ async function seedDB() {
       quantity: 11000,
       categoryId: 6,
       image:
-        "https://static.wikia.nocookie.net/logopedia/images/5/54/Pok%C3%A9mon_Colosseum.png/revision/latest?cb=20131023091658",
+        "https://cdn2.steamgriddb.com/file/sgdb-cdn/logo_thumb/91109a77036a730296d6305a9794fa13.png",
     },
     {
       title: "Pokemon XD: Gale of Darkness",
@@ -3078,7 +3058,7 @@ async function seedDB() {
       quantity: 13000,
       categoryId: 6,
       image:
-        "https://static.wikia.nocookie.net/logopedia/images/4/44/Pok%C3%A9mon_XD_Gale_of_Darkness_logo.png/revision/latest?cb=20190527013815",
+        "https://media.gamestop.com/i/gamestop/10039269/Pokemon-XD-Gale-of-Darkness",
     },
     {
       title: "Pokemon Snap",
@@ -3087,7 +3067,7 @@ async function seedDB() {
       quantity: 4500,
       categoryId: 5,
       image:
-        "https://static.wikia.nocookie.net/mudae/images/7/7c/Pokemon_Snap_Logo.png/revision/latest?cb=20201030131206",
+        "https://upload.wikimedia.org/wikipedia/en/0/0a/Pok%C3%A9mon_Snap_Coverart.png",
     },
     {
       title: "New Pokemon Snap",
@@ -3096,7 +3076,7 @@ async function seedDB() {
       quantity: 18000,
       categoryId: 4,
       image:
-        "https://static.wikia.nocookie.net/logopedia/images/4/41/New_Pokemon_Snap.png/revision/latest?cb=20200618090905",
+        "https://i2.wp.com/mynintendonews.com/wp-content/uploads/2021/01/new_pokemon_snap_logo.jpg?ssl=1",
     },
     {
       title: "Animal Crossing",
@@ -3106,7 +3086,7 @@ async function seedDB() {
       quantity: 4300,
       categoryId: 5,
       image:
-        "https://static.wikia.nocookie.net/logopedia/images/d/d2/Animal_Crossing_logo.png/revision/latest?cb=20171025115130",
+        "https://upload.wikimedia.org/wikipedia/en/8/82/Animal_Crossing_Coverart.png",
     },
     {
       title: "Animal Crossing",
@@ -3116,7 +3096,7 @@ async function seedDB() {
       quantity: 4300,
       categoryId: 6,
       image:
-        "https://static.wikia.nocookie.net/logopedia/images/d/d2/Animal_Crossing_logo.png/revision/latest?cb=20171025115130",
+        "https://upload.wikimedia.org/wikipedia/en/8/82/Animal_Crossing_Coverart.png",
     },
     {
       title: "Animal Crossing: New Horizons",
@@ -3126,7 +3106,7 @@ async function seedDB() {
       quantity: 28000,
       categoryId: 4,
       image:
-        "https://static.wikia.nocookie.net/animalcrossing/images/9/92/NewHorizons.png/revision/latest?cb=20210123051957",
+        "https://www.thumbsticks.com/wp-content/uploads/2021/10/animal-crossing-new-horizons-logo-1200x900.jpg",
     },
     {
       title: "The Sims",
@@ -3136,7 +3116,7 @@ async function seedDB() {
       quantity: 5000,
       categoryId: 1,
       image:
-        "https://static.wikia.nocookie.net/logopedia/images/b/ba/The_Sims_2004.png/revision/latest/scale-to-width-down/300?cb=20130506221327",
+        "https://i.kym-cdn.com/entries/icons/facebook/000/014/002/sims.jpg",
     },
     {
       title: "The Sims",
@@ -3146,7 +3126,7 @@ async function seedDB() {
       quantity: 5000,
       categoryId: 2,
       image:
-        "https://static.wikia.nocookie.net/logopedia/images/b/ba/The_Sims_2004.png/revision/latest/scale-to-width-down/300?cb=20130506221327",
+        "https://i.kym-cdn.com/entries/icons/facebook/000/014/002/sims.jpg",
     },
     {
       title: "The Sims",
@@ -3156,7 +3136,7 @@ async function seedDB() {
       quantity: 5000,
       categoryId: 3,
       image:
-        "https://static.wikia.nocookie.net/logopedia/images/b/ba/The_Sims_2004.png/revision/latest/scale-to-width-down/300?cb=20130506221327",
+        "https://i.kym-cdn.com/entries/icons/facebook/000/014/002/sims.jpg",
     },
     {
       title: "The Sims",
@@ -3166,7 +3146,7 @@ async function seedDB() {
       quantity: 5000,
       categoryId: 6,
       image:
-        "https://static.wikia.nocookie.net/logopedia/images/b/ba/The_Sims_2004.png/revision/latest/scale-to-width-down/300?cb=20130506221327",
+        "https://i.kym-cdn.com/entries/icons/facebook/000/014/002/sims.jpg",
     },
     {
       title: "The Sims 2",
@@ -3175,8 +3155,7 @@ async function seedDB() {
       price: 24.99,
       quantity: 8700,
       categoryId: 1,
-      image:
-        "https://static.wikia.nocookie.net/logopedia/images/e/ee/The_Sims_2_%28Pre-release%29.png/revision/latest?cb=20130511124159",
+      image: "https://lparchive.org/The-Sims-2/Images/1-Sims2HD.PNG",
     },
     {
       title: "The Sims 2",
@@ -3185,8 +3164,7 @@ async function seedDB() {
       price: 24.99,
       quantity: 8700,
       categoryId: 2,
-      image:
-        "https://static.wikia.nocookie.net/logopedia/images/e/ee/The_Sims_2_%28Pre-release%29.png/revision/latest?cb=20130511124159",
+      image: "https://lparchive.org/The-Sims-2/Images/1-Sims2HD.PNG",
     },
     {
       title: "The Sims 2",
@@ -3195,8 +3173,7 @@ async function seedDB() {
       price: 24.99,
       quantity: 8700,
       categoryId: 3,
-      image:
-        "https://static.wikia.nocookie.net/logopedia/images/e/ee/The_Sims_2_%28Pre-release%29.png/revision/latest?cb=20130511124159",
+      image: "https://lparchive.org/The-Sims-2/Images/1-Sims2HD.PNG",
     },
     {
       title: "The Sims 2",
@@ -3205,8 +3182,7 @@ async function seedDB() {
       price: 24.99,
       quantity: 8700,
       categoryId: 6,
-      image:
-        "https://static.wikia.nocookie.net/logopedia/images/e/ee/The_Sims_2_%28Pre-release%29.png/revision/latest?cb=20130511124159",
+      image: "https://lparchive.org/The-Sims-2/Images/1-Sims2HD.PNG",
     },
     {
       title: "MySims SkyHeroes",
@@ -3215,8 +3191,7 @@ async function seedDB() {
       price: 29.99,
       quantity: 10000,
       categoryId: 2,
-      image:
-        "https://static.wikia.nocookie.net/mysims/images/c/c9/MSSH_Logo.png/revision/latest/scale-to-width-down/2000?cb=20100505183028",
+      image: "https://media.gamestop.com/i/gamestop/10077851/MySims-SkyHeroes",
     },
     {
       title: "MySims SkyHeroes",
@@ -3225,38 +3200,37 @@ async function seedDB() {
       price: 29.99,
       quantity: 10000,
       categoryId: 3,
-      image:
-        "https://static.wikia.nocookie.net/mysims/images/c/c9/MSSH_Logo.png/revision/latest/scale-to-width-down/2000?cb=20100505183028",
+      image: "https://media.gamestop.com/i/gamestop/10077851/MySims-SkyHeroes",
     },
     {
       title: "The Sims 3",
       description:
-        "A simulation of the daily activities of one or more virtual people in a suburban household near a fictional city. Rated E",
+        "A simulation of the daily activities of one or more virtual people in a suburban household near a fictional city. Rated T",
       price: 29.99,
       quantity: 11000,
       categoryId: 1,
       image:
-        "https://static.wikia.nocookie.net/logopedia/images/d/da/The-sims-3-logo-480x100.png/revision/latest?cb=20210312233742",
+        "https://upload.wikimedia.org/wikipedia/en/thumb/6/6f/Sims3cover.jpg/220px-Sims3cover.jpg",
     },
     {
       title: "The Sims 3",
       description:
-        "A simulation of the daily activities of one or more virtual people in a suburban household near a fictional city. Rated E",
+        "A simulation of the daily activities of one or more virtual people in a suburban household near a fictional city. Rated T",
       price: 29.99,
       quantity: 11000,
       categoryId: 2,
       image:
-        "https://static.wikia.nocookie.net/logopedia/images/d/da/The-sims-3-logo-480x100.png/revision/latest?cb=20210312233742",
+        "https://upload.wikimedia.org/wikipedia/en/thumb/6/6f/Sims3cover.jpg/220px-Sims3cover.jpg",
     },
     {
       title: "The Sims 3",
       description:
-        "A simulation of the daily activities of one or more virtual people in a suburban household near a fictional city. Rated E",
+        "A simulation of the daily activities of one or more virtual people in a suburban household near a fictional city. Rated T",
       price: 29.99,
       quantity: 11000,
       categoryId: 3,
       image:
-        "https://static.wikia.nocookie.net/logopedia/images/d/da/The-sims-3-logo-480x100.png/revision/latest?cb=20210312233742",
+        "https://upload.wikimedia.org/wikipedia/en/thumb/6/6f/Sims3cover.jpg/220px-Sims3cover.jpg",
     },
     {
       title: "The Sims 4",
