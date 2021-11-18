@@ -21,6 +21,7 @@
 
 .custom-card .card-image {
   width: auto;
+  max-width: 300px;
   max-height: 200px;
   margin: auto;
   padding: 10px 10px 0 10px;
