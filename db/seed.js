@@ -1505,7 +1505,7 @@ async function seedDB() {
       quantity: 30000,
       categoryId: 1,
       image:
-        "https://e7.pngegg.com/pngimages/861/933/png-clipart-final-fantasy-xv-comrades-video-games-noctis-lucis-caelum-final-fantasy-xiii-quest-final-fantasy-x-weapons-game-text.png",
+        "https://cache-eu.finalfantasy.com/uploads/content/file/2018/06/07/163/logo_ffxv_2.jpg",
     },
     {
       title: "Super Mario 64",
@@ -1573,7 +1573,8 @@ async function seedDB() {
       price: 35.99,
       quantity: 4500,
       categoryId: 4,
-      image: "https://i.redd.it/rsgp6bte7fu61.png",
+      image:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCd4_eoV70wMCe0A8UMioEjT96W6KStGnzuA&usqp=CAU",
     },
     {
       title: "Mario Kart 64",
@@ -1601,8 +1602,7 @@ async function seedDB() {
       price: 49.99,
       quantity: 12500,
       categoryId: 4,
-      image:
-        "https://www.pinclipart.com/picdir/middle/227-2273022_mario-kart-8-deluxe-logo-png-clipart.png",
+      image: "https://i.ytimg.com/vi/tKlRN2YpxRE/maxresdefault.jpg",
     },
     {
       title: "Mario Kart Live: Home Circuit",
@@ -1611,7 +1611,8 @@ async function seedDB() {
       price: 54.99,
       quantity: 25000,
       categoryId: 4,
-      image: "https://mklive.nintendo.com/assets/img/global/logo-game.png",
+      image:
+        "https://assets-prd.ignimgs.com/2020/09/04/mario-kart-live-home-circuit-fin-button-1599258888485.jpg",
     },
     {
       title: "Halo",
@@ -1621,7 +1622,7 @@ async function seedDB() {
       quantity: 4300,
       categoryId: 1,
       image:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwDyJ5vaGahShH3AkoCS41dl1C49_jwfOHIA&usqp=CAU",
+        "https://cdna.artstation.com/p/assets/images/images/034/210/222/large/danny-lovick-halo-logo-page-1.jpg?1611692007",
     },
     {
       title: "Halo",
@@ -1631,7 +1632,7 @@ async function seedDB() {
       quantity: 4300,
       categoryId: 2,
       image:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwDyJ5vaGahShH3AkoCS41dl1C49_jwfOHIA&usqp=CAU",
+        "https://cdna.artstation.com/p/assets/images/images/034/210/222/large/danny-lovick-halo-logo-page-1.jpg?1611692007",
     },
     {
       title: "Halo 2",
@@ -1660,8 +1661,7 @@ async function seedDB() {
       price: 39.99,
       quantity: 10540,
       categoryId: 1,
-      image:
-        "https://upload.wikimedia.org/wikipedia/commons/7/71/Halo_3_Logo.png",
+      image: "https://m.media-amazon.com/images/I/71FbyifPeAL._AC_SY741_.jpg",
     },
     {
       title: "Halo 3",
@@ -1670,8 +1670,7 @@ async function seedDB() {
       price: 39.99,
       quantity: 10540,
       categoryId: 2,
-      image:
-        "https://upload.wikimedia.org/wikipedia/commons/7/71/Halo_3_Logo.png",
+      image: "https://m.media-amazon.com/images/I/71FbyifPeAL._AC_SY741_.jpg",
     },
     {
       title: "Halo 3: ODST",
@@ -1720,7 +1719,8 @@ async function seedDB() {
       price: 52.99,
       quantity: 15000,
       categoryId: 1,
-      image: "https://gotgame.com/wp-content/uploads/2012/09/Halo-4-Logo.jpg",
+      image:
+        "https://upload.wikimedia.org/wikipedia/en/9/92/Halo_4_box_artwork.png",
     },
     {
       title: "Halo 4",
@@ -1729,7 +1729,8 @@ async function seedDB() {
       price: 52.99,
       quantity: 15000,
       categoryId: 2,
-      image: "https://gotgame.com/wp-content/uploads/2012/09/Halo-4-Logo.jpg",
+      image:
+        "https://upload.wikimedia.org/wikipedia/en/9/92/Halo_4_box_artwork.png",
     },
     {
       title: "Halo 5: Guardians",
@@ -1739,7 +1740,7 @@ async function seedDB() {
       quantity: 23000,
       categoryId: 1,
       image:
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Logo_Halo_5_Guardians_schwarz.svg/2560px-Logo_Halo_5_Guardians_schwarz.svg.png",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS51ThrsCez6a1Y2rG0MuP1Ao-zdKS9fVbBezCstAwPl_H5mG1D6uANKxQTwWoXHHwxo3w&usqp=CAU",
     },
     {
       title: "Halo 5: Guardians",
@@ -1749,7 +1750,7 @@ async function seedDB() {
       quantity: 23000,
       categoryId: 2,
       image:
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Logo_Halo_5_Guardians_schwarz.svg/2560px-Logo_Halo_5_Guardians_schwarz.svg.png",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS51ThrsCez6a1Y2rG0MuP1Ao-zdKS9fVbBezCstAwPl_H5mG1D6uANKxQTwWoXHHwxo3w&usqp=CAU",
     },
     {
       title: "GoldenEye 007",
@@ -1759,7 +1760,7 @@ async function seedDB() {
       quantity: 430,
       categoryId: 5,
       image:
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Goldeneye-logo.svg/1280px-Goldeneye-logo.svg.png",
+        "https://upload.wikimedia.org/wikipedia/en/3/36/GoldenEye007box.jpg",
     },
     {
       title: "GoldenEye 007 Remake",
@@ -1866,7 +1867,7 @@ async function seedDB() {
       quantity: 4350,
       categoryId: 5,
       image:
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/The_Legend_of_Zelda_Majora%27s_Mask.svg/1024px-The_Legend_of_Zelda_Majora%27s_Mask.svg.png",
+        "https://www.hiddentriforce.com/wp-content/uploads/2016/11/legend-of-zelda-majoras-mask.jpg",
     },
     {
       title: "The Legend of Zelda: Majora's Mask",
@@ -1876,7 +1877,7 @@ async function seedDB() {
       quantity: 4350,
       categoryId: 6,
       image:
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/The_Legend_of_Zelda_Majora%27s_Mask.svg/1024px-The_Legend_of_Zelda_Majora%27s_Mask.svg.png",
+        "https://www.hiddentriforce.com/wp-content/uploads/2016/11/legend-of-zelda-majoras-mask.jpg",
     },
     {
       title: "The Legend of Zelda: The Wind Waker",
@@ -1925,7 +1926,7 @@ async function seedDB() {
       quantity: 35000,
       categoryId: 4,
       image:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTH7mW8A3doFSck7HeBzqJwEUxgZMmdrToUYA&usqp=CAU",
+        "https://www.zelda.com/breath-of-the-wild/assets/media/wallpapers/desktop-1.jpg",
     },
     {
       title: "Sonic the Hedgehog CD",
@@ -1954,7 +1955,7 @@ async function seedDB() {
       quantity: 2900,
       categoryId: 1,
       image:
-        "https://fanatical.imgix.net/product/original/b8e51a2b-4ee5-43cc-946b-0ba7aad3e315.jpg?auto=compress,format&w=400&fit=crop&h=",
+        "https://i0.wp.com/www.stuffwelike.com/wp-content/uploads/2012/02/sonic.jpg?fit=650%2C365&resize=350%2C200",
     },
     {
       title: "Sonic Mania",
@@ -2113,8 +2114,7 @@ async function seedDB() {
       price: 23.99,
       quantity: 4500,
       categoryId: 2,
-      image:
-        "https://e7.pngegg.com/pngimages/527/440/png-clipart-shadow-the-hedgehog-sonic-the-hedgehog-amy-rose-logo-others-emblem-text.png",
+      image: "http://retrocdn.net/images/d/d2/Shadow_title.png",
     },
     {
       title: "Shadow the Hedgehog",
@@ -2123,8 +2123,7 @@ async function seedDB() {
       price: 23.99,
       quantity: 4500,
       categoryId: 3,
-      image:
-        "https://e7.pngegg.com/pngimages/527/440/png-clipart-shadow-the-hedgehog-sonic-the-hedgehog-amy-rose-logo-others-emblem-text.png",
+      image: "http://retrocdn.net/images/d/d2/Shadow_title.png",
     },
     {
       title: "Shadow the Hedgehog",
@@ -2133,8 +2132,7 @@ async function seedDB() {
       price: 23.99,
       quantity: 4500,
       categoryId: 6,
-      image:
-        "https://e7.pngegg.com/pngimages/527/440/png-clipart-shadow-the-hedgehog-sonic-the-hedgehog-amy-rose-logo-others-emblem-text.png",
+      image: "http://retrocdn.net/images/d/d2/Shadow_title.png",
     },
     {
       title: "Sonic the Hedgehog",
@@ -2163,7 +2161,8 @@ async function seedDB() {
       price: 24.99,
       quantity: 6230,
       categoryId: 2,
-      image: "https://image.pngaaa.com/214/4115214-middle.png",
+      image:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQty9XptrdFaAcyQEgP2kH7Gs6bgdYSF_pg1g&usqp=CAU",
     },
     {
       title: "Sonic Unleashed",
@@ -2172,7 +2171,8 @@ async function seedDB() {
       price: 24.99,
       quantity: 6230,
       categoryId: 3,
-      image: "https://image.pngaaa.com/214/4115214-middle.png",
+      image:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQty9XptrdFaAcyQEgP2kH7Gs6bgdYSF_pg1g&usqp=CAU",
     },
     {
       title: "Sonic Colors",
@@ -2222,7 +2222,7 @@ async function seedDB() {
       quantity: 9800,
       categoryId: 1,
       image:
-        "https://upload.wikimedia.org/wikipedia/commons/e/e4/Sonic-Generations-transparent-bg.png",
+        "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/d28a5626-3825-4074-8b43-2211c6e1b986/d515xhs-34defbe5-084a-445b-8713-8b67ed3d9d2e.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2QyOGE1NjI2LTM4MjUtNDA3NC04YjQzLTIyMTFjNmUxYjk4NlwvZDUxNXhocy0zNGRlZmJlNS0wODRhLTQ0NWItODcxMy04YjY3ZWQzZDlkMmUucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.uPG4tZ_1ClMGORdg8N5BOqCkeh0MDAZ7nlCVxQeOLpw",
     },
     {
       title: "Sonic Generations",
@@ -2232,7 +2232,7 @@ async function seedDB() {
       quantity: 9800,
       categoryId: 2,
       image:
-        "https://upload.wikimedia.org/wikipedia/commons/e/e4/Sonic-Generations-transparent-bg.png",
+        "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/d28a5626-3825-4074-8b43-2211c6e1b986/d515xhs-34defbe5-084a-445b-8713-8b67ed3d9d2e.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2QyOGE1NjI2LTM4MjUtNDA3NC04YjQzLTIyMTFjNmUxYjk4NlwvZDUxNXhocy0zNGRlZmJlNS0wODRhLTQ0NWItODcxMy04YjY3ZWQzZDlkMmUucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.uPG4tZ_1ClMGORdg8N5BOqCkeh0MDAZ7nlCVxQeOLpw",
     },
     {
       title: "Sonic Generations",
@@ -2242,7 +2242,7 @@ async function seedDB() {
       quantity: 9800,
       categoryId: 3,
       image:
-        "https://upload.wikimedia.org/wikipedia/commons/e/e4/Sonic-Generations-transparent-bg.png",
+        "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/d28a5626-3825-4074-8b43-2211c6e1b986/d515xhs-34defbe5-084a-445b-8713-8b67ed3d9d2e.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2QyOGE1NjI2LTM4MjUtNDA3NC04YjQzLTIyMTFjNmUxYjk4NlwvZDUxNXhocy0zNGRlZmJlNS0wODRhLTQ0NWItODcxMy04YjY3ZWQzZDlkMmUucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.uPG4tZ_1ClMGORdg8N5BOqCkeh0MDAZ7nlCVxQeOLpw",
     },
     {
       title: "Sonic Lost World",
@@ -2470,7 +2470,7 @@ async function seedDB() {
       quantity: 25000,
       categoryId: 1,
       image:
-        "https://upload.wikimedia.org/wikipedia/commons/e/e3/Half-Life_Alyx_Logo.png",
+        "https://cdn.akamai.steamstatic.com/steam/apps/546560/capsule_616x353.jpg?t=1631826157",
     },
     {
       title: "Resident Evil",
@@ -2500,7 +2500,7 @@ async function seedDB() {
       quantity: 7500,
       categoryId: 6,
       image:
-        "https://fanart.tv/fanart/movies/1576/hdmovielogo/resident-evil-5129fce8667e0.png",
+        "http://bentobyte.co/wp-content/uploads/2014/08/wallpaper-Resident_Evil-15261-1024x500.jpg",
     },
     {
       title: "Resident Evil (2002 remake)",
@@ -2510,7 +2510,7 @@ async function seedDB() {
       quantity: 7500,
       categoryId: 1,
       image:
-        "https://fanart.tv/fanart/movies/1576/hdmovielogo/resident-evil-5129fce8667e0.png",
+        "http://bentobyte.co/wp-content/uploads/2014/08/wallpaper-Resident_Evil-15261-1024x500.jpg",
     },
     {
       title: "Resident Evil (2002 remake)",
@@ -2520,7 +2520,7 @@ async function seedDB() {
       quantity: 7500,
       categoryId: 2,
       image:
-        "https://fanart.tv/fanart/movies/1576/hdmovielogo/resident-evil-5129fce8667e0.png",
+        "http://bentobyte.co/wp-content/uploads/2014/08/wallpaper-Resident_Evil-15261-1024x500.jpg",
     },
     {
       title: "Resident Evil (2002 remake)",
@@ -2530,7 +2530,7 @@ async function seedDB() {
       quantity: 7500,
       categoryId: 3,
       image:
-        "https://fanart.tv/fanart/movies/1576/hdmovielogo/resident-evil-5129fce8667e0.png",
+        "http://bentobyte.co/wp-content/uploads/2014/08/wallpaper-Resident_Evil-15261-1024x500.jpg",
     },
     {
       title: "Resident Evil (2002 remake)",
@@ -2540,7 +2540,7 @@ async function seedDB() {
       quantity: 7500,
       categoryId: 4,
       image:
-        "https://fanart.tv/fanart/movies/1576/hdmovielogo/resident-evil-5129fce8667e0.png",
+        "http://bentobyte.co/wp-content/uploads/2014/08/wallpaper-Resident_Evil-15261-1024x500.jpg",
     },
     {
       title: "Resident Evil 2",
@@ -2630,7 +2630,7 @@ async function seedDB() {
       quantity: 10000,
       categoryId: 1,
       image:
-        "https://deadentertainment.com/uploads/resident-evil-3-fan-made-hd-graphics-mod-75c099w06o.png",
+        "https://upload.wikimedia.org/wikipedia/en/a/a5/Resident_Evil_3_Cover.jpg",
     },
     {
       title: "Resident Evil 3: Nemesis",
@@ -2640,7 +2640,7 @@ async function seedDB() {
       quantity: 10000,
       categoryId: 3,
       image:
-        "https://deadentertainment.com/uploads/resident-evil-3-fan-made-hd-graphics-mod-75c099w06o.png",
+        "https://upload.wikimedia.org/wikipedia/en/a/a5/Resident_Evil_3_Cover.jpg",
     },
     {
       title: "Resident Evil 3: Nemesis",
@@ -2650,7 +2650,7 @@ async function seedDB() {
       quantity: 10000,
       categoryId: 6,
       image:
-        "https://deadentertainment.com/uploads/resident-evil-3-fan-made-hd-graphics-mod-75c099w06o.png",
+        "https://upload.wikimedia.org/wikipedia/en/a/a5/Resident_Evil_3_Cover.jpg",
     },
     {
       title: "Resident Evil 3: Nemesis",
@@ -2660,7 +2660,7 @@ async function seedDB() {
       quantity: 10000,
       categoryId: 7,
       image:
-        "https://deadentertainment.com/uploads/resident-evil-3-fan-made-hd-graphics-mod-75c099w06o.png",
+        "https://upload.wikimedia.org/wikipedia/en/a/a5/Resident_Evil_3_Cover.jpg",
     },
     {
       title: "Resident Evil 3 (2020 remake)",
@@ -2939,7 +2939,7 @@ async function seedDB() {
       quantity: 40000,
       categoryId: 1,
       image:
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Resident_Evil_Village_logo_black.svg/1200px-Resident_Evil_Village_logo_black.svg.png",
+        "https://upload.wikimedia.org/wikipedia/en/2/2c/Resident_Evil_Village.png",
     },
     {
       title: "Resident Evil Village",
@@ -2949,7 +2949,7 @@ async function seedDB() {
       quantity: 40000,
       categoryId: 2,
       image:
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Resident_Evil_Village_logo_black.svg/1200px-Resident_Evil_Village_logo_black.svg.png",
+        "https://upload.wikimedia.org/wikipedia/en/2/2c/Resident_Evil_Village.png",
     },
     {
       title: "Resident Evil Village",
@@ -2959,7 +2959,7 @@ async function seedDB() {
       quantity: 40000,
       categoryId: 3,
       image:
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Resident_Evil_Village_logo_black.svg/1200px-Resident_Evil_Village_logo_black.svg.png",
+        "https://upload.wikimedia.org/wikipedia/en/2/2c/Resident_Evil_Village.png",
     },
     {
       title: "Pokemon: Let's Go Pikachu!",
@@ -2969,7 +2969,7 @@ async function seedDB() {
       quantity: 5700,
       categoryId: 4,
       image:
-        "https://cdn2.bulbagarden.net/upload/2/22/Pok%C3%A9mon_Lets_Go_Pikachu_Logo.png",
+        "https://assets1.ignimgs.com/2018/11/12/pokemon-lets-go-pikachu---button-fin-1542047719936.jpg",
     },
     {
       title: "Pokemon: Let's Go Eevee!",
@@ -2979,7 +2979,7 @@ async function seedDB() {
       quantity: 5340,
       categoryId: 4,
       image:
-        "https://cdn2.bulbagarden.net/upload/8/8b/Pok%C3%A9mon_Lets_Go_Eevee_Logo.png",
+        "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6307/6307747cv11d.jpg",
     },
     {
       title: "Pokemon Sword",
@@ -3048,7 +3048,7 @@ async function seedDB() {
       quantity: 11000,
       categoryId: 6,
       image:
-        "https://cdn2.steamgriddb.com/file/sgdb-cdn/logo_thumb/91109a77036a730296d6305a9794fa13.png",
+        "https://lh3.googleusercontent.com/QFkAXyKCFPfEIm4NQqlid3yB6MaD5K_zRs7-J9150Z1NEkY2GSudBPeUGmP067qTAw=s1200",
     },
     {
       title: "Pokemon XD: Gale of Darkness",
@@ -3239,8 +3239,7 @@ async function seedDB() {
       price: 29.99,
       quantity: 15000,
       categoryId: 1,
-      image:
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Logo_of_The_Sims_4.svg/1200px-Logo_of_The_Sims_4.svg.png",
+      image: "https://i.ytimg.com/vi/YAPkXIuRHwc/maxresdefault.jpg",
     },
     {
       title: "The Sims 4",
@@ -3249,8 +3248,7 @@ async function seedDB() {
       price: 29.99,
       quantity: 15000,
       categoryId: 2,
-      image:
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Logo_of_The_Sims_4.svg/1200px-Logo_of_The_Sims_4.svg.png",
+      image: "https://i.ytimg.com/vi/YAPkXIuRHwc/maxresdefault.jpg",
     },
     {
       title: "The Sims 4",
@@ -3259,8 +3257,7 @@ async function seedDB() {
       price: 29.99,
       quantity: 15000,
       categoryId: 3,
-      image:
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Logo_of_The_Sims_4.svg/1200px-Logo_of_The_Sims_4.svg.png",
+      image: "https://i.ytimg.com/vi/YAPkXIuRHwc/maxresdefault.jpg",
     },
   ];
 
