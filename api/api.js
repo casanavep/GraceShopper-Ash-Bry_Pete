@@ -20,7 +20,7 @@ apiRouter.use("/orders", ordersRouter);
 apiRouter.use("/productorders", productOrdersRouter);
 apiRouter.use("/categories", categoryRouter);
 
-apiRouter.use((error, req, res, next) => {
+apiRouter.use((error, res) => {
   res.send(error);
 });
 

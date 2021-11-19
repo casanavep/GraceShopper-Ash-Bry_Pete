@@ -24,6 +24,7 @@ function App() {
   const [searchFilter, setSearchFilter] = useState("");
   const [cart, setCart] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
+  const [prodId, setProdId] = useState(1);
 
   let localCart = localStorage.getItem("cart");
 
@@ -104,7 +105,7 @@ function App() {
             <Register setUser={setUser} />
           </Route>
           <Route exact path="/admin">
-            <AdminApp setUser={setUser} />
+            <AdminApp setUser={setUser} prodId={prodId} setProdId={setProdId} />
           </Route>
           <Route exact path="/cart">
             <Basket cart={cart} setCart={setCart} />

@@ -7,26 +7,23 @@ import { useState } from "react";
 import BASE_URL from "../../util";
 import { useEffect } from "react";
 
-export default function ProductList() {
+export default function ProductList(props) {
   const [data, setData] = useState(productRows);
-  
-    const fetchProducts = async () => {
-      const resp = await fetch(
-        `${BASE_URL}/products`,
-        {
-          headers: {
-            // "Content-Type": "application/json",
-          },
-        }
-      );
-      const products = await resp.json();
-      setData(products)
-      console.log(products)
-      return products;
-    }
-    useEffect(() => {
-      fetchProducts()
-    }, [])
+
+  const fetchProducts = async () => {
+    const resp = await fetch(`${BASE_URL}/products`, {
+      headers: {
+        // "Content-Type": "application/json",
+      },
+    });
+    const products = await resp.json();
+    setData(products);
+    console.log(products);
+    return products;
+  };
+  useEffect(() => {
+    fetchProducts();
+  }, []);
 
   const handleDelete = (id) => {
     setData(data.filter((item) => item.id !== id));
@@ -41,7 +38,7 @@ export default function ProductList() {
       renderCell: (params) => {
         return (
           <div className="productListItem">
-            <img className="productListImg" src={params.row.img} alt="" />
+            {/* <img className="productListImg" src={params.row.img} alt="" /> */}
             {params.row.title}
           </div>
         );
@@ -63,6 +60,7 @@ export default function ProductList() {
       headerName: "Action",
       width: 150,
       renderCell: (params) => {
+        props.setProdId(params.row.id);
         return (
           <>
             <Link to={"/product/" + params.row.id}>

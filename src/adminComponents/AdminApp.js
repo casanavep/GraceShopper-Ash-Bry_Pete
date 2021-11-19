@@ -11,12 +11,13 @@ import NewProduct from "../adminPages/newProduct/NewProduct";
 import CategoryList from "../adminPages/categories/CategoryList";
 import MainProducts from "../components/MainProducts";
 
-function AdminApp() {
+function AdminApp(props) {
+  console.log(props);
   return (
     <Router>
       {/* <Topbar /> */}
       <div className="adminApp">
-        <Sidebar />
+        <Sidebar prodId={props.prodId} setProdId={props.setProdId} />
         <Switch>
           <Route exact path="/">
             <MainProducts />
@@ -29,11 +30,11 @@ function AdminApp() {
           </Route>
 
           <Route path="/products">
-            <ProductList />
+            <ProductList prodId={props.prodId} setProdId={props.setProdId} />
           </Route>
 
           <Route path="/product/:productId">
-            <Product />
+            <Product prodId={props.prodId} setProdId={props.setProdId} />
           </Route>
           {/* <Route path="/categories/:categoryId">
             <Category />

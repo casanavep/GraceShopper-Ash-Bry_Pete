@@ -10,6 +10,7 @@ import { useEffect, useState } from "react";
 import CustomCard from "../CustomCard";
 import Product from "../Product";
 import BASE_URL from "../../util";
+import { useHistory } from "react-router-dom";
 
 import "./style.css";
 let total = 0;
@@ -36,7 +37,14 @@ const Basket = ({
   const handleDelete = (id) => {
     setData(data.filter((item) => item.id !== id));
   };
-
+  const history = useHistory();
+  let total = 0;
+  const handleEmptyBasket = (event) => {
+    localStorage.removeItem("cart");
+    event.preventDefault();
+    setData([]);
+    history.push("/");
+  };
   const columns = [
     {
       field: "title",
@@ -95,10 +103,9 @@ const Basket = ({
       />
       {/* <div> */}{" "}
       {data.map((item) => {
-        ////////////---------------------------/////////////////////
-        ///     Broken math
-        total = total + item.price;
-        console.log(item.price);
+        let price = parseFloat(item.price);
+
+        total += price;
         console.log(total);
         return (
           <Container id="basket">
@@ -107,11 +114,12 @@ const Basket = ({
         );
       })}
       <div className="actions">
+        <h1>Total: ${total}</h1>
         <Button
           size="small"
           color="secondary"
           variant="contained"
-          // onClick={handleEmptyBasket}
+          onClick={handleEmptyBasket}
         >
           Empty Basket
         </Button>

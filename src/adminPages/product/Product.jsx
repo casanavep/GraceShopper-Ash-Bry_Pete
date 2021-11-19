@@ -3,8 +3,28 @@ import "./product.css";
 import Chart from "../../adminComponents/chart/Chart";
 import { productData } from "../../adminComponents/dummyData";
 import { Publish } from "@material-ui/icons";
+import { useEffect, useState } from "react";
+import BASE_URL from "../../util";
 
-export default function Product() {
+export default function Product(props) {
+  const [data, setData] = useState({});
+
+  const fetchProducts = async () => {
+    console.log(props.prodId);
+    const resp = await fetch(`${BASE_URL}/products/productid/${props.prodId}`, {
+      headers: {
+        // "Content-Type": "application/json",
+      },
+    });
+    const products = await resp.json();
+    setData(products);
+    console.log(products);
+    return products;
+  };
+  useEffect(() => {
+    fetchProducts();
+  }, []);
+
   return (
     <div className="product">
       <div className="productTitleContainer">
@@ -25,7 +45,7 @@ export default function Product() {
           <div className="productInfoBottom">
             <div className="productInfoItem">
               <span className="productInfoKey">id:</span>
-              <span className="productInfoValue">123</span>
+              <span className="productInfoValue">{data.id}</span>
             </div>
             <div className="productInfoItem">
               <span className="productInfoKey">sales:</span>
@@ -36,8 +56,8 @@ export default function Product() {
               <span className="productInfoValue">yes</span>
             </div>
             <div className="productInfoItem">
-              <span className="productInfoKey">in stock:</span>
-              <span className="productInfoValue">no</span>
+              <span className="productInfoKey">stock level:</span>
+              <span className="productInfoValue">{data.quantity}</span>
             </div>
           </div>
         </div>
@@ -46,7 +66,7 @@ export default function Product() {
         <form className="productForm">
           <div className="productFormLeft">
             <label>Product Name</label>
-            <input type="text" placeholder="Apple AirPod" />
+            <input type="text" placeholder={data.title} />
             <label>In Stock</label>
             <select name="inStock" id="idStock">
               <option value="yes">Yes</option>
@@ -60,11 +80,7 @@ export default function Product() {
           </div>
           <div className="productFormRight">
             <div className="productUpload">
-              <img
-                src="https://images.pexels.com/photos/7156886/pexels-photo-7156886.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
-                alt=""
-                className="productUploadImg"
-              />
+              <img src={data.image} alt="" className="productUploadImg" />
               <label for="file">
                 <Publish />
               </label>
