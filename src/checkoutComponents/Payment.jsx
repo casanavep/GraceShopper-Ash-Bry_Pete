@@ -44,6 +44,7 @@ const Payment = ({
             fullWidth
             id="card number"
             name="card number"
+            type="password"
             label="Card Number"
             onChange={handleChange}
           />
