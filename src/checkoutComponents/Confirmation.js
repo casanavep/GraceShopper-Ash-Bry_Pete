@@ -2,6 +2,7 @@ import { Button, Typography } from "@material-ui/core";
 import { BrandingWatermark } from "@material-ui/icons";
 import { Link } from "react-router-dom";
 import Banner from "../Images/Banner.png";
+import { useEffect } from "react";
 const Confirmation = () => {
   // if (error) {
   //   return (
@@ -13,6 +14,15 @@ const Confirmation = () => {
   //     </div>
   //   );
   // }
+  const handleEmptyBasket = (event) => {
+    // event.preventDefault();
+
+    localStorage.removeItem("cart");
+  };
+
+  useEffect(() => {
+    handleEmptyBasket();
+  }, []);
   return (
     <div className="confirmation">
       <Typography variant="h5">
