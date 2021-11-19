@@ -93,6 +93,7 @@ const Navbar = (props) => {
   const handleLogout = (event) => {
     event.preventDefault();
     localStorage.removeItem("token");
+    localStorage.removeItem("cart");
     props.setUser(null);
     history.push("/");
   };
@@ -135,24 +136,25 @@ const Navbar = (props) => {
             <>
               {props.user.admin && (
                 <>
-                <Badge
-                color="inherit"
-                className={classes.badge}
-                title="Home"
-                to="/"
-                component={Link}>
-                  <Home/>
-                </Badge>
-                <Badge
-                  badgeContent={0}
-                  color="secondary"
-                  className={classes.badge}
-                  title="Admin Dashboard"
-                  to="/admin"
-                  component={Link}
-                >
-                  <AdminPanelSettingsIcon />
-                </Badge>
+                  <Badge
+                    color="inherit"
+                    className={classes.badge}
+                    title="Home"
+                    to="/"
+                    component={Link}
+                  >
+                    <Home />
+                  </Badge>
+                  <Badge
+                    badgeContent={0}
+                    color="secondary"
+                    className={classes.badge}
+                    title="Admin Dashboard"
+                    to="/admin"
+                    component={Link}
+                  >
+                    <AdminPanelSettingsIcon />
+                  </Badge>
                 </>
               )}
               <Badge
@@ -178,7 +180,7 @@ const Navbar = (props) => {
                 title="Go to Checkout"
               >
                 <Button onClick={handleCartRoute}>
-                <ShoppingCart />
+                  <ShoppingCart />
                 </Button>
               </Badge>
               <div>
@@ -199,14 +201,15 @@ const Navbar = (props) => {
           /> */}
           {!props.user && (
             <>
-            <Badge
-            color="inherit"
-            className={classes.badge}
-            title="Home"
-            to="/"
-            component={Link}>
-                  <Home/>
-                </Badge>
+              <Badge
+                color="inherit"
+                className={classes.badge}
+                title="Home"
+                to="/"
+                component={Link}
+              >
+                <Home />
+              </Badge>
               <Badge className={classes.badge} title="Click to Login">
                 <Button onClick={handleRoute} to="/login" color="inherit">
                   Login
@@ -219,7 +222,7 @@ const Navbar = (props) => {
                 title="Go to Checkout"
               >
                 <Button onClick={handleCartRoute}>
-                <ShoppingCart />
+                  <ShoppingCart />
                 </Button>
               </Badge>
             </>
